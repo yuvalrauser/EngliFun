@@ -1,0 +1,121 @@
+{
+  "lesson_ref": "unit1-lesson1",
+  "unit_index": 0,
+  "lesson_index": 0,
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "prompt_text": "Hello",
+      "prompt_language": "en",
+      "explanation_he": "Hello = שלום. זו הדרך הנפוצה ביותר לומר שלום באנגלית.",
+      "options": [
+        { "option_text": "שלום", "option_language": "he", "is_correct": true },
+        { "option_text": "להתראות", "option_language": "he", "is_correct": false },
+        { "option_text": "תודה", "option_language": "he", "is_correct": false },
+        { "option_text": "בבקשה", "option_language": "he", "is_correct": false }
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt_text": "Goodbye",
+      "prompt_language": "en",
+      "explanation_he": "Goodbye = להתראות. אומרים את זה כשנפרדים ממישהו.",
+      "options": [
+        { "option_text": "בוקר טוב", "option_language": "he", "is_correct": false },
+        { "option_text": "להתראות", "option_language": "he", "is_correct": true },
+        { "option_text": "שלום", "option_language": "he", "is_correct": false },
+        { "option_text": "ערב טוב", "option_language": "he", "is_correct": false }
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt_text": "Good morning",
+      "prompt_language": "en",
+      "explanation_he": "Good morning = בוקר טוב. אומרים את זה בבוקר כשפוגשים מישהו.",
+      "options": [
+        { "option_text": "ערב טוב", "option_language": "he", "is_correct": false },
+        { "option_text": "לילה טוב", "option_language": "he", "is_correct": false },
+        { "option_text": "בוקר טוב", "option_language": "he", "is_correct": true },
+        { "option_text": "צהריים טובים", "option_language": "he", "is_correct": false }
+      ]
+    },
+    {
+      "type": "word_bank",
+      "prompt_text": "תרגם לאנגלית: שלום, מה שלומך?",
+      "prompt_language": "he",
+      "correct_answer": "Hello, how are you?",
+      "correct_answer_alternatives": ["Hello how are you"],
+      "word_bank_words": ["Hello,", "how", "are", "you?", "is", "goodbye"],
+      "explanation_he": "Hello, how are you? = שלום, מה שלומך? זו שאלה נפוצה כשפוגשים מישהו."
+    },
+    {
+      "type": "word_bank",
+      "prompt_text": "תרגם לאנגלית: בוקר טוב",
+      "prompt_language": "he",
+      "correct_answer": "Good morning",
+      "correct_answer_alternatives": [],
+      "word_bank_words": ["Good", "morning", "night", "evening"],
+      "explanation_he": "Good morning = בוקר טוב. Good = טוב, morning = בוקר."
+    },
+    {
+      "type": "type_answer",
+      "prompt_text": "איך אומרים \"שלום\" באנגלית?",
+      "prompt_language": "he",
+      "correct_answer": "Hello",
+      "correct_answer_alternatives": ["Hi", "hello", "hi"],
+      "explanation_he": "שלום באנגלית זה Hello או Hi."
+    },
+    {
+      "type": "matching",
+      "prompt_text": "התאם את המילים לתרגום שלהן",
+      "prompt_language": "he",
+      "explanation_he": "Hello = שלום, Goodbye = להתראות, Good morning = בוקר טוב, Thank you = תודה.",
+      "options": [
+        { "option_text": "Hello", "option_language": "en", "is_correct": true, "pair_group_id": "pair-1" },
+        { "option_text": "שלום", "option_language": "he", "is_correct": true, "pair_group_id": "pair-1" },
+        { "option_text": "Goodbye", "option_language": "en", "is_correct": true, "pair_group_id": "pair-2" },
+        { "option_text": "להתראות", "option_language": "he", "is_correct": true, "pair_group_id": "pair-2" },
+        { "option_text": "Good morning", "option_language": "en", "is_correct": true, "pair_group_id": "pair-3" },
+        { "option_text": "בוקר טוב", "option_language": "he", "is_correct": true, "pair_group_id": "pair-3" },
+        { "option_text": "Thank you", "option_language": "en", "is_correct": true, "pair_group_id": "pair-4" },
+        { "option_text": "תודה", "option_language": "he", "is_correct": true, "pair_group_id": "pair-4" }
+      ]
+    },
+    {
+      "type": "matching",
+      "prompt_text": "התאם את המילים לתרגום שלהן",
+      "prompt_language": "he",
+      "explanation_he": "Good evening = ערב טוב, Good night = לילה טוב, Please = בבקשה, Yes = כן.",
+      "options": [
+        { "option_text": "Good evening", "option_language": "en", "is_correct": true, "pair_group_id": "pair-5" },
+        { "option_text": "ערב טוב", "option_language": "he", "is_correct": true, "pair_group_id": "pair-5" },
+        { "option_text": "Good night", "option_language": "en", "is_correct": true, "pair_group_id": "pair-6" },
+        { "option_text": "לילה טוב", "option_language": "he", "is_correct": true, "pair_group_id": "pair-6" },
+        { "option_text": "Please", "option_language": "en", "is_correct": true, "pair_group_id": "pair-7" },
+        { "option_text": "בבקשה", "option_language": "he", "is_correct": true, "pair_group_id": "pair-7" },
+        { "option_text": "Yes", "option_language": "en", "is_correct": true, "pair_group_id": "pair-8" },
+        { "option_text": "כן", "option_language": "he", "is_correct": true, "pair_group_id": "pair-8" }
+      ]
+    },
+    {
+      "type": "complete_sentence",
+      "prompt_text": "Good ___! How are you?",
+      "prompt_language": "en",
+      "correct_answer": "morning",
+      "explanation_he": "Good morning = בוקר טוב. המילה החסרה היא morning (בוקר).",
+      "options": [
+        { "option_text": "morning", "option_language": "en", "is_correct": true },
+        { "option_text": "bye", "option_language": "en", "is_correct": false },
+        { "option_text": "hello", "option_language": "en", "is_correct": false }
+      ]
+    },
+    {
+      "type": "type_answer",
+      "prompt_text": "איך אומרים \"להתראות\" באנגלית?",
+      "prompt_language": "he",
+      "correct_answer": "Goodbye",
+      "correct_answer_alternatives": ["goodbye", "Bye", "bye", "Good bye", "good bye"],
+      "explanation_he": "להתראות באנגלית זה Goodbye. אפשר גם לומר בקיצור Bye."
+    }
+  ]
+}

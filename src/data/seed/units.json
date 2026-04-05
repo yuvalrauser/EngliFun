@@ -1,0 +1,16 @@
+[
+  {
+    "title": "ברכות והכרות",
+    "description": "לומדים לברך ולהציג את עצמנו באנגלית",
+    "icon_emoji": "👋",
+    "color_hex": "#58CC02",
+    "order_index": 0
+  },
+  {
+    "title": "מספרים 1–20",
+    "description": "לומדים מספרים בסיסיים באנגלית",
+    "icon_emoji": "🔢",
+    "color_hex": "#CE82FF",
+    "order_index": 1
+  }
+]
