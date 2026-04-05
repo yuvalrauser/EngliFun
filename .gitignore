@@ -1,5 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# Spec document
+EngliFun_Spec_v3.md
+
 # dependencies
 /node_modules
 /.pnp
