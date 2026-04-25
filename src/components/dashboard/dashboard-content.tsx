@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { StreakBanner } from "@/components/dashboard/streak-banner";
 import { getLevel, getLevelLabel, getXpForNextLevel } from "@/lib/constants/levels";
 import type { Profile } from "@/types/database";
 import type { LessonWithStatus } from "@/services/progress.server";
@@ -10,6 +11,7 @@ interface DashboardContentProps {
   nextLesson: LessonWithStatus | null;
   completedCount: number;
   totalCount: number;
+  streakInDanger: boolean;
 }
 
 export function DashboardContent({
@@ -17,6 +19,7 @@ export function DashboardContent({
   nextLesson,
   completedCount,
   totalCount,
+  streakInDanger,
 }: DashboardContentProps) {
   const level = getLevel(profile.total_xp);
   const levelLabel = getLevelLabel(profile.total_xp);
@@ -42,6 +45,11 @@ export function DashboardContent({
             className="w-60 object-contain animate-float"
           />
         </div>
+
+        {/* Streak danger banner */}
+        {streakInDanger && (
+          <StreakBanner nextLessonId={nextLesson?.id ?? null} />
+        )}
 
         {/* Continue learning CTA */}
         {nextLesson ? (
