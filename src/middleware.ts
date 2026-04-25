@@ -2,8 +2,8 @@ import { type NextRequest, NextResponse } from "next/server";
 import { updateSession } from "@/lib/supabase/middleware";
 
 const publicRoutes = ["/", "/login", "/register", "/reset-password"];
-// Routes that are always accessible, even when logged in
-const alwaysPublicRoutes = ["/update-password"];
+// Routes that are always accessible regardless of auth state
+const alwaysPublicRoutes = ["/update-password", "/auth/callback", "/auth/logout"];
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
