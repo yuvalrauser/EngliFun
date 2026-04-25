@@ -74,7 +74,7 @@ export default function OnboardingPage() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-start pt-10 p-4 bg-gradient-to-b from-primary/5 to-background">
+    <main className="flex min-h-screen flex-col items-center justify-center p-4 bg-gradient-to-b from-primary/5 to-background">
       <div className="w-full max-w-lg flex flex-col gap-6">
 
         <AnimatePresence mode="wait">
@@ -130,7 +130,7 @@ function StepWelcome({ onNext }: { onNext: () => void }) {
       <img
         src="/brand/owl.png"
         alt="EngliFun"
-        className="w-56 sm:w-72 object-contain animate-float mb-4 drop-shadow-lg"
+        className="w-64 sm:w-80 object-contain animate-float mb-6 drop-shadow-lg"
       />
       <h1 className="text-3xl font-bold mb-2">!ברוך הבא ל-EngliFun</h1>
       <p className="text-lg text-muted-foreground mb-2">
@@ -162,7 +162,7 @@ function StepLevel({
 }) {
   return (
     <div className="flex flex-col items-center text-center">
-      <MascotWithBubble size="sm" message="מה הרמה שלך באנגלית?" className="mb-6" />
+      <MascotWithBubble size="md" message="מה הרמה שלך באנגלית?" className="mb-6" />
 
       <div className="w-full space-y-3 mb-8">
         {LEVEL_OPTIONS.map((opt) => (
@@ -219,7 +219,7 @@ function StepGoal({
 }) {
   return (
     <div className="flex flex-col items-center text-center">
-      <MascotWithBubble size="sm" message="כמה תרצה ללמוד כל יום?" className="mb-6" />
+      <MascotWithBubble size="md" message="כמה תרצה ללמוד כל יום?" className="mb-6" />
 
       <div className="w-full space-y-3 mb-8">
         {DAILY_GOAL_OPTIONS.map((opt) => (
@@ -276,7 +276,7 @@ function StepMotivation({
 }) {
   return (
     <div className="flex flex-col items-center text-center">
-      <MascotWithBubble size="sm" message="למה אתה רוצה ללמוד אנגלית?" className="mb-6" />
+      <MascotWithBubble size="md" message="למה אתה רוצה ללמוד אנגלית?" className="mb-6" />
 
       <div className="w-full space-y-3 mb-8">
         {MOTIVATION_OPTIONS.map((opt) => (
