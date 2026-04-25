@@ -6,7 +6,7 @@ import { createClient } from "@/lib/supabase/client";
 import { updateOnboarding } from "@/services/gamification";
 import { DAILY_GOAL_OPTIONS, type DailyGoalOption } from "@/lib/constants/xp";
 import { Button } from "@/components/ui/button";
-import { MascotWithBubble } from "@/components/ui/mascot";
+// mascot imported via StepOwl component below
 import { motion, AnimatePresence } from "framer-motion";
 import type { Profile } from "@/types/database";
 
@@ -123,16 +123,23 @@ export default function OnboardingPage() {
 // ============================================================
 // Step 0: Welcome — mascot hero
 // ============================================================
+// Shared owl header used in every step
+function StepOwl({ animate = "float" }: { animate?: "float" | "bounce" }) {
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src="/brand/owl.png"
+      alt="EngliFun"
+      className={`w-52 object-contain drop-shadow-lg mb-8 ${animate === "float" ? "animate-float" : "animate-bounce-subtle"}`}
+    />
+  );
+}
+
 function StepWelcome({ onNext }: { onNext: () => void }) {
   return (
     <div className="flex flex-col items-center text-center">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="/brand/owl.png"
-        alt="EngliFun"
-        className="w-64 sm:w-80 object-contain animate-float mb-6 drop-shadow-lg"
-      />
-      <h1 className="text-3xl font-bold mb-2">!ברוך הבא ל-EngliFun</h1>
+      <StepOwl />
+      <h1 className="text-3xl font-bold mb-3">!ברוך הבא ל-EngliFun</h1>
       <p className="text-lg text-muted-foreground mb-2">
         אני אלמד אותך אנגלית בכיף!
       </p>
@@ -162,7 +169,8 @@ function StepLevel({
 }) {
   return (
     <div className="flex flex-col items-center text-center">
-      <MascotWithBubble size="md" message="מה הרמה שלך באנגלית?" className="mb-6" />
+      <StepOwl />
+      <p className="text-xl font-bold mb-6">מה הרמה שלך באנגלית?</p>
 
       <div className="w-full space-y-3 mb-8">
         {LEVEL_OPTIONS.map((opt) => (
@@ -219,7 +227,8 @@ function StepGoal({
 }) {
   return (
     <div className="flex flex-col items-center text-center">
-      <MascotWithBubble size="md" message="כמה תרצה ללמוד כל יום?" className="mb-6" />
+      <StepOwl />
+      <p className="text-xl font-bold mb-6">כמה תרצה ללמוד כל יום?</p>
 
       <div className="w-full space-y-3 mb-8">
         {DAILY_GOAL_OPTIONS.map((opt) => (
@@ -276,7 +285,8 @@ function StepMotivation({
 }) {
   return (
     <div className="flex flex-col items-center text-center">
-      <MascotWithBubble size="md" message="למה אתה רוצה ללמוד אנגלית?" className="mb-6" />
+      <StepOwl />
+      <p className="text-xl font-bold mb-6">למה אתה רוצה ללמוד אנגלית?</p>
 
       <div className="w-full space-y-3 mb-8">
         {MOTIVATION_OPTIONS.map((opt) => (
