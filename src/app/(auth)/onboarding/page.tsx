@@ -6,7 +6,7 @@ import { createClient } from "@/lib/supabase/client";
 import { updateOnboarding } from "@/services/gamification";
 import { DAILY_GOAL_OPTIONS, type DailyGoalOption } from "@/lib/constants/xp";
 import { Button } from "@/components/ui/button";
-import { Mascot, MascotWithBubble } from "@/components/ui/mascot";
+import { MascotWithBubble } from "@/components/ui/mascot";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Profile } from "@/types/database";
 
@@ -75,14 +75,7 @@ export default function OnboardingPage() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-4 bg-gradient-to-b from-primary/5 to-background">
-      <div className="w-full max-w-lg">
-        {/* Progress bar */}
-        <div className="mb-8 h-2 rounded-full bg-muted overflow-hidden mx-8">
-          <div
-            className="h-full rounded-full bg-primary transition-all duration-500 ease-out"
-            style={{ width: `${((step + 1) / 5) * 100}%` }}
-          />
-        </div>
+      <div className="w-full max-w-lg flex flex-col gap-6">
 
         <AnimatePresence mode="wait">
           <motion.div
@@ -114,6 +107,14 @@ export default function OnboardingPage() {
             )}
           </motion.div>
         </AnimatePresence>
+
+        {/* Progress bar — below the buttons */}
+        <div className="h-2 rounded-full bg-muted overflow-hidden mx-4">
+          <div
+            className="h-full rounded-full bg-primary transition-all duration-500 ease-out"
+            style={{ width: `${((step + 1) / 5) * 100}%` }}
+          />
+        </div>
       </div>
     </main>
   );
@@ -125,9 +126,12 @@ export default function OnboardingPage() {
 function StepWelcome({ onNext }: { onNext: () => void }) {
   return (
     <div className="flex flex-col items-center text-center">
-      <div className="animate-float mb-4">
-        <Mascot size="xl" />
-      </div>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/brand/owl.png"
+        alt="EngliFun"
+        className="w-56 sm:w-72 object-contain animate-float mb-4 drop-shadow-lg"
+      />
       <h1 className="text-3xl font-bold mb-2">!ברוך הבא ל-EngliFun</h1>
       <p className="text-lg text-muted-foreground mb-2">
         אני אלמד אותך אנגלית בכיף!
@@ -325,9 +329,8 @@ function StepReady({
 
   return (
     <div className="flex flex-col items-center text-center">
-      <div className="animate-bounce-subtle mb-2">
-        <Mascot size="lg" />
-      </div>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/brand/owl.png" alt="EngliFun" className="w-40 object-contain animate-bounce-subtle mb-3 drop-shadow-md" />
       <h2 className="text-2xl font-bold mb-1">!מוכנים לצאת לדרך</h2>
       <p className="text-muted-foreground mb-6">הנה הסיכום שלך:</p>
 
