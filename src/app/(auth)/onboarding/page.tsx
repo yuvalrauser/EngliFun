@@ -74,7 +74,7 @@ export default function OnboardingPage() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-4 bg-gradient-to-b from-primary/5 to-background">
+    <main className="flex min-h-screen flex-col items-center justify-start pt-10 p-4 bg-gradient-to-b from-primary/5 to-background">
       <div className="w-full max-w-lg flex flex-col gap-6">
 
         <AnimatePresence mode="wait">
