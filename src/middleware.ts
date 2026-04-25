@@ -72,6 +72,7 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    "/((?!_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|api).*)",
+    // Skip Next.js internals, static files, and public assets
+    "/((?!_next/static|_next/image|favicon|sitemap|robots|api|brand|icon|apple-touch).*)",
   ],
 };

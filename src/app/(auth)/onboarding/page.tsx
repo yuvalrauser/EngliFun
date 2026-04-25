@@ -36,30 +36,31 @@ const MOTIVATION_OPTIONS = [
 export default function OnboardingPage() {
   const router = useRouter();
   const [step, setStep] = useState<Step>(0);
-  const [userId, setUserId] = useState<string>("");
   const [level, setLevel] = useState<Profile["starting_level"]>("beginner");
   const [goal, setGoal] = useState<DailyGoalOption>(20);
   const [motivation, setMotivation] = useState<string>("");
   const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    const supabase = createClient();
-    supabase.auth.getUser().then(({ data }) => {
-      if (data.user) setUserId(data.user.id);
-    });
-  }, []);
+  const [saveError, setSaveError] = useState("");
 
   async function handleComplete() {
-    if (!userId) return;
     setIsLoading(true);
+    setSaveError("");
     try {
-      await updateOnboarding(userId, {
+      const supabase = createClient();
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) throw new Error("לא מחובר");
+
+      await updateOnboarding(user.id, {
         starting_level: level,
         daily_xp_goal: goal,
         motivation: motivation || undefined,
       });
-      router.push("/dashboard");
-    } catch {
+
+      // Force full navigation to ensure middleware re-evaluates session
+      window.location.href = "/dashboard";
+    } catch (err) {
+      console.error("Onboarding error:", err);
+      setSaveError("שגיאה בשמירה. נסה שוב.");
       setIsLoading(false);
     }
   }
@@ -106,6 +107,7 @@ export default function OnboardingPage() {
                 level={level}
                 goal={goal}
                 isLoading={isLoading}
+                saveError={saveError}
                 onComplete={handleComplete}
                 onBack={back}
               />
@@ -308,11 +310,13 @@ function StepReady({
   level,
   goal,
   isLoading,
+  saveError,
   onComplete,
   onBack,
 }: {
   level: Profile["starting_level"];
   goal: DailyGoalOption;
+  saveError?: string;
   isLoading: boolean;
   onComplete: () => void;
   onBack: () => void;
@@ -343,8 +347,12 @@ function StepReady({
         </div>
       </div>
 
+      {saveError && (
+        <p className="text-sm text-destructive mb-3 text-center">{saveError}</p>
+      )}
+
       <div className="flex w-full gap-3">
-        <Button variant="outline" onClick={onBack} className="h-12 flex-1 rounded-xl">
+        <Button variant="outline" onClick={onBack} className="h-12 flex-1 rounded-xl" disabled={isLoading}>
           חזרה
         </Button>
         <Button
