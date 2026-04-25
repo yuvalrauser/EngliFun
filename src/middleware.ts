@@ -1,12 +1,19 @@
 import { type NextRequest, NextResponse } from "next/server";
 import { updateSession } from "@/lib/supabase/middleware";
 
-const publicRoutes = ["/", "/login", "/register", "/reset-password", "/update-password"];
+const publicRoutes = ["/", "/login", "/register", "/reset-password"];
+// Routes that are always accessible, even when logged in
+const alwaysPublicRoutes = ["/update-password"];
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   const { user, supabaseResponse, supabase } = await updateSession(request);
+
+  // Always-public routes: never redirect away (password reset flow)
+  if (alwaysPublicRoutes.includes(pathname)) {
+    return supabaseResponse;
+  }
 
   // Public routes: if logged in, redirect to dashboard
   if (publicRoutes.includes(pathname)) {
