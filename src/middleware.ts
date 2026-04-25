@@ -2,15 +2,16 @@ import { type NextRequest, NextResponse } from "next/server";
 import { updateSession } from "@/lib/supabase/middleware";
 
 const publicRoutes = ["/", "/login", "/register", "/reset-password"];
-// Routes that are always accessible regardless of auth state
 const alwaysPublicRoutes = ["/update-password", "/auth/callback", "/auth/logout"];
+
+const ONBOARDING_COOKIE = "ef_onboarded";
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   const { user, supabaseResponse, supabase } = await updateSession(request);
 
-  // Always-public routes: never redirect away (password reset flow)
+  // Always-public routes
   if (alwaysPublicRoutes.includes(pathname)) {
     return supabaseResponse;
   }
@@ -30,14 +31,31 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(loginUrl);
   }
 
-  // Check onboarding status
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("onboarding_completed")
-    .eq("id", user.id)
-    .single();
+  // Check onboarding via cookie first (avoids DB query on every request)
+  const onboardingCookie = request.cookies.get(ONBOARDING_COOKIE)?.value;
 
-  const onboardingCompleted = profile?.onboarding_completed ?? false;
+  let onboardingCompleted = onboardingCookie === "1";
+
+  // If cookie not set, query DB once and set the cookie
+  if (!onboardingCookie) {
+    const { data: profile } = await supabase
+      .from("profiles")
+      .select("onboarding_completed")
+      .eq("id", user.id)
+      .single();
+
+    onboardingCompleted = profile?.onboarding_completed ?? false;
+
+    // Set cookie so future requests skip DB query
+    if (onboardingCompleted) {
+      supabaseResponse.cookies.set(ONBOARDING_COOKIE, "1", {
+        path: "/",
+        httpOnly: true,
+        sameSite: "lax",
+        maxAge: 60 * 60 * 24 * 30, // 30 days
+      });
+    }
+  }
 
   // Not onboarded: force to /onboarding
   if (!onboardingCompleted && pathname !== "/onboarding") {
@@ -54,12 +72,6 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    /*
-     * Match all routes except:
-     * - _next/static, _next/image (Next.js internals)
-     * - favicon.ico, sitemap.xml, robots.txt (metadata)
-     * - api routes (handled separately)
-     */
     "/((?!_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|api).*)",
   ],
 };
