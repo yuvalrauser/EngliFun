@@ -2,8 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { createClient } from "@/lib/supabase/client";
-import { updateOnboarding } from "@/services/gamification";
 import { DAILY_GOAL_OPTIONS, type DailyGoalOption } from "@/lib/constants/xp";
 import { Button } from "@/components/ui/button";
 // mascot imported via StepOwl component below
@@ -46,21 +44,25 @@ export default function OnboardingPage() {
     setIsLoading(true);
     setSaveError("");
     try {
-      const supabase = createClient();
-      const { data: { user } } = await supabase.auth.getUser();
-      if (!user) throw new Error("לא מחובר");
-
-      await updateOnboarding(user.id, {
-        starting_level: level,
-        daily_xp_goal: goal,
-        motivation: motivation || undefined,
+      const res = await fetch("/api/complete-onboarding", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          starting_level: level,
+          daily_xp_goal: goal,
+          motivation: motivation || null,
+        }),
       });
 
-      // Force full navigation to ensure middleware re-evaluates session
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || `שגיאת שרת ${res.status}`);
+      }
+
       window.location.href = "/dashboard";
     } catch (err) {
       console.error("Onboarding error:", err);
-      setSaveError("שגיאה בשמירה. נסה שוב.");
+      setSaveError(err instanceof Error ? err.message : "שגיאה בשמירה. נסה שוב.");
       setIsLoading(false);
     }
   }
@@ -75,6 +77,19 @@ export default function OnboardingPage() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-4 bg-gradient-to-b from-primary/5 to-background">
+      {/* Emergency exit */}
+      <div className="absolute top-4 left-4">
+        <button
+          onClick={async () => {
+            await fetch("/auth/logout", { method: "POST" });
+            window.location.href = "/login";
+          }}
+          className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+        >
+          התנתקות
+        </button>
+      </div>
+
       <div className="w-full max-w-lg flex flex-col gap-6">
 
         <AnimatePresence mode="wait">
