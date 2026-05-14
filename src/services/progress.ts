@@ -67,7 +67,10 @@ export async function getUserProgress(
   return data;
 }
 
+const RPC_TIMEOUT_MS = 15000;
+
 export async function completeLesson(params: {
+  userId: string;
   lessonId: string;
   totalExercises: number;
   correctCount: number;
@@ -76,14 +79,13 @@ export async function completeLesson(params: {
   durationSeconds: number;
   exerciseAttempts: ExerciseAttemptPayload[];
 }): Promise<CompleteLessonResult> {
+  if (!params.userId) throw new Error("Not authenticated");
+  if (!params.lessonId) throw new Error("Missing lesson id");
+
   const supabase = createClient();
 
-  // Get current user ID
-  const { data: { user } } = await supabase.auth.getUser();
-  if (!user) throw new Error("Not authenticated");
-
-  const { data, error } = await supabase.rpc("complete_lesson", {
-    p_user_id: user.id,
+  const rpcPromise = supabase.rpc("complete_lesson", {
+    p_user_id: params.userId,
     p_lesson_id: params.lessonId,
     p_total_exercises: params.totalExercises,
     p_correct_count: params.correctCount,
@@ -92,6 +94,16 @@ export async function completeLesson(params: {
     p_duration_seconds: params.durationSeconds,
     p_exercise_attempts: params.exerciseAttempts,
   });
+
+  // Hard timeout — without this the UI hangs forever if the network call stalls.
+  const timeoutPromise = new Promise<never>((_, reject) =>
+    setTimeout(
+      () => reject(new Error("שמירת השיעור הסתיימה ב-timeout — נסה שוב")),
+      RPC_TIMEOUT_MS,
+    ),
+  );
+
+  const { data, error } = await Promise.race([rpcPromise, timeoutPromise]);
 
   if (error) {
     console.error("complete_lesson RPC error:", error);

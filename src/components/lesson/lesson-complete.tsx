@@ -74,7 +74,16 @@ export function LessonComplete() {
 
       const snapshot = getFinalAttemptSnapshot();
       const xpBefore = profile?.total_xp ?? 0;
-      const result = await completeLesson(snapshot);
+      console.info("[complete-lesson] sending snapshot", {
+        userId: user.id,
+        lessonId: snapshot.lessonId,
+        totalExercises: snapshot.totalExercises,
+        correctCount: snapshot.correctCount,
+        heartsRemaining: snapshot.heartsRemaining,
+        attempts: snapshot.exerciseAttempts.length,
+      });
+      const result = await completeLesson({ ...snapshot, userId: user.id });
+      console.info("[complete-lesson] rpc returned", result);
 
       // Update XP + success state IMMEDIATELY from the RPC result.
       // Profile re-fetch happens in the background and must not block the UI.
