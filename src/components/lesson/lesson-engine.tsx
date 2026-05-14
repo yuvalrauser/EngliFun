@@ -17,11 +17,19 @@ interface LessonEngineProps {
 }
 
 export function LessonEngine({ lesson, exercises }: LessonEngineProps) {
-  const { state, initLesson } = useLessonStore();
+  const state = useLessonStore((s) => s.state);
+  const lessonIdInStore = useLessonStore((s) => s.lessonId);
+  const initLesson = useLessonStore((s) => s.initLesson);
 
   useEffect(() => {
-    initLesson(lesson.id, exercises);
-  }, [lesson.id, exercises, initLesson]);
+    // Only re-init when navigating to a different lesson. A router.refresh()
+    // after save produces a new `exercises` array reference for the same
+    // lesson — without this guard it would reset the store to "intro" and
+    // restart the lesson the user just finished.
+    if (lessonIdInStore !== lesson.id) {
+      initLesson(lesson.id, exercises);
+    }
+  }, [lesson.id, lessonIdInStore, exercises, initLesson]);
 
   // During intro — no header
   if (state === "intro") {
