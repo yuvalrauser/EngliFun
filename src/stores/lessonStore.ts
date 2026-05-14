@@ -37,14 +37,24 @@ const initialState: LessonSessionState = {
 export const useLessonStore = create<LessonStore>((set, get) => ({
   ...initialState,
 
-  initLesson: (lessonId, exercises) =>
+  initLesson: (lessonId, exercises) => {
+    const current = get();
+    // Idempotent: if the lesson engine re-renders for the same lesson — for
+    // example after a background fetch updates the user profile, which causes
+    // upstream server components to re-render with a new `exercises` prop
+    // reference — never wipe the active session. Only initialize on a real
+    // lesson switch.
+    if (current.lessonId === lessonId && current.exercises.length > 0) {
+      return;
+    }
     set({
       ...initialState,
       lessonId,
       exercises,
       state: "intro",
       startedAt: new Date(),
-    }),
+    });
+  },
 
   goTo: (state) => set({ state }),
 

@@ -44,23 +44,11 @@ export function LessonComplete() {
   const [saveStatus, setSaveStatus] = useState<SaveStatus>("saving");
   const [errorMsg, setErrorMsg] = useState("");
   const [levelUp, setLevelUp] = useState<{ level: number; label: string } | null>(null);
-  const [savingElapsed, setSavingElapsed] = useState(0);
   const autoSaveStartedRef = useRef(false);
 
   const saving = saveStatus === "saving";
   const saved = saveStatus === "success";
   const total = store.exercises.length;
-
-  // Visible "still saving" counter so we can tell from a screenshot whether
-  // the save is genuinely stuck and for how long.
-  useEffect(() => {
-    if (!saving) {
-      setSavingElapsed(0);
-      return;
-    }
-    const interval = setInterval(() => setSavingElapsed((s) => s + 1), 1000);
-    return () => clearInterval(interval);
-  }, [saving]);
 
   const correctCount = (() => {
     const deduped = new Map<string, boolean>();
@@ -180,10 +168,17 @@ export function LessonComplete() {
         </p>
 
         <div className="flex items-center gap-4 mb-8">
-          <div className="rounded-2xl bg-xp-gold/20 p-4 text-center min-w-[80px]">
-            <div className="text-2xl font-bold text-xp-gold-foreground">
-              {saving ? `שומר${savingElapsed > 0 ? ` ${savingElapsed}s` : ""}` : errorMsg ? "—" : `+${xp}`}
-            </div>
+          <div className="rounded-2xl bg-xp-gold/20 p-4 text-center min-w-[80px] flex flex-col items-center justify-center">
+            {saving ? (
+              <div
+                className="h-7 w-7 rounded-full border-2 border-xp-gold-foreground/30 border-t-xp-gold-foreground animate-spin"
+                aria-label="שומר"
+              />
+            ) : (
+              <div className="text-2xl font-bold text-xp-gold-foreground">
+                {errorMsg ? "—" : `+${xp}`}
+              </div>
+            )}
             <div className="text-xs text-muted-foreground mt-0.5">XP</div>
           </div>
           <div className="rounded-2xl bg-primary/10 p-4 text-center min-w-[80px]">
