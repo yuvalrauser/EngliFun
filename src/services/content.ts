@@ -1,5 +1,5 @@
 import { createClient } from "@/lib/supabase/client";
-import type { Course, Unit, Lesson, Exercise, ExerciseOption } from "@/types/database";
+import type { Course, Unit, Lesson } from "@/types/database";
 import type { ExerciseWithOptions } from "@/types/lesson";
 
 const supabase = createClient();

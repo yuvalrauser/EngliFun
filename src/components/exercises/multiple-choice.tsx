@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { shuffle } from "@/lib/utils/shuffle";
 import type { ExerciseWithOptions } from "@/types/lesson";
@@ -12,11 +12,7 @@ interface MultipleChoiceProps {
 
 export function MultipleChoice({ exercise, onSubmit }: MultipleChoiceProps) {
   const [selected, setSelected] = useState<string | null>(null);
-
-  const shuffledOptions = useMemo(
-    () => shuffle(exercise.exercise_options),
-    [exercise.id] // eslint-disable-line react-hooks/exhaustive-deps
-  );
+  const [shuffledOptions] = useState(() => shuffle(exercise.exercise_options));
 
   return (
     <div className="space-y-6">

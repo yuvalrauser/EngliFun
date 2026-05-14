@@ -1,96 +1,133 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Mascot } from "@/components/ui/mascot";
 import { LevelUpModal } from "@/components/lesson/level-up-modal";
 import { useLessonStore } from "@/stores/lessonStore";
+import { useUserStore } from "@/stores/userStore";
 import { completeLesson } from "@/services/progress";
 import { getLevel, getLevelLabel } from "@/lib/constants/levels";
 import { createClient } from "@/lib/supabase/client";
+import type { Profile } from "@/types/database";
+
+type SaveStatus = "saving" | "success" | "error";
+
+function getFinalAttemptSnapshot() {
+  const { lessonId, exercises, hearts, attempts, startedAt } = useLessonStore.getState();
+  const deduped = new Map<string, (typeof attempts)[number]>();
+
+  for (const attempt of attempts) {
+    deduped.set(attempt.exercise_id, attempt);
+  }
+
+  const finalAttempts = Array.from(deduped.values());
+  const correctCount = finalAttempts.filter((attempt) => attempt.is_correct).length;
+
+  return {
+    lessonId,
+    totalExercises: exercises.length,
+    correctCount,
+    heartsRemaining: hearts,
+    isPerfect: correctCount === exercises.length && hearts === 3,
+    durationSeconds: Math.max(0, Math.floor((Date.now() - startedAt.getTime()) / 1000)),
+    exerciseAttempts: finalAttempts,
+  };
+}
 
 export function LessonComplete() {
   const router = useRouter();
   const store = useLessonStore();
+  const profile = useUserStore((s) => s.profile);
+  const setProfile = useUserStore((s) => s.setProfile);
   const [xp, setXp] = useState(0);
-  const [saving, setSaving] = useState(true);
+  const [saveStatus, setSaveStatus] = useState<SaveStatus>("saving");
   const [errorMsg, setErrorMsg] = useState("");
   const [levelUp, setLevelUp] = useState<{ level: number; label: string } | null>(null);
-  const savedRef = useRef(false);
+  const autoSaveStartedRef = useRef(false);
 
+  const saving = saveStatus === "saving";
+  const saved = saveStatus === "success";
   const total = store.exercises.length;
 
   const correctCount = (() => {
     const deduped = new Map<string, boolean>();
-    for (const a of store.attempts) {
-      deduped.set(a.exercise_id, a.is_correct);
+    for (const attempt of store.attempts) {
+      deduped.set(attempt.exercise_id, attempt.is_correct);
     }
     return Array.from(deduped.values()).filter(Boolean).length;
   })();
 
-  useEffect(() => {
-    if (savedRef.current) return;
-    savedRef.current = true;
+  const saveLesson = useCallback(async () => {
+    try {
+      setSaveStatus("saving");
+      setErrorMsg("");
 
-    const { lessonId, exercises, hearts, attempts, startedAt } = useLessonStore.getState();
-    const totalEx = exercises.length;
-    const dur = Math.floor((Date.now() - startedAt.getTime()) / 1000);
+      const supabase = createClient();
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
 
-    const deduped = new Map<string, (typeof attempts)[number]>();
-    for (const a of attempts) {
-      deduped.set(a.exercise_id, a);
-    }
-    const finalAttempts = Array.from(deduped.values());
-    const correct = finalAttempts.filter((a) => a.is_correct).length;
-
-    async function save() {
-      try {
-        // Snapshot current XP before saving (to detect level-up)
-        const supabase = createClient();
-        const { data: { user } } = await supabase.auth.getUser();
-        let xpBefore = 0;
-        if (user) {
-          const { data: profile } = await supabase
-            .from("profiles")
-            .select("total_xp")
-            .eq("id", user.id)
-            .single();
-          xpBefore = profile?.total_xp ?? 0;
-        }
-
-        const result = await completeLesson({
-          lessonId,
-          totalExercises: totalEx,
-          correctCount: correct,
-          heartsRemaining: hearts,
-          isPerfect: correct === totalEx && hearts === 3,
-          durationSeconds: dur,
-          exerciseAttempts: finalAttempts,
-        });
-
-        const xpEarned = result.xp_earned;
-        setXp(xpEarned);
-
-        // Detect level-up
-        const levelBefore = getLevel(xpBefore);
-        const levelAfter = getLevel(xpBefore + xpEarned);
-        if (levelAfter > levelBefore) {
-          setLevelUp({ level: levelAfter, label: getLevelLabel(xpBefore + xpEarned) });
-        }
-      } catch (err) {
-        console.error("Failed to save lesson:", err);
-        setErrorMsg(err instanceof Error ? err.message : "שגיאה בשמירת התוצאות");
-      } finally {
-        setSaving(false);
+      if (!user) {
+        throw new Error("צריך להתחבר מחדש כדי לשמור את השיעור");
       }
+
+      const snapshot = getFinalAttemptSnapshot();
+      const xpBefore = profile?.total_xp ?? 0;
+      const result = await completeLesson(snapshot);
+
+      setXp(result.xp_earned);
+
+      const { data: freshProfile, error: profileError } = await supabase
+        .from("profiles")
+        .select("*")
+        .eq("id", user.id)
+        .single();
+
+      if (profileError) {
+        console.error("Profile refresh after lesson failed:", profileError);
+        if (profile) {
+          setProfile({
+            ...profile,
+            total_xp: result.total_xp,
+            current_streak: result.current_streak,
+            longest_streak: Math.max(profile.longest_streak, result.current_streak),
+          });
+        }
+      } else {
+        setProfile(freshProfile as Profile);
+      }
+
+      const levelBefore = getLevel(xpBefore);
+      const levelAfter = getLevel(result.total_xp);
+      if (levelAfter > levelBefore) {
+        setLevelUp({ level: levelAfter, label: getLevelLabel(result.total_xp) });
+      }
+
+      setSaveStatus("success");
+      router.refresh();
+    } catch (err) {
+      console.error("Failed to save lesson:", err);
+      setErrorMsg(err instanceof Error ? err.message : "שגיאה בשמירת תוצאות השיעור");
+      setSaveStatus("error");
     }
-    save();
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [profile, router, setProfile]);
+
+  useEffect(() => {
+    if (autoSaveStartedRef.current) return;
+    autoSaveStartedRef.current = true;
+    saveLesson();
+  }, [saveLesson]);
+
+  function handleContinue() {
+    if (!saved) return;
+    router.push("/path");
+    router.refresh();
+  }
 
   return (
     <>
-      {/* Level-up modal — shown after saving */}
-      {!saving && levelUp && (
+      {saved && levelUp && (
         <LevelUpModal
           newLevel={levelUp.level}
           newLabel={levelUp.label}
@@ -105,14 +142,15 @@ export function LessonComplete() {
           {correctCount === total ? "!מושלם" : "!כל הכבוד"}
         </h1>
         <p className="text-muted-foreground mb-6">
-          {correctCount === total ? "סיימת בלי אף טעות!" : "סיימת את השיעור בהצלחה!"}
+          {correctCount === total
+            ? "סיימת בלי אף טעות!"
+            : "סיימת את השיעור בהצלחה!"}
         </p>
 
-        {/* Stats */}
         <div className="flex items-center gap-4 mb-8">
           <div className="rounded-2xl bg-xp-gold/20 p-4 text-center min-w-[80px]">
             <div className="text-2xl font-bold text-xp-gold-foreground">
-              {saving ? "..." : errorMsg ? "—" : `+${xp}`}
+              {saving ? "שומר" : errorMsg ? "—" : `+${xp}`}
             </div>
             <div className="text-xs text-muted-foreground mt-0.5">XP</div>
           </div>
@@ -135,12 +173,30 @@ export function LessonComplete() {
           </div>
         )}
 
-        <button
-          onClick={() => router.push("/path")}
-          className="w-full max-w-xs rounded-2xl bg-primary py-4 text-lg font-bold text-primary-foreground shadow-lg shadow-primary/25 transition-all active:scale-[0.98]"
-        >
-          המשך
-        </button>
+        {saveStatus === "error" ? (
+          <div className="flex w-full max-w-xs flex-col gap-3">
+            <button
+              onClick={saveLesson}
+              className="w-full rounded-2xl bg-primary py-4 text-lg font-bold text-primary-foreground shadow-lg shadow-primary/25 transition-all active:scale-[0.98]"
+            >
+              נסה לשמור שוב
+            </button>
+            <button
+              onClick={() => router.push("/path")}
+              className="w-full rounded-2xl border-2 border-border py-3.5 text-base font-medium transition-all hover:bg-muted active:scale-[0.98]"
+            >
+              חזרה למסלול בלי לסמן כהושלם
+            </button>
+          </div>
+        ) : (
+          <button
+            onClick={handleContinue}
+            disabled={!saved}
+            className="w-full max-w-xs rounded-2xl bg-primary py-4 text-lg font-bold text-primary-foreground shadow-lg shadow-primary/25 transition-all active:scale-[0.98] disabled:cursor-not-allowed disabled:bg-muted disabled:text-muted-foreground disabled:shadow-none"
+          >
+            {saving ? "שומר תוצאות..." : "המשך"}
+          </button>
+        )}
       </div>
     </>
   );

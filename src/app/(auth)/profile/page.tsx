@@ -22,17 +22,28 @@ export default async function ProfilePage() {
   const levelLabel = getLevelLabel(p.total_xp);
   const { next: xpNext } = getXpForNextLevel(p.total_xp);
 
-  // Get accuracy stats
-  const { count: totalAttempts } = await supabase
-    .from("exercise_attempts")
+  // Completed lessons count (distinct, via user_lesson_progress)
+  const { count: completedLessons } = await supabase
+    .from("user_lesson_progress")
     .select("*", { count: "exact", head: true })
-    .eq("lesson_attempt_id", user.id); // will be 0 for new users
+    .eq("user_id", user.id)
+    .eq("status", "completed");
 
-  const { count: correctAttempts } = await supabase
-    .from("exercise_attempts")
-    .select("*", { count: "exact", head: true })
-    .eq("lesson_attempt_id", user.id)
-    .eq("is_correct", true);
+  // Accuracy across all lesson attempts owned by this user
+  const { data: attemptStats } = await supabase
+    .from("lesson_attempts")
+    .select("total_exercises, correct_count")
+    .eq("user_id", user.id)
+    .eq("completed", true);
+
+  let totalAnswered = 0;
+  let totalCorrect = 0;
+  for (const a of attemptStats ?? []) {
+    totalAnswered += a.total_exercises ?? 0;
+    totalCorrect += a.correct_count ?? 0;
+  }
+  const accuracyPct =
+    totalAnswered > 0 ? Math.round((totalCorrect / totalAnswered) * 100) : null;
 
   const joinDate = new Date(p.created_at).toLocaleDateString("he-IL", {
     year: "numeric",
@@ -76,6 +87,18 @@ export default async function ProfilePage() {
             <div className="text-2xl mb-1">🎯</div>
             <div className="text-xl font-bold">{p.daily_xp_goal}</div>
             <div className="text-xs text-muted-foreground">יעד יומי</div>
+          </div>
+          <div className="rounded-2xl bg-card p-4 text-center ring-1 ring-border">
+            <div className="text-2xl mb-1">📖</div>
+            <div className="text-xl font-bold">{completedLessons ?? 0}</div>
+            <div className="text-xs text-muted-foreground">שיעורים שהושלמו</div>
+          </div>
+          <div className="rounded-2xl bg-card p-4 text-center ring-1 ring-border">
+            <div className="text-2xl mb-1">🎯</div>
+            <div className="text-xl font-bold">
+              {accuracyPct === null ? "—" : `${accuracyPct}%`}
+            </div>
+            <div className="text-xs text-muted-foreground">דיוק תשובות</div>
           </div>
         </div>
 

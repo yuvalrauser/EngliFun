@@ -12,18 +12,10 @@ export default async function LeaderboardPage() {
     .select("*")
     .limit(10);
 
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("id, username, total_xp")
-    .eq("id", user.id)
-    .single();
-
   return (
     <LeaderboardContent
       entries={entries ?? []}
       currentUserId={user.id}
-      currentUserXp={profile?.total_xp ?? 0}
-      currentUsername={profile?.username ?? ""}
     />
   );
 }

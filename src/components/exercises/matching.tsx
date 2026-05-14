@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useMemo } from "react";
+import { useState, useCallback } from "react";
 import { cn } from "@/lib/utils";
 import { shuffle } from "@/lib/utils/shuffle";
 import { isMatchingPairCorrect } from "@/lib/utils/validation";
@@ -18,13 +18,11 @@ export function Matching({ exercise, onComplete }: MatchingProps) {
   const [flashWrong, setFlashWrong] = useState<Set<string>>(new Set());
 
   // Shuffle each column independently so pairs don't line up
-  const heOptions = useMemo(
-    () => shuffle(exercise.exercise_options.filter((o) => o.option_language === "he")),
-    [exercise.id] // eslint-disable-line react-hooks/exhaustive-deps
+  const [heOptions] = useState(() =>
+    shuffle(exercise.exercise_options.filter((o) => o.option_language === "he"))
   );
-  const enOptions = useMemo(
-    () => shuffle(exercise.exercise_options.filter((o) => o.option_language === "en")),
-    [exercise.id] // eslint-disable-line react-hooks/exhaustive-deps
+  const [enOptions] = useState(() =>
+    shuffle(exercise.exercise_options.filter((o) => o.option_language === "en"))
   );
 
   const totalPairs = new Set(

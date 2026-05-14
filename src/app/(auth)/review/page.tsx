@@ -12,6 +12,7 @@ export interface MistakeWithContext {
   prompt_language: string;
   type: string;
   explanation_he: string;
+  correct_answer: string | null;
   lesson_title: string;
   unit_title: string;
   unit_order: number;
@@ -35,6 +36,7 @@ export default async function ReviewPage() {
         prompt_language,
         type,
         explanation_he,
+        correct_answer,
         lessons (
           title,
           order_index,
@@ -63,12 +65,22 @@ export default async function ReviewPage() {
   }
 
   // Flatten and type the joined data
+  type UnitJoin = { title?: string; order_index?: number } | null;
+  type LessonJoin = { title?: string; order_index?: number; units?: UnitJoin } | null;
+  type ExerciseJoin = {
+    prompt_text: string;
+    prompt_language: string;
+    type: string;
+    explanation_he: string;
+    correct_answer: string | null;
+    lessons?: LessonJoin;
+  };
   const flat: MistakeWithContext[] = mistakes
     .filter((m) => m.exercises)
     .map((m) => {
-      const ex = m.exercises as any;
-      const lesson = ex.lessons as any;
-      const unit = lesson?.units as any;
+      const ex = m.exercises as unknown as ExerciseJoin;
+      const lesson = ex.lessons ?? null;
+      const unit = lesson?.units ?? null;
       return {
         id: m.id,
         exercise_id: m.exercise_id,
@@ -78,6 +90,7 @@ export default async function ReviewPage() {
         prompt_language: ex.prompt_language,
         type: ex.type,
         explanation_he: ex.explanation_he,
+        correct_answer: ex.correct_answer ?? null,
         lesson_title: lesson?.title ?? "",
         unit_title: unit?.title ?? "",
         unit_order: unit?.order_index ?? 0,

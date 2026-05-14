@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { shuffle } from "@/lib/utils/shuffle";
 import type { ExerciseWithOptions } from "@/types/lesson";
@@ -13,11 +13,17 @@ interface WordBankProps {
 export function WordBank({ exercise, onSubmit }: WordBankProps) {
   const [selected, setSelected] = useState<number[]>([]);
 
-  // Shuffle tile order so they don't appear in correct sentence order
-  const shuffledTiles = useMemo(() => {
+  // Shuffle tile order so they don't appear in correct sentence order.
+  // Reshuffle if the shuffled order matches the original (avoid giving away the answer).
+  const [shuffledTiles] = useState(() => {
     const indexed = exercise.word_bank_words.map((word, origIdx) => ({ word, origIdx }));
-    return shuffle(indexed);
-  }, [exercise.id]); // eslint-disable-line react-hooks/exhaustive-deps
+    if (indexed.length < 2) return indexed;
+    let result = shuffle(indexed);
+    for (let i = 0; i < 5 && result.every((t, idx) => t.origIdx === idx); i++) {
+      result = shuffle(indexed);
+    }
+    return result;
+  });
 
   function addTile(shuffledIdx: number) {
     if (!selected.includes(shuffledIdx)) {

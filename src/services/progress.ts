@@ -2,6 +2,46 @@ import { createClient } from "@/lib/supabase/client";
 import type { UserLessonProgress, UserProgress, CompleteLessonResult } from "@/types/database";
 import type { ExerciseAttemptPayload } from "@/types/lesson";
 
+function parseCompleteLessonResult(data: unknown): CompleteLessonResult {
+  let result: unknown;
+
+  try {
+    result = typeof data === "string" ? JSON.parse(data) : data;
+  } catch (err) {
+    console.error("complete_lesson RPC returned invalid JSON:", err, data);
+    throw new Error("שמירת השיעור נכשלה: תשובה לא תקינה מהשרת");
+  }
+
+  if (!result || typeof result !== "object") {
+    console.error("complete_lesson RPC returned empty data:", data);
+    throw new Error("שמירת השיעור נכשלה: תשובה ריקה מהשרת");
+  }
+
+  const value = result as Record<string, unknown>;
+  const hasNumber = (key: string) => typeof value[key] === "number" && Number.isFinite(value[key]);
+  const hasBoolean = (key: string) => typeof value[key] === "boolean";
+  const hasString = (key: string) => typeof value[key] === "string";
+
+  if (
+    !hasString("lesson_attempt_id") ||
+    !hasNumber("xp_earned") ||
+    !hasNumber("total_xp") ||
+    !hasNumber("correct_count") ||
+    !hasNumber("total_exercises") ||
+    !hasBoolean("completed") ||
+    !hasBoolean("is_perfect") ||
+    !hasBoolean("daily_goal_reached") ||
+    !hasBoolean("streak_updated") ||
+    !hasNumber("current_streak") ||
+    !(value.next_lesson_id === null || typeof value.next_lesson_id === "string")
+  ) {
+    console.error("complete_lesson RPC returned unexpected data:", data);
+    throw new Error("שמירת השיעור נכשלה: תשובה לא תקינה מהשרת");
+  }
+
+  return value as unknown as CompleteLessonResult;
+}
+
 export async function getUserLessonProgress(
   userId: string
 ): Promise<UserLessonProgress[]> {
@@ -55,16 +95,8 @@ export async function completeLesson(params: {
 
   if (error) {
     console.error("complete_lesson RPC error:", error);
-    throw error;
+    throw new Error(error.message || "שמירת השיעור נכשלה");
   }
 
-  // Supabase RPC with jsonb return: data is the object directly
-  const result = typeof data === "string" ? JSON.parse(data) : data;
-
-  if (!result || typeof result.xp_earned === "undefined") {
-    console.error("complete_lesson RPC returned unexpected data:", data);
-    throw new Error("Invalid RPC response");
-  }
-
-  return result as CompleteLessonResult;
+  return parseCompleteLessonResult(data);
 }

@@ -12,6 +12,7 @@ interface DashboardContentProps {
   completedCount: number;
   totalCount: number;
   streakInDanger: boolean;
+  todayXp: number;
 }
 
 export function DashboardContent({
@@ -20,7 +21,11 @@ export function DashboardContent({
   completedCount,
   totalCount,
   streakInDanger,
+  todayXp,
 }: DashboardContentProps) {
+  const dailyGoal = profile.daily_xp_goal;
+  const goalProgress = dailyGoal > 0 ? Math.min((todayXp / dailyGoal) * 100, 100) : 0;
+  const goalReached = todayXp >= dailyGoal;
   const level = getLevel(profile.total_xp);
   const levelLabel = getLevelLabel(profile.total_xp);
   const { current: xpCurrent, next: xpNext } = getXpForNextLevel(profile.total_xp);
@@ -103,6 +108,30 @@ export function DashboardContent({
             <div className="text-2xl mb-1">📖</div>
             <div className="text-xl font-bold">{completedCount}</div>
             <div className="text-[11px] text-muted-foreground mt-0.5">שיעורים</div>
+          </div>
+        </div>
+
+        {/* Daily XP goal card */}
+        <div className="rounded-2xl bg-card p-5 shadow-sm ring-1 ring-border">
+          <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center gap-2">
+              <span className="text-lg">🎯</span>
+              <span className="text-sm font-semibold">יעד יומי</span>
+              {goalReached && (
+                <span className="rounded-full bg-success/15 px-2 py-0.5 text-[11px] font-semibold text-success">
+                  הושג!
+                </span>
+              )}
+            </div>
+            <span className="text-xs font-medium text-muted-foreground">
+              {Math.min(todayXp, dailyGoal)}/{dailyGoal} XP
+            </span>
+          </div>
+          <div className="h-3 rounded-full bg-muted overflow-hidden">
+            <div
+              className="h-full rounded-full bg-gradient-to-l from-xp-gold to-amber-400 transition-all duration-700"
+              style={{ width: `${goalProgress}%` }}
+            />
           </div>
         </div>
 

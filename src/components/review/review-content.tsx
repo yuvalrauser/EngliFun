@@ -135,6 +135,11 @@ function MistakeCard({
       {/* Expanded explanation */}
       {expanded && (
         <div className="px-4 pb-4 border-t border-border/50">
+          {mistake.correct_answer && (
+            <p className="text-sm text-success mt-3" dir="ltr">
+              ✓ {mistake.correct_answer}
+            </p>
+          )}
           <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
             💡 {mistake.explanation_he}
           </p>

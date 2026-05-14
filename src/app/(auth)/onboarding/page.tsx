@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { DAILY_GOAL_OPTIONS, type DailyGoalOption } from "@/lib/constants/xp";
 import { Button } from "@/components/ui/button";
 // mascot imported via StepOwl component below
@@ -32,7 +31,6 @@ const MOTIVATION_OPTIONS = [
 ];
 
 export default function OnboardingPage() {
-  const router = useRouter();
   const [step, setStep] = useState<Step>(0);
   const [level, setLevel] = useState<Profile["starting_level"]>("beginner");
   const [goal, setGoal] = useState<DailyGoalOption>(20);

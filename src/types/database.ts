@@ -158,10 +158,15 @@ export interface LeaderboardEntry {
 // complete_lesson RPC response
 // ============================================================
 export interface CompleteLessonResult {
-  attempt_id: string;
+  lesson_attempt_id: string;
   xp_earned: number;
-  is_replay: boolean;
-  daily_goal_bonus: boolean;
-  current_streak: number;
   total_xp: number;
+  correct_count: number;
+  total_exercises: number;
+  completed: boolean;
+  is_perfect: boolean;
+  daily_goal_reached: boolean;
+  streak_updated: boolean;
+  current_streak: number;
+  next_lesson_id: string | null;
 }

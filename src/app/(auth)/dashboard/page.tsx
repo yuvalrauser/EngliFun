@@ -63,6 +63,31 @@ export default async function DashboardPage() {
     console.error("Course/progress error:", e);
   }
 
+  // Today's XP — sum xp_earned from completed lesson_attempts dated today (user timezone)
+  let todayXp = 0;
+  try {
+    const tz = p.timezone || "Asia/Jerusalem";
+    const todayLocal = new Date().toLocaleDateString("en-CA", { timeZone: tz });
+    const todayStart = new Date(`${todayLocal}T00:00:00`);
+    const sinceIso = new Date(todayStart.getTime() - 24 * 3600 * 1000).toISOString();
+    const { data: attempts } = await supabase
+      .from("lesson_attempts")
+      .select("xp_earned, created_at")
+      .eq("user_id", user.id)
+      .eq("completed", true)
+      .gte("created_at", sinceIso);
+    if (attempts) {
+      todayXp = attempts
+        .filter((a) => {
+          const d = new Date(a.created_at).toLocaleDateString("en-CA", { timeZone: tz });
+          return d === todayLocal;
+        })
+        .reduce((sum, a) => sum + (a.xp_earned ?? 0), 0);
+    }
+  } catch (e) {
+    console.error("Today XP error:", e);
+  }
+
   const streakInDanger = isStreakInDanger(p);
 
   return (
@@ -72,6 +97,7 @@ export default async function DashboardPage() {
       completedCount={completedCount}
       totalCount={totalCount}
       streakInDanger={streakInDanger}
+      todayXp={todayXp}
     />
   );
 }

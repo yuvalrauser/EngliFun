@@ -11,7 +11,6 @@ import {
   validateWordBank,
   validateTypeAnswer,
   validateCompleteSentence,
-  validateMatching,
 } from "@/lib/utils/validation";
 
 export function ExerciseRenderer() {
@@ -92,8 +91,7 @@ export function ExerciseRenderer() {
         <Matching
           key={exercise.id}
           exercise={exercise}
-          onComplete={(matchedPairIds) => {
-            const r = validateMatching(exercise, matchedPairIds);
+          onComplete={() => {
             // Matching always succeeds when onComplete fires (all pairs matched)
             submitCorrect("all_pairs_matched");
           }}

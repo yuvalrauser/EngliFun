@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { useLessonStore } from "@/stores/lessonStore";
 
 export function FeedbackBar() {
-  const { state, lastAnswer, lastCorrectAnswer, lastExplanation, lastIsNearMiss, advanceToNext } =
+  const { state, lastCorrectAnswer, lastExplanation, lastIsNearMiss, advanceToNext } =
     useLessonStore();
 
   if (state !== "correct_feedback" && state !== "wrong_feedback") return null;
