@@ -44,11 +44,23 @@ export function LessonComplete() {
   const [saveStatus, setSaveStatus] = useState<SaveStatus>("saving");
   const [errorMsg, setErrorMsg] = useState("");
   const [levelUp, setLevelUp] = useState<{ level: number; label: string } | null>(null);
+  const [savingElapsed, setSavingElapsed] = useState(0);
   const autoSaveStartedRef = useRef(false);
 
   const saving = saveStatus === "saving";
   const saved = saveStatus === "success";
   const total = store.exercises.length;
+
+  // Visible "still saving" counter so we can tell from a screenshot whether
+  // the save is genuinely stuck and for how long.
+  useEffect(() => {
+    if (!saving) {
+      setSavingElapsed(0);
+      return;
+    }
+    const interval = setInterval(() => setSavingElapsed((s) => s + 1), 1000);
+    return () => clearInterval(interval);
+  }, [saving]);
 
   const correctCount = (() => {
     const deduped = new Map<string, boolean>();
@@ -74,7 +86,8 @@ export function LessonComplete() {
 
       const snapshot = getFinalAttemptSnapshot();
       const xpBefore = profile?.total_xp ?? 0;
-      console.info("[complete-lesson] sending snapshot", {
+      // Use console.error so the line shows up even when info/log are filtered out.
+      console.error("[complete-lesson] STEP-1 sending snapshot", {
         userId: user.id,
         lessonId: snapshot.lessonId,
         totalExercises: snapshot.totalExercises,
@@ -83,7 +96,7 @@ export function LessonComplete() {
         attempts: snapshot.exerciseAttempts.length,
       });
       const result = await completeLesson({ ...snapshot, userId: user.id });
-      console.info("[complete-lesson] rpc returned", result);
+      console.error("[complete-lesson] STEP-2 rpc returned", result);
 
       // Update XP + success state IMMEDIATELY from the RPC result.
       // Profile re-fetch happens in the background and must not block the UI.
@@ -165,7 +178,7 @@ export function LessonComplete() {
         <div className="flex items-center gap-4 mb-8">
           <div className="rounded-2xl bg-xp-gold/20 p-4 text-center min-w-[80px]">
             <div className="text-2xl font-bold text-xp-gold-foreground">
-              {saving ? "שומר" : errorMsg ? "—" : `+${xp}`}
+              {saving ? `שומר${savingElapsed > 0 ? ` ${savingElapsed}s` : ""}` : errorMsg ? "—" : `+${xp}`}
             </div>
             <div className="text-xs text-muted-foreground mt-0.5">XP</div>
           </div>

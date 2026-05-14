@@ -67,7 +67,7 @@ export async function getUserProgress(
   return data;
 }
 
-const RPC_TIMEOUT_MS = 15000;
+const RPC_TIMEOUT_MS = 8000;
 
 export async function completeLesson(params: {
   userId: string;
