@@ -9,9 +9,10 @@ interface UnitSectionProps {
   unit: UnitWithLessons;
   lessonStatuses: Map<string, LessonWithStatus>;
   isFirst: boolean;
+  allowReplays?: boolean;
 }
 
-export function UnitSection({ unit, lessonStatuses, isFirst }: UnitSectionProps) {
+export function UnitSection({ unit, lessonStatuses, allowReplays = false }: UnitSectionProps) {
   const lessons = unit.lessons.map((l) => lessonStatuses.get(l.id)!).filter(Boolean);
   const completedCount = lessons.filter((l) => l.status === "completed").length;
   const totalCount = lessons.length;
@@ -133,7 +134,12 @@ export function UnitSection({ unit, lessonStatuses, isFirst }: UnitSectionProps)
         {/* Nodes */}
         {lessons.map((lesson, idx) => (
           <div key={lesson.id} className="relative z-10">
-            <LessonNode lesson={lesson} index={idx} totalInUnit={totalCount} />
+            <LessonNode
+              lesson={lesson}
+              index={idx}
+              totalInUnit={totalCount}
+              allowReplays={allowReplays}
+            />
           </div>
         ))}
       </div>

@@ -8,13 +8,17 @@ interface LessonNodeProps {
   lesson: LessonWithStatus;
   index: number;
   totalInUnit: number;
+  allowReplays?: boolean;
 }
 
-export function LessonNode({ lesson, index, totalInUnit }: LessonNodeProps) {
-  // Completed lessons are intentionally NOT clickable — replays were letting
-  // the user farm XP on the same lesson over and over.
+export function LessonNode({ lesson, index, totalInUnit, allowReplays = false }: LessonNodeProps) {
+  // Completed lessons normally can't be re-played (XP farming), but once the
+  // whole course is done we unlock replays so the user has something to do.
+  // The RPC awards `xp_replay_reward` (5 XP) on a replay, not the full reward.
   const isPlayable =
-    lesson.status === "current" || lesson.status === "unlocked";
+    lesson.status === "current" ||
+    lesson.status === "unlocked" ||
+    (allowReplays && lesson.status === "completed");
   const isCurrent = lesson.status === "current";
   const isCompleted = lesson.status === "completed";
   const isLocked = lesson.status === "locked";
