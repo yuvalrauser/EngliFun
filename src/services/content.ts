@@ -1,14 +1,15 @@
 import { createClient } from "@/lib/supabase/client";
-import type { Course, Unit, Lesson } from "@/types/database";
+import type { Course, CourseLevel, Unit, Lesson } from "@/types/database";
 import type { ExerciseWithOptions } from "@/types/lesson";
 
 const supabase = createClient();
 
-export async function getCourse(): Promise<Course | null> {
+export async function getCourse(level: CourseLevel): Promise<Course | null> {
   const { data } = await supabase
     .from("courses")
     .select("*")
     .eq("is_active", true)
+    .eq("level", level)
     .single();
   return data;
 }

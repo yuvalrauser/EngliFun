@@ -3,7 +3,7 @@ import { createClient } from "@/lib/supabase/server";
 import { getFullCourse } from "@/services/content.server";
 import { getLessonProgressMap, buildLessonStatuses, getNextLesson } from "@/services/progress.server";
 import { DashboardContent } from "@/components/dashboard/dashboard-content";
-import type { Profile } from "@/types/database";
+import type { CourseLevel, Profile } from "@/types/database";
 
 function isStreakInDanger(profile: Profile): boolean {
   if (!profile.last_activity_date || profile.current_streak === 0) return false;
@@ -42,13 +42,14 @@ export default async function DashboardPage() {
   if (!profile) redirect("/login");
 
   const p = profile as Profile;
+  const level = (p.starting_level as CourseLevel) ?? "beginner";
 
   let nextLesson = null;
   let completedCount = 0;
   let totalCount = 0;
 
   try {
-    const course = await getFullCourse(supabase);
+    const course = await getFullCourse(level, supabase);
     if (course) {
       const progressMap = await getLessonProgressMap(user.id, course.units, supabase);
       const lessonStatuses = buildLessonStatuses(course.units, progressMap);
@@ -98,6 +99,7 @@ export default async function DashboardPage() {
       totalCount={totalCount}
       streakInDanger={streakInDanger}
       todayXp={todayXp}
+      currentLevel={level}
     />
   );
 }

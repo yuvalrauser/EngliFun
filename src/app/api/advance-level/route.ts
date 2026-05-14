@@ -54,10 +54,52 @@ export async function POST() {
     return NextResponse.json({ error: updateError.message }, { status: 500 });
   }
 
+  // Unlock the first lesson of the destination course, if it has any content
+  // yet. Without this, an advanced user would land on /path and the
+  // auto-init code in getLessonProgressMap would have to do it on next
+  // render — and only if the course actually has lessons.
+  let firstLessonSeeded = false;
+  try {
+    const { data: destCourse } = await supabase
+      .from("courses")
+      .select("id")
+      .eq("is_active", true)
+      .eq("level", next)
+      .single();
+
+    if (destCourse?.id) {
+      const { data: firstLesson } = await supabase
+        .from("lessons")
+        .select("id, unit_id, units!inner(course_id, order_index)")
+        .eq("units.course_id", destCourse.id)
+        .order("order_index", { referencedTable: "units", ascending: true })
+        .order("order_index", { ascending: true })
+        .limit(1)
+        .maybeSingle();
+
+      if (firstLesson?.id) {
+        await supabase
+          .from("user_lesson_progress")
+          .upsert(
+            {
+              user_id: user.id,
+              lesson_id: firstLesson.id,
+              status: "unlocked",
+            },
+            { onConflict: "user_id,lesson_id", ignoreDuplicates: true },
+          );
+        firstLessonSeeded = true;
+      }
+    }
+  } catch (e) {
+    console.error("advance-level first-lesson unlock failed:", e);
+  }
+
   return NextResponse.json({
     ok: true,
     previous_level: current,
     new_level: next,
     new_level_label: LEVEL_LABEL_HE[next],
+    first_lesson_seeded: firstLessonSeeded,
   });
 }

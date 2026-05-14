@@ -1,6 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import type { SupabaseClient } from "@supabase/supabase-js";
-import type { Course, Unit, Lesson } from "@/types/database";
+import type { Course, CourseLevel, Unit, Lesson } from "@/types/database";
 
 export interface UnitWithLessons extends Unit {
   lessons: Lesson[];
@@ -10,13 +10,17 @@ export interface CourseWithUnits extends Course {
   units: UnitWithLessons[];
 }
 
-export async function getFullCourse(supabase?: SupabaseClient): Promise<CourseWithUnits | null> {
+export async function getFullCourse(
+  level: CourseLevel,
+  supabase?: SupabaseClient,
+): Promise<CourseWithUnits | null> {
   const sb = supabase ?? await createClient();
 
   const { data: course } = await sb
     .from("courses")
     .select("*")
     .eq("is_active", true)
+    .eq("level", level)
     .single();
 
   if (!course) return null;

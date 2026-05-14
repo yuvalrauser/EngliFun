@@ -19,6 +19,8 @@ export interface Profile {
   created_at: string;
 }
 
+export type CourseLevel = "beginner" | "elementary" | "intermediate";
+
 export interface Course {
   id: string;
   title: string;
@@ -26,6 +28,7 @@ export interface Course {
   language_from: string;
   language_to: string;
   is_active: boolean;
+  level: CourseLevel;
   created_at: string;
 }
 

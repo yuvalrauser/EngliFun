@@ -3,14 +3,22 @@ import { createClient } from "@/lib/supabase/server";
 import { getFullCourse } from "@/services/content.server";
 import { getLessonProgressMap, buildLessonStatuses } from "@/services/progress.server";
 import { LearningPath } from "@/components/path/learning-path";
-import type { Profile } from "@/types/database";
+import type { CourseLevel, Profile } from "@/types/database";
 
 export default async function PathPage() {
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) redirect("/login");
 
-  const course = await getFullCourse(supabase);
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("starting_level")
+    .eq("id", user.id)
+    .single();
+
+  const level = (profile?.starting_level as CourseLevel) ?? "beginner";
+
+  const course = await getFullCourse(level, supabase);
   if (!course) {
     return (
       <main className="flex items-center justify-center p-8">
@@ -18,12 +26,6 @@ export default async function PathPage() {
       </main>
     );
   }
-
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("starting_level")
-    .eq("id", user.id)
-    .single();
 
   const progressMap = await getLessonProgressMap(user.id, course.units, supabase);
   const lessonStatuses = buildLessonStatuses(course.units, progressMap);
@@ -44,7 +46,7 @@ export default async function PathPage() {
         units={course.units}
         lessonStatuses={lessonStatusEntries}
         allCompleted={allCompleted}
-        currentLevel={(profile?.starting_level as Profile["starting_level"]) ?? "beginner"}
+        currentLevel={level as Profile["starting_level"]}
       />
     </main>
   );
