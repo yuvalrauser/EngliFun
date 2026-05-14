@@ -67,7 +67,7 @@ export async function getUserProgress(
   return data;
 }
 
-const RPC_TIMEOUT_MS = 8000;
+const RPC_TIMEOUT_MS = 15000;
 
 export async function completeLesson(params: {
   userId: string;
@@ -79,36 +79,53 @@ export async function completeLesson(params: {
   durationSeconds: number;
   exerciseAttempts: ExerciseAttemptPayload[];
 }): Promise<CompleteLessonResult> {
-  if (!params.userId) throw new Error("Not authenticated");
   if (!params.lessonId) throw new Error("Missing lesson id");
 
-  const supabase = createClient();
+  // Go through the Next.js API route instead of supabase-js directly.
+  // The browser-side supabase client occasionally hangs forever on Vercel
+  // (we saw zero outbound POSTs even when /rest/v1/rpc/complete_lesson was
+  // attempted). The server route uses cookies and runs server-side fetch,
+  // which doesn't have that failure mode.
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), RPC_TIMEOUT_MS);
 
-  const rpcPromise = supabase.rpc("complete_lesson", {
-    p_user_id: params.userId,
-    p_lesson_id: params.lessonId,
-    p_total_exercises: params.totalExercises,
-    p_correct_count: params.correctCount,
-    p_hearts_remaining: params.heartsRemaining,
-    p_is_perfect: params.isPerfect,
-    p_duration_seconds: params.durationSeconds,
-    p_exercise_attempts: params.exerciseAttempts,
-  });
-
-  // Hard timeout — without this the UI hangs forever if the network call stalls.
-  const timeoutPromise = new Promise<never>((_, reject) =>
-    setTimeout(
-      () => reject(new Error("שמירת השיעור הסתיימה ב-timeout — נסה שוב")),
-      RPC_TIMEOUT_MS,
-    ),
-  );
-
-  const { data, error } = await Promise.race([rpcPromise, timeoutPromise]);
-
-  if (error) {
-    console.error("complete_lesson RPC error:", error);
-    throw new Error(error.message || "שמירת השיעור נכשלה");
+  let response: Response;
+  try {
+    response = await fetch("/api/complete-lesson", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        lessonId: params.lessonId,
+        totalExercises: params.totalExercises,
+        correctCount: params.correctCount,
+        heartsRemaining: params.heartsRemaining,
+        isPerfect: params.isPerfect,
+        durationSeconds: params.durationSeconds,
+        exerciseAttempts: params.exerciseAttempts,
+      }),
+      signal: controller.signal,
+    });
+  } catch (err) {
+    if ((err as { name?: string })?.name === "AbortError") {
+      throw new Error("שמירת השיעור הסתיימה ב-timeout — נסה שוב");
+    }
+    throw err;
+  } finally {
+    clearTimeout(timer);
   }
 
-  return parseCompleteLessonResult(data);
+  if (!response.ok) {
+    let serverMessage = "";
+    try {
+      const errBody = await response.json();
+      serverMessage = errBody?.error ?? "";
+    } catch {
+      // ignore body parse failures
+    }
+    console.error("complete-lesson route error:", response.status, serverMessage);
+    throw new Error(serverMessage || `שמירת השיעור נכשלה (${response.status})`);
+  }
+
+  const payload = (await response.json()) as { result: unknown };
+  return parseCompleteLessonResult(payload.result);
 }
