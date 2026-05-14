@@ -118,7 +118,11 @@ export function LessonComplete() {
       }
 
       setSaveStatus("success");
-      router.refresh();
+      // Intentionally NO router.refresh() here: it would re-render the
+      // /lesson/[id] server component, produce a new `exercises` array
+      // reference, and risk knocking the lesson engine back to its intro
+      // state. /path and /dashboard are server components that already
+      // fetch fresh data when the user navigates to them.
 
       // Best-effort fresh profile sync — never blocks the success UI.
       const supabase = createClient();
@@ -139,7 +143,7 @@ export function LessonComplete() {
       setErrorMsg(err instanceof Error ? err.message : "שגיאה בשמירת תוצאות השיעור");
       setSaveStatus("error");
     }
-  }, [profile, router, setProfile]);
+  }, [profile, setProfile]);
 
   useEffect(() => {
     if (autoSaveStartedRef.current) return;
