@@ -76,27 +76,9 @@ export function LessonComplete() {
       const xpBefore = profile?.total_xp ?? 0;
       const result = await completeLesson(snapshot);
 
+      // Update XP + success state IMMEDIATELY from the RPC result.
+      // Profile re-fetch happens in the background and must not block the UI.
       setXp(result.xp_earned);
-
-      const { data: freshProfile, error: profileError } = await supabase
-        .from("profiles")
-        .select("*")
-        .eq("id", user.id)
-        .single();
-
-      if (profileError) {
-        console.error("Profile refresh after lesson failed:", profileError);
-        if (profile) {
-          setProfile({
-            ...profile,
-            total_xp: result.total_xp,
-            current_streak: result.current_streak,
-            longest_streak: Math.max(profile.longest_streak, result.current_streak),
-          });
-        }
-      } else {
-        setProfile(freshProfile as Profile);
-      }
 
       const levelBefore = getLevel(xpBefore);
       const levelAfter = getLevel(result.total_xp);
@@ -104,8 +86,32 @@ export function LessonComplete() {
         setLevelUp({ level: levelAfter, label: getLevelLabel(result.total_xp) });
       }
 
+      if (profile) {
+        setProfile({
+          ...profile,
+          total_xp: result.total_xp,
+          current_streak: result.current_streak,
+          longest_streak: Math.max(profile.longest_streak, result.current_streak),
+          last_activity_date: new Date().toISOString().slice(0, 10),
+        });
+      }
+
       setSaveStatus("success");
       router.refresh();
+
+      // Best-effort fresh profile sync — never blocks the success UI.
+      supabase
+        .from("profiles")
+        .select("*")
+        .eq("id", user.id)
+        .single()
+        .then(({ data: freshProfile, error: profileError }) => {
+          if (profileError) {
+            console.warn("Background profile refresh failed:", profileError);
+            return;
+          }
+          if (freshProfile) setProfile(freshProfile as Profile);
+        });
     } catch (err) {
       console.error("Failed to save lesson:", err);
       setErrorMsg(err instanceof Error ? err.message : "שגיאה בשמירת תוצאות השיעור");

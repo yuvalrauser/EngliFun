@@ -50,6 +50,10 @@ export const useLessonStore = create<LessonStore>((set, get) => ({
 
   submitCorrect: (answer) => {
     const s = get();
+    // Ignore re-submits while showing feedback — the user must click "המשך"
+    // to advance, otherwise they could fix a wrong answer in place and lose
+    // the mistake record while still losing hearts.
+    if (s.state !== "active_question") return;
     const exercise = s.exercises[s.currentIndex];
     set({
       score: s.score + 1,
@@ -72,6 +76,7 @@ export const useLessonStore = create<LessonStore>((set, get) => ({
 
   submitWrong: (answer, correctAnswer, explanation, isNearMiss) => {
     const s = get();
+    if (s.state !== "active_question") return;
     const exercise = s.exercises[s.currentIndex];
     const newHearts = s.hearts - 1;
     set({

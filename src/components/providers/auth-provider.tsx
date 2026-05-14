@@ -1,14 +1,27 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { useUserStore } from "@/stores/userStore";
 import type { Profile } from "@/types/database";
 
-export function AuthProvider({ children }: { children: React.ReactNode }) {
+interface AuthProviderProps {
+  children: React.ReactNode;
+  initialProfile?: Profile | null;
+}
+
+export function AuthProvider({ children, initialProfile = null }: AuthProviderProps) {
   const router = useRouter();
   const { setProfile, setLoading } = useUserStore();
+  const hydratedRef = useRef(false);
+
+  // Hydrate Zustand once with the server-fetched profile so the header pills
+  // render real XP/streak on the first paint.
+  if (!hydratedRef.current) {
+    hydratedRef.current = true;
+    useUserStore.setState({ profile: initialProfile, isLoading: false });
+  }
 
   useEffect(() => {
     const supabase = createClient();
@@ -27,7 +40,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         .eq("id", user.id)
         .single();
 
-      setProfile(profile as Profile | null);
+      if (profile) setProfile(profile as Profile);
       setLoading(false);
     }
 

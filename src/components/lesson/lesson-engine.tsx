@@ -44,7 +44,8 @@ export function LessonEngine({ lesson, exercises }: LessonEngineProps) {
     return <LessonFailed />;
   }
 
-  // Active question / feedback states
+  // Active question / feedback states.
+  // ExerciseRenderer locks itself when state is in feedback — no extra wrapper needed.
   return (
     <div className="flex flex-col min-h-screen">
       <LessonHeader />
