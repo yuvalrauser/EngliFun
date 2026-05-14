@@ -75,12 +75,11 @@ export function LessonComplete() {
       setSaveStatus("saving");
       setErrorMsg("");
 
-      const supabase = createClient();
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
-
-      if (!user) {
+      // Use the user id from the Zustand profile that was server-hydrated by
+      // AuthLayout — calling supabase.auth.getUser() here can hang on a stale
+      // cookie refresh, which was the actual root cause of the "שומר" lockup.
+      const userId = profile?.id;
+      if (!userId) {
         throw new Error("צריך להתחבר מחדש כדי לשמור את השיעור");
       }
 
@@ -88,14 +87,14 @@ export function LessonComplete() {
       const xpBefore = profile?.total_xp ?? 0;
       // Use console.error so the line shows up even when info/log are filtered out.
       console.error("[complete-lesson] STEP-1 sending snapshot", {
-        userId: user.id,
+        userId,
         lessonId: snapshot.lessonId,
         totalExercises: snapshot.totalExercises,
         correctCount: snapshot.correctCount,
         heartsRemaining: snapshot.heartsRemaining,
         attempts: snapshot.exerciseAttempts.length,
       });
-      const result = await completeLesson({ ...snapshot, userId: user.id });
+      const result = await completeLesson({ ...snapshot, userId });
       console.error("[complete-lesson] STEP-2 rpc returned", result);
 
       // Update XP + success state IMMEDIATELY from the RPC result.
@@ -122,10 +121,11 @@ export function LessonComplete() {
       router.refresh();
 
       // Best-effort fresh profile sync — never blocks the success UI.
+      const supabase = createClient();
       supabase
         .from("profiles")
         .select("*")
-        .eq("id", user.id)
+        .eq("id", userId)
         .single()
         .then(({ data: freshProfile, error: profileError }) => {
           if (profileError) {
