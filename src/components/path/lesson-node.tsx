@@ -11,10 +11,10 @@ interface LessonNodeProps {
 }
 
 export function LessonNode({ lesson, index, totalInUnit }: LessonNodeProps) {
+  // Completed lessons are intentionally NOT clickable — replays were letting
+  // the user farm XP on the same lesson over and over.
   const isPlayable =
-    lesson.status === "current" ||
-    lesson.status === "unlocked" ||
-    lesson.status === "completed";
+    lesson.status === "current" || lesson.status === "unlocked";
   const isCurrent = lesson.status === "current";
   const isCompleted = lesson.status === "completed";
   const isLocked = lesson.status === "locked";
