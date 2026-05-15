@@ -1,0 +1,25 @@
+-- ============================================================
+-- 017_create_beginner_unit_8.sql
+--
+-- Phase 5 / Batch 6: Create Beginner Unit 8 ("פעלים נפוצים").
+-- 5 lessons, 50 exercises, 164 options, 40 pair_group_ids.
+-- Purely ADDITIVE.
+--
+-- ID convention:
+--   Unit:           00000000-0000-0000-0001-000000000008
+--   Lessons:        00000000-0000-0008-0002-000000000071..075
+--   Exercises:      00000000-0000-0008-0003-000000000351..400
+--   Pair groups:    b0000000-0008-0004-0000-000000000281..320
+--   Continuity:     unlock 00000000-0000-0008-0002-000000000071
+--                   for users who completed
+--                   00000000-0000-0008-0002-000000000065 (Unit 7 checkpoint)
+--
+-- All verbs in simple-present 1st-person; don't/do introduced as
+-- negation marker. No matching pair translates do/don't to a Hebrew
+-- pronoun or meta-explanation.
+--
+-- Units 1–7 NOT touched. complete_lesson RPC NOT touched.
+-- ============================================================
+
+-- (Applied via MCP in 4 chunks; see git log for the live migration sequence.)
+-- Chunks: 017a (unit+lessons), 017b (L0+L1), 017c (L2+L3), 017d (L4+continuity).

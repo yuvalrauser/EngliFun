@@ -1,0 +1,1222 @@
+{
+  "unit": {
+    "title_he": "אוכל, שתייה ובית",
+    "title_en": "Food, Drinks & Home",
+    "objective_he": "ללמוד מילים נפוצות על אוכל, שתייה ובית, ולבנות משפטים שימושיים קצרים.",
+    "icon_emoji": "🍎",
+    "color_hex": "#FF8A00",
+    "order_index": 8
+  },
+  "lessons": [
+    {
+      "order_index": 0,
+      "title_he": "Basic Food",
+      "description_he": "אוכל בסיסי: bread, rice, apple, egg, cheese",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "bread",
+          "prompt_language": "en",
+          "explanation_he": "bread = לחם.",
+          "options": [
+            {
+              "text": "לחם",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "אורז",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "תפוח",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "גבינה",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "apple",
+          "prompt_language": "en",
+          "explanation_he": "apple = תפוח.",
+          "options": [
+            {
+              "text": "תפוח",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "ביצה",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "לחם",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אורז",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "cheese",
+          "prompt_language": "en",
+          "explanation_he": "cheese = גבינה.",
+          "options": [
+            {
+              "text": "גבינה",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "לחם",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "ביצה",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "חלב",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור אני אוכל לחם: I eat ___.",
+          "prompt_language": "he",
+          "correct_answer": "bread",
+          "explanation_he": "I eat bread. = אני אוכל/ת לחם.",
+          "options": [
+            {
+              "text": "bread",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "water",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "coffee",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור אני רוצה תפוח: I want an ___.",
+          "prompt_language": "he",
+          "correct_answer": "apple",
+          "explanation_he": "I want an apple. = אני רוצה תפוח.",
+          "options": [
+            {
+              "text": "apple",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "egg",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "rice",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני אוכל אורז.",
+          "prompt_language": "he",
+          "correct_answer": "I eat rice.",
+          "correct_answer_alternatives": [
+            "I eat rice"
+          ],
+          "word_bank_words": [
+            "I",
+            "eat",
+            "rice.",
+            "bread.",
+            "drink"
+          ],
+          "explanation_he": "I eat rice. = אני אוכל/ת אורז."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני רוצה תפוח.",
+          "prompt_language": "he",
+          "correct_answer": "I want an apple.",
+          "correct_answer_alternatives": [
+            "I want an apple"
+          ],
+          "word_bank_words": [
+            "I",
+            "want",
+            "an",
+            "apple.",
+            "egg.",
+            "water."
+          ],
+          "explanation_he": "I want an apple. = אני רוצה תפוח."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את המאכלים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "מילים בסיסיות על אוכל.",
+          "pairs": [
+            {
+              "en": "bread",
+              "he": "לחם"
+            },
+            {
+              "en": "rice",
+              "he": "אורז"
+            },
+            {
+              "en": "apple",
+              "he": "תפוח"
+            },
+            {
+              "en": "cheese",
+              "he": "גבינה"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את המשפטים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "משפטים קצרים עם אוכל.",
+          "pairs": [
+            {
+              "en": "I eat bread",
+              "he": "אני אוכל לחם"
+            },
+            {
+              "en": "I eat rice",
+              "he": "אני אוכל אורז"
+            },
+            {
+              "en": "I want an apple",
+              "he": "אני רוצה תפוח"
+            },
+            {
+              "en": "I like cheese",
+              "he": "אני אוהב גבינה"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'לחם' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "bread",
+          "correct_answer_alternatives": [
+            "Bread",
+            "bread."
+          ],
+          "explanation_he": "לחם באנגלית הוא bread."
+        }
+      ]
+    },
+    {
+      "order_index": 1,
+      "title_he": "Drinks",
+      "description_he": "שתייה: water, coffee, tea, milk, juice",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "water",
+          "prompt_language": "en",
+          "explanation_he": "water = מים.",
+          "options": [
+            {
+              "text": "מים",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "קפה",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "תה",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "חלב",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "coffee",
+          "prompt_language": "en",
+          "explanation_he": "coffee = קפה.",
+          "options": [
+            {
+              "text": "קפה",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "מים",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "מיץ",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "תה",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "milk",
+          "prompt_language": "en",
+          "explanation_he": "milk = חלב.",
+          "options": [
+            {
+              "text": "חלב",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "מיץ",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "מים",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "גבינה",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור אני שותה מים: I drink ___.",
+          "prompt_language": "he",
+          "correct_answer": "water",
+          "explanation_he": "I drink water. = אני שותה מים.",
+          "options": [
+            {
+              "text": "water",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "bread",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "rice",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור אני רוצה תה: I want ___.",
+          "prompt_language": "he",
+          "correct_answer": "tea",
+          "explanation_he": "I want tea. = אני רוצה תה.",
+          "options": [
+            {
+              "text": "tea",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "egg",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "room",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני שותה חלב.",
+          "prompt_language": "he",
+          "correct_answer": "I drink milk.",
+          "correct_answer_alternatives": [
+            "I drink milk"
+          ],
+          "word_bank_words": [
+            "I",
+            "drink",
+            "milk.",
+            "coffee.",
+            "eat"
+          ],
+          "explanation_he": "I drink milk. = אני שותה חלב."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני רוצה מיץ.",
+          "prompt_language": "he",
+          "correct_answer": "I want juice.",
+          "correct_answer_alternatives": [
+            "I want juice"
+          ],
+          "word_bank_words": [
+            "I",
+            "want",
+            "juice.",
+            "tea.",
+            "bread."
+          ],
+          "explanation_he": "I want juice. = אני רוצה מיץ."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את השתייה לתרגום שלה",
+          "prompt_language": "he",
+          "explanation_he": "מילים בסיסיות על שתייה.",
+          "pairs": [
+            {
+              "en": "water",
+              "he": "מים"
+            },
+            {
+              "en": "coffee",
+              "he": "קפה"
+            },
+            {
+              "en": "tea",
+              "he": "תה"
+            },
+            {
+              "en": "milk",
+              "he": "חלב"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את המשפטים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "משפטים קצרים עם שתייה.",
+          "pairs": [
+            {
+              "en": "I drink water",
+              "he": "אני שותה מים"
+            },
+            {
+              "en": "I drink coffee",
+              "he": "אני שותה קפה"
+            },
+            {
+              "en": "I want tea",
+              "he": "אני רוצה תה"
+            },
+            {
+              "en": "I like juice",
+              "he": "אני אוהב מיץ"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'אני שותה מים' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "I drink water",
+          "correct_answer_alternatives": [
+            "I drink water.",
+            "i drink water"
+          ],
+          "explanation_he": "אני שותה מים באנגלית הוא I drink water."
+        }
+      ]
+    },
+    {
+      "order_index": 2,
+      "title_he": "Home Rooms",
+      "description_he": "חדרים בבית: room, kitchen, bedroom, bathroom",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "kitchen",
+          "prompt_language": "en",
+          "explanation_he": "kitchen = מטבח.",
+          "options": [
+            {
+              "text": "מטבח",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "חדר",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "חדר שינה",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "מקלחת",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "bedroom",
+          "prompt_language": "en",
+          "explanation_he": "bedroom = חדר שינה.",
+          "options": [
+            {
+              "text": "חדר שינה",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "מטבח",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "בית",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "שולחן",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "house",
+          "prompt_language": "en",
+          "explanation_he": "house = בית.",
+          "options": [
+            {
+              "text": "בית",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "חדר",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "מטבח",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "כיסא",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור אני במטבח: I am in the ___.",
+          "prompt_language": "he",
+          "correct_answer": "kitchen",
+          "explanation_he": "I am in the kitchen. = אני במטבח.",
+          "options": [
+            {
+              "text": "kitchen",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "bed",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "chair",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור זה הבית שלי: It is my ___.",
+          "prompt_language": "he",
+          "correct_answer": "house",
+          "explanation_he": "It is my house. = זה הבית שלי.",
+          "options": [
+            {
+              "text": "house",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "food",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "milk",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני במטבח.",
+          "prompt_language": "he",
+          "correct_answer": "I am in the kitchen.",
+          "correct_answer_alternatives": [
+            "I am in the kitchen",
+            "I'm in the kitchen",
+            "I'm in the kitchen."
+          ],
+          "word_bank_words": [
+            "I",
+            "am",
+            "in",
+            "the",
+            "kitchen.",
+            "bedroom."
+          ],
+          "explanation_he": "I am in the kitchen. = אני במטבח."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: זה הבית שלי.",
+          "prompt_language": "he",
+          "correct_answer": "It is my house.",
+          "correct_answer_alternatives": [
+            "It is my house",
+            "It's my house",
+            "It's my house."
+          ],
+          "word_bank_words": [
+            "It",
+            "is",
+            "my",
+            "house.",
+            "room.",
+            "food."
+          ],
+          "explanation_he": "It is my house. = זה הבית שלי."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את החדרים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "חדרים ומקומות בבית.",
+          "pairs": [
+            {
+              "en": "room",
+              "he": "חדר"
+            },
+            {
+              "en": "kitchen",
+              "he": "מטבח"
+            },
+            {
+              "en": "bedroom",
+              "he": "חדר שינה"
+            },
+            {
+              "en": "bathroom",
+              "he": "חדר רחצה"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את המשפטים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "משפטים עם in the.",
+          "pairs": [
+            {
+              "en": "in the kitchen",
+              "he": "במטבח"
+            },
+            {
+              "en": "in the bedroom",
+              "he": "בחדר השינה"
+            },
+            {
+              "en": "my house",
+              "he": "הבית שלי"
+            },
+            {
+              "en": "my room",
+              "he": "החדר שלי"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'מטבח' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "kitchen",
+          "correct_answer_alternatives": [
+            "Kitchen",
+            "kitchen."
+          ],
+          "explanation_he": "מטבח באנגלית הוא kitchen."
+        }
+      ]
+    },
+    {
+      "order_index": 3,
+      "title_he": "Home Objects",
+      "description_he": "חפצים בבית ושימוש ב-in the",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "table",
+          "prompt_language": "en",
+          "explanation_he": "table = שולחן.",
+          "options": [
+            {
+              "text": "שולחן",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "כיסא",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "מיטה",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "דלת",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "chair",
+          "prompt_language": "en",
+          "explanation_he": "chair = כיסא.",
+          "options": [
+            {
+              "text": "כיסא",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "שולחן",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "חדר",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "מפתח",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "bed",
+          "prompt_language": "en",
+          "explanation_he": "bed = מיטה.",
+          "options": [
+            {
+              "text": "מיטה",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "כיסא",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "טלפון",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "חלון",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור השולחן במטבח: The table is in the ___.",
+          "prompt_language": "he",
+          "correct_answer": "kitchen",
+          "explanation_he": "The table is in the kitchen. = השולחן במטבח.",
+          "options": [
+            {
+              "text": "kitchen",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "apple",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "water",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור המיטה בחדר השינה: The bed is in the ___.",
+          "prompt_language": "he",
+          "correct_answer": "bedroom",
+          "explanation_he": "The bed is in the bedroom. = המיטה בחדר השינה.",
+          "options": [
+            {
+              "text": "bedroom",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "table",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "coffee",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: השולחן במטבח.",
+          "prompt_language": "he",
+          "correct_answer": "The table is in the kitchen.",
+          "correct_answer_alternatives": [
+            "The table is in the kitchen"
+          ],
+          "word_bank_words": [
+            "The",
+            "table",
+            "is",
+            "in",
+            "the",
+            "kitchen.",
+            "bed."
+          ],
+          "explanation_he": "The table is in the kitchen. = השולחן במטבח."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: הכיסא בחדר.",
+          "prompt_language": "he",
+          "correct_answer": "The chair is in the room.",
+          "correct_answer_alternatives": [
+            "The chair is in the room"
+          ],
+          "word_bank_words": [
+            "The",
+            "chair",
+            "is",
+            "in",
+            "the",
+            "room.",
+            "kitchen."
+          ],
+          "explanation_he": "The chair is in the room. = הכיסא בחדר."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את החפצים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "חפצים בסיסיים בבית.",
+          "pairs": [
+            {
+              "en": "table",
+              "he": "שולחן"
+            },
+            {
+              "en": "chair",
+              "he": "כיסא"
+            },
+            {
+              "en": "bed",
+              "he": "מיטה"
+            },
+            {
+              "en": "door",
+              "he": "דלת"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את המשפטים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "משפטים עם חפצים בבית.",
+          "pairs": [
+            {
+              "en": "The table is in the kitchen",
+              "he": "השולחן במטבח"
+            },
+            {
+              "en": "The bed is in the bedroom",
+              "he": "המיטה בחדר השינה"
+            },
+            {
+              "en": "The chair is in the room",
+              "he": "הכיסא בחדר"
+            },
+            {
+              "en": "The door is white",
+              "he": "הדלת לבנה"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'שולחן' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "table",
+          "correct_answer_alternatives": [
+            "Table",
+            "table."
+          ],
+          "explanation_he": "שולחן באנגלית הוא table."
+        }
+      ]
+    },
+    {
+      "order_index": 4,
+      "title_he": "Checkpoint: Food / Drinks / Home Review",
+      "description_he": "חזרה על אוכל, שתייה ובית",
+      "is_checkpoint": true,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "apple",
+          "prompt_language": "en",
+          "explanation_he": "apple = תפוח.",
+          "options": [
+            {
+              "text": "תפוח",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "לחם",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "קפה",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "שולחן",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "I drink milk.",
+          "prompt_language": "en",
+          "explanation_he": "I drink milk. = אני שותה חלב.",
+          "options": [
+            {
+              "text": "אני שותה חלב.",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "אני אוכל חלב.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אני רוצה שולחן.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אני שותה לחם.",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "bedroom",
+          "prompt_language": "en",
+          "explanation_he": "bedroom = חדר שינה.",
+          "options": [
+            {
+              "text": "חדר שינה",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "מטבח",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "שולחן",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "כיסא",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני רוצה תפוח.",
+          "prompt_language": "he",
+          "correct_answer": "I want an apple.",
+          "correct_answer_alternatives": [
+            "I want an apple"
+          ],
+          "word_bank_words": [
+            "I",
+            "want",
+            "an",
+            "apple.",
+            "milk.",
+            "table."
+          ],
+          "explanation_he": "I want an apple. = אני רוצה תפוח."
+        },
+        {
+          "order_index": 4,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני שותה מים.",
+          "prompt_language": "he",
+          "correct_answer": "I drink water.",
+          "correct_answer_alternatives": [
+            "I drink water"
+          ],
+          "word_bank_words": [
+            "I",
+            "drink",
+            "water.",
+            "eat",
+            "bread."
+          ],
+          "explanation_he": "I drink water. = אני שותה מים."
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני במטבח.",
+          "prompt_language": "he",
+          "correct_answer": "I am in the kitchen.",
+          "correct_answer_alternatives": [
+            "I am in the kitchen",
+            "I'm in the kitchen",
+            "I'm in the kitchen."
+          ],
+          "word_bank_words": [
+            "I",
+            "am",
+            "in",
+            "the",
+            "kitchen.",
+            "bedroom."
+          ],
+          "explanation_he": "I am in the kitchen. = אני במטבח."
+        },
+        {
+          "order_index": 6,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'גבינה' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "cheese",
+          "correct_answer_alternatives": [
+            "Cheese",
+            "cheese."
+          ],
+          "explanation_he": "גבינה באנגלית הוא cheese."
+        },
+        {
+          "order_index": 7,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'השולחן במטבח' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "The table is in the kitchen",
+          "correct_answer_alternatives": [
+            "The table is in the kitchen.",
+            "the table is in the kitchen"
+          ],
+          "explanation_he": "השולחן במטבח באנגלית הוא The table is in the kitchen."
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם אוכל ושתייה לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "חזרה על אוכל ושתייה.",
+          "pairs": [
+            {
+              "en": "bread",
+              "he": "לחם"
+            },
+            {
+              "en": "apple",
+              "he": "תפוח"
+            },
+            {
+              "en": "water",
+              "he": "מים"
+            },
+            {
+              "en": "coffee",
+              "he": "קפה"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "matching",
+          "prompt_text": "התאם בית וחפצים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "חזרה על בית וחפצים.",
+          "pairs": [
+            {
+              "en": "kitchen",
+              "he": "מטבח"
+            },
+            {
+              "en": "bedroom",
+              "he": "חדר שינה"
+            },
+            {
+              "en": "table",
+              "he": "שולחן"
+            },
+            {
+              "en": "chair",
+              "he": "כיסא"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

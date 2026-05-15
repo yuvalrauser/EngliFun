@@ -1,0 +1,1214 @@
+{
+  "unit": {
+    "title_he": "פעלים נפוצים",
+    "title_en": "Common Verbs",
+    "objective_he": "ללמוד פעלים בסיסיים בזמן הווה פשוט ולבנות משפטים קצרים כמו אני אוכל, אני רוצה ואני צריך.",
+    "icon_emoji": "🏃",
+    "color_hex": "#58CC02",
+    "order_index": 7
+  },
+  "lessons": [
+    {
+      "order_index": 0,
+      "title_he": "Eat / Drink / Like",
+      "description_he": "פעלים בסיסיים: eat, drink, like",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "eat",
+          "prompt_language": "en",
+          "explanation_he": "eat = לאכול.",
+          "options": [
+            {
+              "text": "לאכול",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "לשתות",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "לאהוב",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "לקרוא",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "drink",
+          "prompt_language": "en",
+          "explanation_he": "drink = לשתות.",
+          "options": [
+            {
+              "text": "לשתות",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "לאכול",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "לכתוב",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "ללכת",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "I like water.",
+          "prompt_language": "en",
+          "explanation_he": "I like water. = אני אוהב/ת מים.",
+          "options": [
+            {
+              "text": "אני אוהב/ת מים.",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "אני שותה מים.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אני רוצה מים.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אני אוכל לחם.",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור אני אוכל לחם: I ___ bread.",
+          "prompt_language": "he",
+          "correct_answer": "eat",
+          "explanation_he": "I eat bread. = אני אוכל/ת לחם.",
+          "options": [
+            {
+              "text": "eat",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "drink",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "read",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור אני שותה מים: I ___ water.",
+          "prompt_language": "he",
+          "correct_answer": "drink",
+          "explanation_he": "I drink water. = אני שותה מים.",
+          "options": [
+            {
+              "text": "drink",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "eat",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "write",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני אוכל לחם.",
+          "prompt_language": "he",
+          "correct_answer": "I eat bread.",
+          "correct_answer_alternatives": [
+            "I eat bread"
+          ],
+          "word_bank_words": [
+            "I",
+            "eat",
+            "bread.",
+            "drink",
+            "water."
+          ],
+          "explanation_he": "I eat bread. = אני אוכל/ת לחם."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני אוהב מים.",
+          "prompt_language": "he",
+          "correct_answer": "I like water.",
+          "correct_answer_alternatives": [
+            "I like water"
+          ],
+          "word_bank_words": [
+            "I",
+            "like",
+            "water.",
+            "eat",
+            "bread."
+          ],
+          "explanation_he": "I like water. = אני אוהב/ת מים."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את הפעלים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "פעלים בסיסיים באנגלית.",
+          "pairs": [
+            {
+              "en": "eat",
+              "he": "לאכול"
+            },
+            {
+              "en": "drink",
+              "he": "לשתות"
+            },
+            {
+              "en": "like",
+              "he": "לאהוב"
+            },
+            {
+              "en": "water",
+              "he": "מים"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את המשפטים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "משפטים פשוטים עם I.",
+          "pairs": [
+            {
+              "en": "I eat bread",
+              "he": "אני אוכל לחם"
+            },
+            {
+              "en": "I drink water",
+              "he": "אני שותה מים"
+            },
+            {
+              "en": "I like water",
+              "he": "אני אוהב מים"
+            },
+            {
+              "en": "I like bread",
+              "he": "אני אוהב לחם"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'אני שותה מים' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "I drink water",
+          "correct_answer_alternatives": [
+            "I drink water.",
+            "i drink water"
+          ],
+          "explanation_he": "אני שותה מים באנגלית הוא I drink water."
+        }
+      ]
+    },
+    {
+      "order_index": 1,
+      "title_he": "Read / Write / Want",
+      "description_he": "לקרוא, לכתוב ולרצות",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "read",
+          "prompt_language": "en",
+          "explanation_he": "read = לקרוא.",
+          "options": [
+            {
+              "text": "לקרוא",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "לכתוב",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "לרצות",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "לבוא",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "write",
+          "prompt_language": "en",
+          "explanation_he": "write = לכתוב.",
+          "options": [
+            {
+              "text": "לכתוב",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "לקרוא",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "ללכת",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "לשתות",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "I want tea.",
+          "prompt_language": "en",
+          "explanation_he": "I want tea. = אני רוצה תה.",
+          "options": [
+            {
+              "text": "אני רוצה תה.",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "אני כותב תה.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אני קורא תה.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אני שותה לחם.",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור אני קורא ספר: I ___ a book.",
+          "prompt_language": "he",
+          "correct_answer": "read",
+          "explanation_he": "I read a book. = אני קורא/ת ספר.",
+          "options": [
+            {
+              "text": "read",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "write",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "want",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור אני רוצה תה: I ___ tea.",
+          "prompt_language": "he",
+          "correct_answer": "want",
+          "explanation_he": "I want tea. = אני רוצה תה.",
+          "options": [
+            {
+              "text": "want",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "read",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "come",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני קורא ספר.",
+          "prompt_language": "he",
+          "correct_answer": "I read a book.",
+          "correct_answer_alternatives": [
+            "I read a book"
+          ],
+          "word_bank_words": [
+            "I",
+            "read",
+            "a",
+            "book.",
+            "write",
+            "tea."
+          ],
+          "explanation_he": "I read a book. = אני קורא/ת ספר."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני רוצה תה.",
+          "prompt_language": "he",
+          "correct_answer": "I want tea.",
+          "correct_answer_alternatives": [
+            "I want tea"
+          ],
+          "word_bank_words": [
+            "I",
+            "want",
+            "tea.",
+            "read",
+            "book."
+          ],
+          "explanation_he": "I want tea. = אני רוצה תה."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את הפעלים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "read = לקרוא, write = לכתוב, want = לרצות.",
+          "pairs": [
+            {
+              "en": "read",
+              "he": "לקרוא"
+            },
+            {
+              "en": "write",
+              "he": "לכתוב"
+            },
+            {
+              "en": "want",
+              "he": "לרצות"
+            },
+            {
+              "en": "book",
+              "he": "ספר"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את המשפטים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "משפטים עם read, write ו-want.",
+          "pairs": [
+            {
+              "en": "I read a book",
+              "he": "אני קורא ספר"
+            },
+            {
+              "en": "I write",
+              "he": "אני כותב"
+            },
+            {
+              "en": "I want tea",
+              "he": "אני רוצה תה"
+            },
+            {
+              "en": "I want water",
+              "he": "אני רוצה מים"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'אני רוצה מים' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "I want water",
+          "correct_answer_alternatives": [
+            "I want water.",
+            "i want water"
+          ],
+          "explanation_he": "אני רוצה מים באנגלית הוא I want water."
+        }
+      ]
+    },
+    {
+      "order_index": 2,
+      "title_he": "Go / Come / Have",
+      "description_he": "ללכת, לבוא ויש לי",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "go",
+          "prompt_language": "en",
+          "explanation_he": "go = ללכת.",
+          "options": [
+            {
+              "text": "ללכת",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "לבוא",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "יש לי",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "צריך",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "come",
+          "prompt_language": "en",
+          "explanation_he": "come = לבוא.",
+          "options": [
+            {
+              "text": "לבוא",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "ללכת",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "לכתוב",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "לאכול",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "I have a book.",
+          "prompt_language": "en",
+          "explanation_he": "I have a book. = יש לי ספר.",
+          "options": [
+            {
+              "text": "יש לי ספר.",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "אני ספר.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אני רוצה ספר.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אני קורא ספר.",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור אני הולך לבית: I ___ home.",
+          "prompt_language": "he",
+          "correct_answer": "go",
+          "explanation_he": "I go home. = אני הולך/ת לבית.",
+          "options": [
+            {
+              "text": "go",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "come",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "have",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור יש לי ספר: I ___ a book.",
+          "prompt_language": "he",
+          "correct_answer": "have",
+          "explanation_he": "I have a book. = יש לי ספר.",
+          "options": [
+            {
+              "text": "have",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "want",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "drink",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני הולך הביתה.",
+          "prompt_language": "he",
+          "correct_answer": "I go home.",
+          "correct_answer_alternatives": [
+            "I go home"
+          ],
+          "word_bank_words": [
+            "I",
+            "go",
+            "home.",
+            "come",
+            "book."
+          ],
+          "explanation_he": "I go home. = אני הולך/ת הביתה."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: יש לי ספר.",
+          "prompt_language": "he",
+          "correct_answer": "I have a book.",
+          "correct_answer_alternatives": [
+            "I have a book"
+          ],
+          "word_bank_words": [
+            "I",
+            "have",
+            "a",
+            "book.",
+            "want",
+            "water."
+          ],
+          "explanation_he": "I have a book. = יש לי ספר."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את הפעלים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "go = ללכת, come = לבוא, have = יש לי / להחזיק.",
+          "pairs": [
+            {
+              "en": "go",
+              "he": "ללכת"
+            },
+            {
+              "en": "come",
+              "he": "לבוא"
+            },
+            {
+              "en": "have",
+              "he": "יש לי"
+            },
+            {
+              "en": "home",
+              "he": "בית"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את המשפטים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "משפטים פשוטים עם go, come ו-have.",
+          "pairs": [
+            {
+              "en": "I go home",
+              "he": "אני הולך הביתה"
+            },
+            {
+              "en": "I come here",
+              "he": "אני בא לכאן"
+            },
+            {
+              "en": "I have a book",
+              "he": "יש לי ספר"
+            },
+            {
+              "en": "I have water",
+              "he": "יש לי מים"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'יש לי ספר' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "I have a book",
+          "correct_answer_alternatives": [
+            "I have a book.",
+            "i have a book"
+          ],
+          "explanation_he": "יש לי ספר באנגלית הוא I have a book."
+        }
+      ]
+    },
+    {
+      "order_index": 3,
+      "title_he": "Need / Do / Don't",
+      "description_he": "צריך, לעשות ושלילה עם don't",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "need",
+          "prompt_language": "en",
+          "explanation_he": "need = צריך.",
+          "options": [
+            {
+              "text": "צריך",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "רוצה",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "עושה",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "שותה",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "I don't drink coffee.",
+          "prompt_language": "en",
+          "explanation_he": "I don't drink coffee. = אני לא שותה קפה.",
+          "options": [
+            {
+              "text": "אני לא שותה קפה.",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "אני שותה קפה.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אני רוצה קפה.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אני לא אוכל לחם.",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "do",
+          "prompt_language": "en",
+          "explanation_he": "do = לעשות.",
+          "options": [
+            {
+              "text": "לעשות",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "צריך",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "לא",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "לבוא",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור אני צריך מים: I ___ water.",
+          "prompt_language": "he",
+          "correct_answer": "need",
+          "explanation_he": "I need water. = אני צריך/ה מים.",
+          "options": [
+            {
+              "text": "need",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "like",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "write",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור אני לא שותה קפה: I ___ drink coffee.",
+          "prompt_language": "he",
+          "correct_answer": "don't",
+          "explanation_he": "I don't drink coffee. = אני לא שותה קפה.",
+          "options": [
+            {
+              "text": "don't",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "do",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "want",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני צריך מים.",
+          "prompt_language": "he",
+          "correct_answer": "I need water.",
+          "correct_answer_alternatives": [
+            "I need water"
+          ],
+          "word_bank_words": [
+            "I",
+            "need",
+            "water.",
+            "want",
+            "coffee."
+          ],
+          "explanation_he": "I need water. = אני צריך/ה מים."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני לא שותה קפה.",
+          "prompt_language": "he",
+          "correct_answer": "I don't drink coffee.",
+          "correct_answer_alternatives": [
+            "I don't drink coffee",
+            "I do not drink coffee"
+          ],
+          "word_bank_words": [
+            "I",
+            "don't",
+            "drink",
+            "coffee.",
+            "eat",
+            "bread."
+          ],
+          "explanation_he": "I don't drink coffee. = אני לא שותה קפה."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את המילים לתרגום שלהן",
+          "prompt_language": "he",
+          "explanation_he": "מילים שימושיות מהשיעור בלי להפוך do/don't לתרגום מטעה.",
+          "pairs": [
+            {
+              "en": "need",
+              "he": "צריך"
+            },
+            {
+              "en": "coffee",
+              "he": "קפה"
+            },
+            {
+              "en": "water",
+              "he": "מים"
+            },
+            {
+              "en": "bread",
+              "he": "לחם"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את המשפטים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "משפטים חיוביים ושליליים עם פעלים בסיסיים.",
+          "pairs": [
+            {
+              "en": "I need water",
+              "he": "אני צריך מים"
+            },
+            {
+              "en": "I do this",
+              "he": "אני עושה את זה"
+            },
+            {
+              "en": "I eat bread",
+              "he": "אני אוכל לחם"
+            },
+            {
+              "en": "I drink coffee",
+              "he": "אני שותה קפה"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'אני לא אוכל לחם' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "I don't eat bread",
+          "correct_answer_alternatives": [
+            "I don't eat bread.",
+            "I do not eat bread",
+            "i don't eat bread"
+          ],
+          "explanation_he": "אני לא אוכל לחם באנגלית הוא I don't eat bread."
+        }
+      ]
+    },
+    {
+      "order_index": 4,
+      "title_he": "Checkpoint: Common Verbs Review",
+      "description_he": "חזרה על פעלים נפוצים",
+      "is_checkpoint": true,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "drink",
+          "prompt_language": "en",
+          "explanation_he": "drink = לשתות.",
+          "options": [
+            {
+              "text": "לשתות",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "לאכול",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "לקרוא",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "ללכת",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "I want water.",
+          "prompt_language": "en",
+          "explanation_he": "I want water. = אני רוצה מים.",
+          "options": [
+            {
+              "text": "אני רוצה מים.",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "אני שותה מים.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אני צריך ספר.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אני קורא מים.",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "I don't eat bread.",
+          "prompt_language": "en",
+          "explanation_he": "I don't eat bread. = אני לא אוכל לחם.",
+          "options": [
+            {
+              "text": "אני לא אוכל לחם.",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "אני אוכל לחם.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אני רוצה לחם.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אני לא שותה מים.",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני אוכל לחם.",
+          "prompt_language": "he",
+          "correct_answer": "I eat bread.",
+          "correct_answer_alternatives": [
+            "I eat bread"
+          ],
+          "word_bank_words": [
+            "I",
+            "eat",
+            "bread.",
+            "drink",
+            "water."
+          ],
+          "explanation_he": "I eat bread. = אני אוכל/ת לחם."
+        },
+        {
+          "order_index": 4,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני רוצה מים.",
+          "prompt_language": "he",
+          "correct_answer": "I want water.",
+          "correct_answer_alternatives": [
+            "I want water"
+          ],
+          "word_bank_words": [
+            "I",
+            "want",
+            "water.",
+            "need",
+            "book."
+          ],
+          "explanation_he": "I want water. = אני רוצה מים."
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני לא שותה קפה.",
+          "prompt_language": "he",
+          "correct_answer": "I don't drink coffee.",
+          "correct_answer_alternatives": [
+            "I don't drink coffee",
+            "I do not drink coffee"
+          ],
+          "word_bank_words": [
+            "I",
+            "don't",
+            "drink",
+            "coffee.",
+            "eat",
+            "tea."
+          ],
+          "explanation_he": "I don't drink coffee. = אני לא שותה קפה."
+        },
+        {
+          "order_index": 6,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'אני קורא ספר' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "I read a book",
+          "correct_answer_alternatives": [
+            "I read a book.",
+            "i read a book"
+          ],
+          "explanation_he": "אני קורא ספר באנגלית הוא I read a book."
+        },
+        {
+          "order_index": 7,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'אני צריך מים' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "I need water",
+          "correct_answer_alternatives": [
+            "I need water.",
+            "i need water"
+          ],
+          "explanation_he": "אני צריך מים באנגלית הוא I need water."
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את הפעלים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "חזרה על פעלים מרכזיים.",
+          "pairs": [
+            {
+              "en": "eat",
+              "he": "לאכול"
+            },
+            {
+              "en": "drink",
+              "he": "לשתות"
+            },
+            {
+              "en": "read",
+              "he": "לקרוא"
+            },
+            {
+              "en": "write",
+              "he": "לכתוב"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "matching",
+          "prompt_text": "התאם את המשפטים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "חזרה על משפטי פעלים.",
+          "pairs": [
+            {
+              "en": "I want water",
+              "he": "אני רוצה מים"
+            },
+            {
+              "en": "I have a book",
+              "he": "יש לי ספר"
+            },
+            {
+              "en": "I don't eat bread",
+              "he": "אני לא אוכל לחם"
+            },
+            {
+              "en": "I go home",
+              "he": "אני הולך הביתה"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

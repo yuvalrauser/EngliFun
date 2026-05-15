@@ -46,3 +46,4 @@ next-env.d.ts
 
 # Generated MCP migration chunk output (source files live in supabase/migrations/)
 scripts/_batch5_out/
+scripts/_batch6_out/

@@ -1,0 +1,21 @@
+-- ============================================================
+-- 018_create_beginner_unit_9.sql
+--
+-- Phase 5 / Batch 6: Create Beginner Unit 9 ("אוכל, שתייה ובית").
+-- 5 lessons, 50 exercises, 164 options, 40 pair_group_ids.
+-- Purely ADDITIVE.
+--
+-- ID convention:
+--   Unit:           00000000-0000-0000-0001-000000000009
+--   Lessons:        00000000-0000-0008-0002-000000000081..085
+--   Exercises:      00000000-0000-0008-0003-000000000401..450
+--   Pair groups:    b0000000-0008-0004-0000-000000000321..360
+--   Continuity:     unlock 00000000-0000-0008-0002-000000000081
+--                   for users who completed
+--                   00000000-0000-0008-0002-000000000075 (Unit 8 checkpoint)
+--
+-- Units 1–8 NOT touched. complete_lesson RPC NOT touched.
+-- ============================================================
+
+-- (Applied via MCP in 4 chunks; see git log for the live migration sequence.)
+-- Chunks: 018a (unit+lessons), 018b (L0+L1), 018c (L2+L3), 018d (L4+continuity).

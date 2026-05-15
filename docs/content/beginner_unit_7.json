@@ -1,0 +1,1218 @@
+{
+  "unit": {
+    "title_he": "ימים, חודשים ומזג אוויר",
+    "title_en": "Days, Months & Weather",
+    "objective_he": "ללמוד ימים, חודשים בסיסיים ומזג אוויר, ולבנות משפטים קצרים על היום ועל מזג האוויר.",
+    "icon_emoji": "🌤️",
+    "color_hex": "#4D96FF",
+    "order_index": 6
+  },
+  "lessons": [
+    {
+      "order_index": 0,
+      "title_he": "Days of the Week (1)",
+      "description_he": "ימים ראשונים בשבוע: Monday עד Thursday",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "Monday",
+          "prompt_language": "en",
+          "explanation_he": "Monday = יום שני.",
+          "options": [
+            {
+              "text": "יום שני",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "יום שלישי",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "יום רביעי",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "יום חמישי",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "Tuesday",
+          "prompt_language": "en",
+          "explanation_he": "Tuesday = יום שלישי.",
+          "options": [
+            {
+              "text": "יום שלישי",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "יום שני",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "יום רביעי",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "יום שישי",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "Thursday",
+          "prompt_language": "en",
+          "explanation_he": "Thursday = יום חמישי.",
+          "options": [
+            {
+              "text": "יום חמישי",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "יום ראשון",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "יום שני",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "יום רביעי",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור היום יום שני: Today is ___.",
+          "prompt_language": "he",
+          "correct_answer": "Monday",
+          "explanation_he": "Today is Monday. = היום יום שני.",
+          "options": [
+            {
+              "text": "Monday",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "Tuesday",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "Friday",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור מחר יום רביעי: Tomorrow is ___.",
+          "prompt_language": "he",
+          "correct_answer": "Wednesday",
+          "explanation_he": "Tomorrow is Wednesday. = מחר יום רביעי.",
+          "options": [
+            {
+              "text": "Wednesday",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "Sunday",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "Thursday",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: היום יום שני.",
+          "prompt_language": "he",
+          "correct_answer": "Today is Monday.",
+          "correct_answer_alternatives": [
+            "Today is Monday"
+          ],
+          "word_bank_words": [
+            "Today",
+            "is",
+            "Monday.",
+            "Tuesday.",
+            "Tomorrow"
+          ],
+          "explanation_he": "Today is Monday. = היום יום שני."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: מחר יום חמישי.",
+          "prompt_language": "he",
+          "correct_answer": "Tomorrow is Thursday.",
+          "correct_answer_alternatives": [
+            "Tomorrow is Thursday"
+          ],
+          "word_bank_words": [
+            "Tomorrow",
+            "is",
+            "Thursday.",
+            "Monday.",
+            "Today"
+          ],
+          "explanation_he": "Tomorrow is Thursday. = מחר יום חמישי."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את הימים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "ימים ראשונים בשבוע באנגלית.",
+          "pairs": [
+            {
+              "en": "Monday",
+              "he": "יום שני"
+            },
+            {
+              "en": "Tuesday",
+              "he": "יום שלישי"
+            },
+            {
+              "en": "Wednesday",
+              "he": "יום רביעי"
+            },
+            {
+              "en": "Thursday",
+              "he": "יום חמישי"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את המשפטים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "משפטים קצרים עם Today ו-Tomorrow.",
+          "pairs": [
+            {
+              "en": "Today is Monday",
+              "he": "היום יום שני"
+            },
+            {
+              "en": "Today is Tuesday",
+              "he": "היום יום שלישי"
+            },
+            {
+              "en": "Tomorrow is Wednesday",
+              "he": "מחר יום רביעי"
+            },
+            {
+              "en": "Tomorrow is Thursday",
+              "he": "מחר יום חמישי"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'היום יום רביעי' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "Today is Wednesday",
+          "correct_answer_alternatives": [
+            "Today is Wednesday.",
+            "today is wednesday"
+          ],
+          "explanation_he": "היום יום רביעי באנגלית הוא Today is Wednesday."
+        }
+      ]
+    },
+    {
+      "order_index": 1,
+      "title_he": "Days of the Week (2)",
+      "description_he": "שאר ימי השבוע ומילים כמו today, tomorrow, yesterday",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "Friday",
+          "prompt_language": "en",
+          "explanation_he": "Friday = יום שישי.",
+          "options": [
+            {
+              "text": "יום שישי",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "יום שבת",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "יום ראשון",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "יום חמישי",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "Saturday",
+          "prompt_language": "en",
+          "explanation_he": "Saturday = יום שבת.",
+          "options": [
+            {
+              "text": "יום שבת",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "יום שישי",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "יום ראשון",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "יום שני",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "yesterday",
+          "prompt_language": "en",
+          "explanation_he": "yesterday = אתמול.",
+          "options": [
+            {
+              "text": "אתמול",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "היום",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "מחר",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "שבוע",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור היום יום שישי: Today is ___.",
+          "prompt_language": "he",
+          "correct_answer": "Friday",
+          "explanation_he": "Today is Friday. = היום יום שישי.",
+          "options": [
+            {
+              "text": "Friday",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "Sunday",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "Monday",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור אתמול היה יום שבת: Yesterday was ___.",
+          "prompt_language": "he",
+          "correct_answer": "Saturday",
+          "explanation_he": "Yesterday was Saturday. = אתמול היה יום שבת.",
+          "options": [
+            {
+              "text": "Saturday",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "Tuesday",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "Thursday",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: היום יום ראשון.",
+          "prompt_language": "he",
+          "correct_answer": "Today is Sunday.",
+          "correct_answer_alternatives": [
+            "Today is Sunday"
+          ],
+          "word_bank_words": [
+            "Today",
+            "is",
+            "Sunday.",
+            "Friday.",
+            "Tomorrow"
+          ],
+          "explanation_he": "Today is Sunday. = היום יום ראשון."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אתמול היה יום שישי.",
+          "prompt_language": "he",
+          "correct_answer": "Yesterday was Friday.",
+          "correct_answer_alternatives": [
+            "Yesterday was Friday"
+          ],
+          "word_bank_words": [
+            "Yesterday",
+            "was",
+            "Friday.",
+            "Saturday.",
+            "Today"
+          ],
+          "explanation_he": "Yesterday was Friday. = אתמול היה יום שישי."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את הימים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "סוף השבוע באנגלית.",
+          "pairs": [
+            {
+              "en": "Friday",
+              "he": "יום שישי"
+            },
+            {
+              "en": "Saturday",
+              "he": "יום שבת"
+            },
+            {
+              "en": "Sunday",
+              "he": "יום ראשון"
+            },
+            {
+              "en": "today",
+              "he": "היום"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את מילות הזמן לתרגום שלהן",
+          "prompt_language": "he",
+          "explanation_he": "today = היום, tomorrow = מחר, yesterday = אתמול.",
+          "pairs": [
+            {
+              "en": "today",
+              "he": "היום"
+            },
+            {
+              "en": "tomorrow",
+              "he": "מחר"
+            },
+            {
+              "en": "yesterday",
+              "he": "אתמול"
+            },
+            {
+              "en": "week",
+              "he": "שבוע"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'מחר יום ראשון' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "Tomorrow is Sunday",
+          "correct_answer_alternatives": [
+            "Tomorrow is Sunday.",
+            "tomorrow is sunday"
+          ],
+          "explanation_he": "מחר יום ראשון באנגלית הוא Tomorrow is Sunday."
+        }
+      ]
+    },
+    {
+      "order_index": 2,
+      "title_he": "Months & Seasons",
+      "description_he": "חודשים בסיסיים ועונות השנה",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "January",
+          "prompt_language": "en",
+          "explanation_he": "January = ינואר.",
+          "options": [
+            {
+              "text": "ינואר",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "פברואר",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "מרץ",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "יולי",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "July",
+          "prompt_language": "en",
+          "explanation_he": "July = יולי.",
+          "options": [
+            {
+              "text": "יולי",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "ינואר",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "יוני",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "דצמבר",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "summer",
+          "prompt_language": "en",
+          "explanation_he": "summer = קיץ.",
+          "options": [
+            {
+              "text": "קיץ",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "חורף",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אביב",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "סתיו",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור החודש הוא ינואר: The month is ___.",
+          "prompt_language": "he",
+          "correct_answer": "January",
+          "explanation_he": "The month is January. = החודש הוא ינואר.",
+          "options": [
+            {
+              "text": "January",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "March",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "December",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור העונה היא קיץ: The season is ___.",
+          "prompt_language": "he",
+          "correct_answer": "summer",
+          "explanation_he": "The season is summer. = העונה היא קיץ.",
+          "options": [
+            {
+              "text": "summer",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "winter",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "spring",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: החודש הוא מרץ.",
+          "prompt_language": "he",
+          "correct_answer": "The month is March.",
+          "correct_answer_alternatives": [
+            "The month is March"
+          ],
+          "word_bank_words": [
+            "The",
+            "month",
+            "is",
+            "March.",
+            "June.",
+            "season"
+          ],
+          "explanation_he": "The month is March. = החודש הוא מרץ."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: העונה היא חורף.",
+          "prompt_language": "he",
+          "correct_answer": "The season is winter.",
+          "correct_answer_alternatives": [
+            "The season is winter"
+          ],
+          "word_bank_words": [
+            "The",
+            "season",
+            "is",
+            "winter.",
+            "summer.",
+            "month"
+          ],
+          "explanation_he": "The season is winter. = העונה היא חורף."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את החודשים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "חודשים בסיסיים באנגלית.",
+          "pairs": [
+            {
+              "en": "January",
+              "he": "ינואר"
+            },
+            {
+              "en": "February",
+              "he": "פברואר"
+            },
+            {
+              "en": "March",
+              "he": "מרץ"
+            },
+            {
+              "en": "December",
+              "he": "דצמבר"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את העונות לתרגום שלהן",
+          "prompt_language": "he",
+          "explanation_he": "עונות השנה באנגלית.",
+          "pairs": [
+            {
+              "en": "summer",
+              "he": "קיץ"
+            },
+            {
+              "en": "winter",
+              "he": "חורף"
+            },
+            {
+              "en": "spring",
+              "he": "אביב"
+            },
+            {
+              "en": "autumn",
+              "he": "סתיו"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'דצמבר' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "December",
+          "correct_answer_alternatives": [
+            "december",
+            "December."
+          ],
+          "explanation_he": "דצמבר באנגלית הוא December."
+        }
+      ]
+    },
+    {
+      "order_index": 3,
+      "title_he": "Weather Words",
+      "description_he": "מילים על מזג אוויר ושאלת How is the weather?",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "hot",
+          "prompt_language": "en",
+          "explanation_he": "hot = חם.",
+          "options": [
+            {
+              "text": "חם",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "קר",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "גשום",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "מעונן",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "cold",
+          "prompt_language": "en",
+          "explanation_he": "cold = קר.",
+          "options": [
+            {
+              "text": "קר",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "חם",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "שמשי",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "גשום",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "How is the weather?",
+          "prompt_language": "en",
+          "explanation_he": "How is the weather? = איך מזג האוויר?",
+          "options": [
+            {
+              "text": "איך מזג האוויר?",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "איזה צבע זה?",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "כמה ספרים?",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "מה השם שלך?",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור זה חם: It is ___.",
+          "prompt_language": "he",
+          "correct_answer": "hot",
+          "explanation_he": "It is hot. = חם.",
+          "options": [
+            {
+              "text": "hot",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "cold",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "rainy",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "שאל איך מזג האוויר: How is the ___?",
+          "prompt_language": "he",
+          "correct_answer": "weather",
+          "explanation_he": "How is the weather? = איך מזג האוויר?",
+          "options": [
+            {
+              "text": "weather",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "month",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "name",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: חם היום.",
+          "prompt_language": "he",
+          "correct_answer": "It is hot today.",
+          "correct_answer_alternatives": [
+            "It is hot today",
+            "It's hot today",
+            "It's hot today."
+          ],
+          "word_bank_words": [
+            "It",
+            "is",
+            "hot",
+            "today.",
+            "cold",
+            "Monday."
+          ],
+          "explanation_he": "It is hot today. = חם היום."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: איך מזג האוויר?",
+          "prompt_language": "he",
+          "correct_answer": "How is the weather?",
+          "correct_answer_alternatives": [
+            "How is the weather"
+          ],
+          "word_bank_words": [
+            "How",
+            "is",
+            "the",
+            "weather?",
+            "color",
+            "it?"
+          ],
+          "explanation_he": "How is the weather? = איך מזג האוויר?"
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את מילות מזג האוויר לתרגום שלהן",
+          "prompt_language": "he",
+          "explanation_he": "מילים בסיסיות למזג אוויר.",
+          "pairs": [
+            {
+              "en": "hot",
+              "he": "חם"
+            },
+            {
+              "en": "cold",
+              "he": "קר"
+            },
+            {
+              "en": "rain",
+              "he": "גשם"
+            },
+            {
+              "en": "cloudy",
+              "he": "מעונן"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את המשפטים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "משפטים על מזג האוויר.",
+          "pairs": [
+            {
+              "en": "It is hot",
+              "he": "חם"
+            },
+            {
+              "en": "It is cold",
+              "he": "קר"
+            },
+            {
+              "en": "It is cloudy",
+              "he": "מעונן"
+            },
+            {
+              "en": "How is the weather?",
+              "he": "איך מזג האוויר?"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'קר היום' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "It is cold today",
+          "correct_answer_alternatives": [
+            "It is cold today.",
+            "It's cold today",
+            "it's cold today"
+          ],
+          "explanation_he": "קר היום באנגלית הוא It is cold today."
+        }
+      ]
+    },
+    {
+      "order_index": 4,
+      "title_he": "Checkpoint: Days/Months/Weather Review",
+      "description_he": "חזרה על ימים, חודשים ומזג האוויר",
+      "is_checkpoint": true,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "Wednesday",
+          "prompt_language": "en",
+          "explanation_he": "Wednesday = יום רביעי.",
+          "options": [
+            {
+              "text": "יום רביעי",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "יום שני",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "יום חמישי",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "יום שבת",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "winter",
+          "prompt_language": "en",
+          "explanation_he": "winter = חורף.",
+          "options": [
+            {
+              "text": "חורף",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "קיץ",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אביב",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "סתיו",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "It is cloudy.",
+          "prompt_language": "en",
+          "explanation_he": "It is cloudy. = מעונן.",
+          "options": [
+            {
+              "text": "מעונן.",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "חם.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "קר.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "שמשי.",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: היום יום שני.",
+          "prompt_language": "he",
+          "correct_answer": "Today is Monday.",
+          "correct_answer_alternatives": [
+            "Today is Monday"
+          ],
+          "word_bank_words": [
+            "Today",
+            "is",
+            "Monday.",
+            "Friday.",
+            "Tomorrow"
+          ],
+          "explanation_he": "Today is Monday. = היום יום שני."
+        },
+        {
+          "order_index": 4,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: העונה היא קיץ.",
+          "prompt_language": "he",
+          "correct_answer": "The season is summer.",
+          "correct_answer_alternatives": [
+            "The season is summer"
+          ],
+          "word_bank_words": [
+            "The",
+            "season",
+            "is",
+            "summer.",
+            "winter.",
+            "month"
+          ],
+          "explanation_he": "The season is summer. = העונה היא קיץ."
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: קר היום.",
+          "prompt_language": "he",
+          "correct_answer": "It is cold today.",
+          "correct_answer_alternatives": [
+            "It is cold today",
+            "It's cold today",
+            "It's cold today."
+          ],
+          "word_bank_words": [
+            "It",
+            "is",
+            "cold",
+            "today.",
+            "hot",
+            "rain."
+          ],
+          "explanation_he": "It is cold today. = קר היום."
+        },
+        {
+          "order_index": 6,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'יום ראשון' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "Sunday",
+          "correct_answer_alternatives": [
+            "sunday",
+            "Sunday."
+          ],
+          "explanation_he": "יום ראשון באנגלית הוא Sunday."
+        },
+        {
+          "order_index": 7,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'איך מזג האוויר?' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "How is the weather",
+          "correct_answer_alternatives": [
+            "How is the weather?",
+            "how is the weather"
+          ],
+          "explanation_he": "איך מזג האוויר באנגלית הוא How is the weather?"
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את הימים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "חזרה על ימי השבוע.",
+          "pairs": [
+            {
+              "en": "Monday",
+              "he": "יום שני"
+            },
+            {
+              "en": "Thursday",
+              "he": "יום חמישי"
+            },
+            {
+              "en": "Friday",
+              "he": "יום שישי"
+            },
+            {
+              "en": "Sunday",
+              "he": "יום ראשון"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "matching",
+          "prompt_text": "התאם את מזג האוויר לתרגום שלו",
+          "prompt_language": "he",
+          "explanation_he": "חזרה על מזג אוויר ועונות.",
+          "pairs": [
+            {
+              "en": "summer",
+              "he": "קיץ"
+            },
+            {
+              "en": "winter",
+              "he": "חורף"
+            },
+            {
+              "en": "hot",
+              "he": "חם"
+            },
+            {
+              "en": "cold",
+              "he": "קר"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1226 @@
+{
+  "unit": {
+    "title_he": "חזרה מסכמת למתחילים",
+    "title_en": "Beginner Final Review",
+    "objective_he": "לחזור על כל נושאי רמת Beginner: ברכות, היכרות, To Be, מספרים, משפחה, צבעים, ימים, פעלים, אוכל ובית.",
+    "icon_emoji": "🏆",
+    "color_hex": "#FFD43B",
+    "order_index": 9
+  },
+  "lessons": [
+    {
+      "order_index": 0,
+      "title_he": "Mixed Review: Units 1–3",
+      "description_he": "חזרה על ברכות, היכרות והפועל To Be",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "Good morning!",
+          "prompt_language": "en",
+          "explanation_he": "Good morning! = בוקר טוב!",
+          "options": [
+            {
+              "text": "בוקר טוב!",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "לילה טוב!",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "שלום!",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "תודה!",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "My name is Dana.",
+          "prompt_language": "en",
+          "explanation_he": "My name is Dana. = קוראים לי דנה.",
+          "options": [
+            {
+              "text": "קוראים לי דנה.",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "אני מדנה.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "מה השם שלך?",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אני מישראל.",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "She is happy.",
+          "prompt_language": "en",
+          "explanation_he": "She is happy. = היא שמחה.",
+          "options": [
+            {
+              "text": "היא שמחה.",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "הוא שמח.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אני שמח.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "הם שמחים.",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור נעים להכיר: Nice to ___ you.",
+          "prompt_language": "he",
+          "correct_answer": "meet",
+          "explanation_he": "Nice to meet you. = נעים להכיר.",
+          "options": [
+            {
+              "text": "meet",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "name",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "from",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור היא שמחה: She ___ happy.",
+          "prompt_language": "he",
+          "correct_answer": "is",
+          "explanation_he": "She is happy. = היא שמחה.",
+          "options": [
+            {
+              "text": "is",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "are",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "am",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: קוראים לי דנה.",
+          "prompt_language": "he",
+          "correct_answer": "My name is Dana.",
+          "correct_answer_alternatives": [
+            "My name is Dana"
+          ],
+          "word_bank_words": [
+            "My",
+            "name",
+            "is",
+            "Dana.",
+            "from",
+            "Tom."
+          ],
+          "explanation_he": "My name is Dana. = קוראים לי דנה."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: היא שמחה.",
+          "prompt_language": "he",
+          "correct_answer": "She is happy.",
+          "correct_answer_alternatives": [
+            "She is happy",
+            "She's happy",
+            "She's happy."
+          ],
+          "word_bank_words": [
+            "She",
+            "is",
+            "happy.",
+            "He",
+            "ready."
+          ],
+          "explanation_he": "She is happy. = היא שמחה."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את הביטויים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "חזרה על יחידות 1–2.",
+          "pairs": [
+            {
+              "en": "Hello",
+              "he": "שלום"
+            },
+            {
+              "en": "Goodbye",
+              "he": "להתראות"
+            },
+            {
+              "en": "My name is",
+              "he": "קוראים לי"
+            },
+            {
+              "en": "Nice to meet you",
+              "he": "נעים להכיר"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את המשפטים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "חזרה על To Be.",
+          "pairs": [
+            {
+              "en": "I am ready",
+              "he": "אני מוכן"
+            },
+            {
+              "en": "You are ready",
+              "he": "אתה מוכן"
+            },
+            {
+              "en": "He is a teacher",
+              "he": "הוא מורה"
+            },
+            {
+              "en": "They are friends",
+              "he": "הם חברים"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'נעים להכיר' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "Nice to meet you",
+          "correct_answer_alternatives": [
+            "Nice to meet you.",
+            "nice to meet you"
+          ],
+          "explanation_he": "נעים להכיר באנגלית הוא Nice to meet you."
+        }
+      ]
+    },
+    {
+      "order_index": 1,
+      "title_he": "Mixed Review: Numbers & Family",
+      "description_he": "חזרה על מספרים ומשפחה",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "twenty",
+          "prompt_language": "en",
+          "explanation_he": "twenty = עשרים.",
+          "options": [
+            {
+              "text": "עשרים",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "שתים עשרה",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "חמש עשרה",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "עשר",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "mother",
+          "prompt_language": "en",
+          "explanation_he": "mother = אמא.",
+          "options": [
+            {
+              "text": "אמא",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "אבא",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אחות",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "חבר",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "They are my parents.",
+          "prompt_language": "en",
+          "explanation_he": "They are my parents. = אלה ההורים שלי.",
+          "options": [
+            {
+              "text": "אלה ההורים שלי.",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "הם חברים שלי.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "היא אחות שלי.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "זה אבא שלי.",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור עשרים ספרים: ___ books.",
+          "prompt_language": "he",
+          "correct_answer": "twenty",
+          "explanation_he": "twenty books = עשרים ספרים.",
+          "options": [
+            {
+              "text": "twenty",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "twelve",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "three",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור הוא אח שלי: He is my ___.",
+          "prompt_language": "he",
+          "correct_answer": "brother",
+          "explanation_he": "He is my brother. = הוא אח שלי.",
+          "options": [
+            {
+              "text": "brother",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "sister",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "friend",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: כמה ספרים?",
+          "prompt_language": "he",
+          "correct_answer": "How many books?",
+          "correct_answer_alternatives": [
+            "How many books"
+          ],
+          "word_bank_words": [
+            "How",
+            "many",
+            "books?",
+            "students?",
+            "one"
+          ],
+          "explanation_he": "How many books? = כמה ספרים?"
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: היא אמא שלי.",
+          "prompt_language": "he",
+          "correct_answer": "She is my mother.",
+          "correct_answer_alternatives": [
+            "She is my mother",
+            "She's my mother",
+            "She's my mother."
+          ],
+          "word_bank_words": [
+            "She",
+            "is",
+            "my",
+            "mother.",
+            "sister.",
+            "daughter."
+          ],
+          "explanation_he": "She is my mother. = היא אמא שלי."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם מספרים ומשפחה",
+          "prompt_language": "he",
+          "explanation_he": "חזרה על מספרים ומשפחה.",
+          "pairs": [
+            {
+              "en": "ten",
+              "he": "עשר"
+            },
+            {
+              "en": "twenty",
+              "he": "עשרים"
+            },
+            {
+              "en": "father",
+              "he": "אבא"
+            },
+            {
+              "en": "sister",
+              "he": "אחות"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את המשפטים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "משפטים מיחידות 4–5.",
+          "pairs": [
+            {
+              "en": "five students",
+              "he": "חמישה תלמידים"
+            },
+            {
+              "en": "How many books?",
+              "he": "כמה ספרים?"
+            },
+            {
+              "en": "He is my brother",
+              "he": "הוא אח שלי"
+            },
+            {
+              "en": "They are my parents",
+              "he": "אלה ההורים שלי"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'אחות שלי' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "my sister",
+          "correct_answer_alternatives": [
+            "My sister",
+            "my sister."
+          ],
+          "explanation_he": "אחות שלי באנגלית הוא my sister."
+        }
+      ]
+    },
+    {
+      "order_index": 2,
+      "title_he": "Mixed Review: Colors, Objects, Days & Weather",
+      "description_he": "חזרה על צבעים, חפצים, ימים ומזג אוויר",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "What color is it?",
+          "prompt_language": "en",
+          "explanation_he": "What color is it? = איזה צבע זה?",
+          "options": [
+            {
+              "text": "איזה צבע זה?",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "כמה ספרים?",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "מה השם שלך?",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "איך מזג האוויר?",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "Sunday",
+          "prompt_language": "en",
+          "explanation_he": "Sunday = יום ראשון.",
+          "options": [
+            {
+              "text": "יום ראשון",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "יום שני",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "יום שישי",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "יום שבת",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "It is cold today.",
+          "prompt_language": "en",
+          "explanation_he": "It is cold today. = קר היום.",
+          "options": [
+            {
+              "text": "קר היום.",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "חם היום.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "היום יום שני.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "זה כחול.",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור הספר כחול: The book is ___.",
+          "prompt_language": "he",
+          "correct_answer": "blue",
+          "explanation_he": "The book is blue. = הספר כחול.",
+          "options": [
+            {
+              "text": "blue",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "red",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "cold",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור היום יום שני: Today is ___.",
+          "prompt_language": "he",
+          "correct_answer": "Monday",
+          "explanation_he": "Today is Monday. = היום יום שני.",
+          "options": [
+            {
+              "text": "Monday",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "January",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "summer",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: איזה צבע זה?",
+          "prompt_language": "he",
+          "correct_answer": "What color is it?",
+          "correct_answer_alternatives": [
+            "What color is it"
+          ],
+          "word_bank_words": [
+            "What",
+            "color",
+            "is",
+            "it?",
+            "many",
+            "books?"
+          ],
+          "explanation_he": "What color is it? = איזה צבע זה?"
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: קר היום.",
+          "prompt_language": "he",
+          "correct_answer": "It is cold today.",
+          "correct_answer_alternatives": [
+            "It is cold today",
+            "It's cold today",
+            "It's cold today."
+          ],
+          "word_bank_words": [
+            "It",
+            "is",
+            "cold",
+            "today.",
+            "blue",
+            "book."
+          ],
+          "explanation_he": "It is cold today. = קר היום."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם צבעים וחפצים",
+          "prompt_language": "he",
+          "explanation_he": "חזרה על צבעים וחפצים.",
+          "pairs": [
+            {
+              "en": "red",
+              "he": "אדום"
+            },
+            {
+              "en": "blue",
+              "he": "כחול"
+            },
+            {
+              "en": "book",
+              "he": "ספר"
+            },
+            {
+              "en": "phone",
+              "he": "טלפון"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם ימים ומזג אוויר",
+          "prompt_language": "he",
+          "explanation_he": "חזרה על ימים ומזג אוויר.",
+          "pairs": [
+            {
+              "en": "Monday",
+              "he": "יום שני"
+            },
+            {
+              "en": "Sunday",
+              "he": "יום ראשון"
+            },
+            {
+              "en": "hot",
+              "he": "חם"
+            },
+            {
+              "en": "cold",
+              "he": "קר"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'היום יום שני' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "Today is Monday",
+          "correct_answer_alternatives": [
+            "Today is Monday.",
+            "today is monday"
+          ],
+          "explanation_he": "היום יום שני באנגלית הוא Today is Monday."
+        }
+      ]
+    },
+    {
+      "order_index": 3,
+      "title_he": "Mixed Review: Verbs, Food, Drinks & Home",
+      "description_he": "חזרה על פעלים, אוכל, שתייה ובית",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "I drink water.",
+          "prompt_language": "en",
+          "explanation_he": "I drink water. = אני שותה מים.",
+          "options": [
+            {
+              "text": "אני שותה מים.",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "אני אוכל לחם.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אני רוצה מים.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אני לא שותה קפה.",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "kitchen",
+          "prompt_language": "en",
+          "explanation_he": "kitchen = מטבח.",
+          "options": [
+            {
+              "text": "מטבח",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "חדר שינה",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "שולחן",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "כיסא",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "apple",
+          "prompt_language": "en",
+          "explanation_he": "apple = תפוח.",
+          "options": [
+            {
+              "text": "תפוח",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "לחם",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "חלב",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "שולחן",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור אני אוכל לחם: I ___ bread.",
+          "prompt_language": "he",
+          "correct_answer": "eat",
+          "explanation_he": "I eat bread. = אני אוכל לחם.",
+          "options": [
+            {
+              "text": "eat",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "drink",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "write",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור אני במטבח: I am in the ___.",
+          "prompt_language": "he",
+          "correct_answer": "kitchen",
+          "explanation_he": "I am in the kitchen. = אני במטבח.",
+          "options": [
+            {
+              "text": "kitchen",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "bed",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "apple",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני רוצה מים.",
+          "prompt_language": "he",
+          "correct_answer": "I want water.",
+          "correct_answer_alternatives": [
+            "I want water"
+          ],
+          "word_bank_words": [
+            "I",
+            "want",
+            "water.",
+            "eat",
+            "bread."
+          ],
+          "explanation_he": "I want water. = אני רוצה מים."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני במטבח.",
+          "prompt_language": "he",
+          "correct_answer": "I am in the kitchen.",
+          "correct_answer_alternatives": [
+            "I am in the kitchen",
+            "I'm in the kitchen",
+            "I'm in the kitchen."
+          ],
+          "word_bank_words": [
+            "I",
+            "am",
+            "in",
+            "the",
+            "kitchen.",
+            "bedroom."
+          ],
+          "explanation_he": "I am in the kitchen. = אני במטבח."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם פעלים ואוכל",
+          "prompt_language": "he",
+          "explanation_he": "חזרה על פעלים ואוכל.",
+          "pairs": [
+            {
+              "en": "eat",
+              "he": "לאכול"
+            },
+            {
+              "en": "drink",
+              "he": "לשתות"
+            },
+            {
+              "en": "bread",
+              "he": "לחם"
+            },
+            {
+              "en": "water",
+              "he": "מים"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם בית וחפצים",
+          "prompt_language": "he",
+          "explanation_he": "חזרה על בית וחפצים.",
+          "pairs": [
+            {
+              "en": "kitchen",
+              "he": "מטבח"
+            },
+            {
+              "en": "bedroom",
+              "he": "חדר שינה"
+            },
+            {
+              "en": "table",
+              "he": "שולחן"
+            },
+            {
+              "en": "chair",
+              "he": "כיסא"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'אני לא שותה קפה' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "I don't drink coffee",
+          "correct_answer_alternatives": [
+            "I don't drink coffee.",
+            "I do not drink coffee",
+            "i don't drink coffee"
+          ],
+          "explanation_he": "אני לא שותה קפה באנגלית הוא I don't drink coffee."
+        }
+      ]
+    },
+    {
+      "order_index": 4,
+      "title_he": "Checkpoint: Beginner Final Review",
+      "description_he": "מבחן מסכם לרמת Beginner",
+      "is_checkpoint": true,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "Where are you from?",
+          "prompt_language": "en",
+          "explanation_he": "Where are you from? = מאיפה אתה?",
+          "options": [
+            {
+              "text": "מאיפה אתה?",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "מה השם שלך?",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "איך מזג האוויר?",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "כמה ספרים?",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "The book is blue.",
+          "prompt_language": "en",
+          "explanation_he": "The book is blue. = הספר כחול.",
+          "options": [
+            {
+              "text": "הספר כחול.",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "הספר אדום.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "העט כחול.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "זה ספר.",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "I need water.",
+          "prompt_language": "en",
+          "explanation_he": "I need water. = אני צריך מים.",
+          "options": [
+            {
+              "text": "אני צריך מים.",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "אני רוצה לחם.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אני שותה קפה.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אני לא צריך מים.",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: קוראים לי דנה.",
+          "prompt_language": "he",
+          "correct_answer": "My name is Dana.",
+          "correct_answer_alternatives": [
+            "My name is Dana"
+          ],
+          "word_bank_words": [
+            "My",
+            "name",
+            "is",
+            "Dana.",
+            "from",
+            "Tom."
+          ],
+          "explanation_he": "My name is Dana. = קוראים לי דנה."
+        },
+        {
+          "order_index": 4,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני לא אוכל לחם.",
+          "prompt_language": "he",
+          "correct_answer": "I don't eat bread.",
+          "correct_answer_alternatives": [
+            "I don't eat bread",
+            "I do not eat bread"
+          ],
+          "word_bank_words": [
+            "I",
+            "don't",
+            "eat",
+            "bread.",
+            "drink",
+            "water."
+          ],
+          "explanation_he": "I don't eat bread. = אני לא אוכל לחם."
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: השולחן במטבח.",
+          "prompt_language": "he",
+          "correct_answer": "The table is in the kitchen.",
+          "correct_answer_alternatives": [
+            "The table is in the kitchen"
+          ],
+          "word_bank_words": [
+            "The",
+            "table",
+            "is",
+            "in",
+            "the",
+            "kitchen.",
+            "bed."
+          ],
+          "explanation_he": "The table is in the kitchen. = השולחן במטבח."
+        },
+        {
+          "order_index": 6,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'כמה תלמידים?' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "How many students",
+          "correct_answer_alternatives": [
+            "How many students?",
+            "how many students"
+          ],
+          "explanation_he": "כמה תלמידים באנגלית הוא How many students?"
+        },
+        {
+          "order_index": 7,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'נעים להכיר' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "Nice to meet you",
+          "correct_answer_alternatives": [
+            "Nice to meet you.",
+            "nice to meet you"
+          ],
+          "explanation_he": "נעים להכיר באנגלית הוא Nice to meet you."
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם ביטויים מרכזיים",
+          "prompt_language": "he",
+          "explanation_he": "חזרה מסכמת על ביטויים נפוצים.",
+          "pairs": [
+            {
+              "en": "Good morning",
+              "he": "בוקר טוב"
+            },
+            {
+              "en": "Nice to meet you",
+              "he": "נעים להכיר"
+            },
+            {
+              "en": "How many books?",
+              "he": "כמה ספרים?"
+            },
+            {
+              "en": "What color is it?",
+              "he": "איזה צבע זה?"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "matching",
+          "prompt_text": "התאם משפטים מרכזיים",
+          "prompt_language": "he",
+          "explanation_he": "חזרה על משפטים מכל רמת Beginner.",
+          "pairs": [
+            {
+              "en": "I am ready",
+              "he": "אני מוכן"
+            },
+            {
+              "en": "She is my mother",
+              "he": "היא אמא שלי"
+            },
+            {
+              "en": "It is cold today",
+              "he": "קר היום"
+            },
+            {
+              "en": "I drink water",
+              "he": "אני שותה מים"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

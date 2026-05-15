@@ -1,0 +1,25 @@
+-- ============================================================
+-- 019_create_beginner_unit_10.sql
+--
+-- Phase 5 / Batch 6: Create Beginner Unit 10 ("חזרה מסכמת למתחילים").
+-- 5 lessons, 50 exercises, 164 options, 40 pair_group_ids.
+-- Purely ADDITIVE — final mixed review of Beginner Units 1–9.
+--
+-- Unit 10 introduces NO new vocabulary — validator enforces this via
+-- the no-new-vocab gate (every English token must appear somewhere in
+-- Units 1–9 or in the glue-word allow-list).
+--
+-- ID convention:
+--   Unit:           00000000-0000-0000-0001-00000000000a
+--   Lessons:        00000000-0000-0008-0002-000000000091..095
+--   Exercises:      00000000-0000-0008-0003-000000000451..500
+--   Pair groups:    b0000000-0008-0004-0000-000000000361..400
+--   Continuity:     unlock 00000000-0000-0008-0002-000000000091
+--                   for users who completed
+--                   00000000-0000-0008-0002-000000000085 (Unit 9 checkpoint)
+--
+-- Units 1–9 NOT touched. complete_lesson RPC NOT touched.
+-- ============================================================
+
+-- (Applied via MCP in 4 chunks; see git log for the live migration sequence.)
+-- Chunks: 019a (unit+lessons), 019b (L0+L1), 019c (L2+L3), 019d (L4+continuity).

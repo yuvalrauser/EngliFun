@@ -1,0 +1,21 @@
+-- ============================================================
+-- 016_create_beginner_unit_7.sql
+--
+-- Phase 5 / Batch 6: Create Beginner Unit 7 ("ימים, חודשים ומזג אוויר").
+-- 5 lessons, 50 exercises, 164 options, 40 pair_group_ids.
+-- Purely ADDITIVE.
+--
+-- ID convention:
+--   Unit:           00000000-0000-0000-0001-000000000007
+--   Lessons:        00000000-0000-0008-0002-000000000061..065
+--   Exercises:      00000000-0000-0008-0003-000000000301..350
+--   Pair groups:    b0000000-0008-0004-0000-000000000241..280
+--   Continuity:     unlock 00000000-0000-0008-0002-000000000061
+--                   for users who completed
+--                   00000000-0000-0008-0002-000000000055 (Unit 6 checkpoint)
+--
+-- Units 1–6 NOT touched. complete_lesson RPC NOT touched.
+-- ============================================================
+
+-- (Applied via MCP in 4 chunks; see git log for the live migration sequence.)
+-- Chunks: 016a (unit+lessons), 016b (L0+L1), 016c (L2+L3), 016d (L4+continuity).
