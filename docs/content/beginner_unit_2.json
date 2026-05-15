@@ -1,0 +1,645 @@
+{
+  "unit": {
+    "title_he": "היכרות עצמית",
+    "title_en": "Introducing Yourself",
+    "objective_he": "ללמוד להציג את עצמך באנגלית: שם, גיל, מדינה ושיחת היכרות קצרה.",
+    "icon_emoji": "🤝",
+    "color_hex": "#1CB0F6",
+    "order_index": 1
+  },
+  "lessons": [
+    {
+      "order_index": 0,
+      "title_he": "My Name Is",
+      "description_he": "להציג את השם הפרטי ולשאול על שם של אחר",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "My name is Dana.",
+          "prompt_language": "en",
+          "explanation_he": "My name is Dana. = קוראים לי דנה. משתמשים ב-My name is כדי להציג שם.",
+          "options": [
+            { "text": "קוראים לי דנה.", "language": "he", "is_correct": true },
+            { "text": "אני דנה.", "language": "he", "is_correct": false },
+            { "text": "שלום דנה.", "language": "he", "is_correct": false },
+            { "text": "מה שמך?", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "What is your name?",
+          "prompt_language": "en",
+          "explanation_he": "What is your name? = מה שמך? זו שאלה בסיסית בהיכרות.",
+          "options": [
+            { "text": "מה שמך?", "language": "he", "is_correct": true },
+            { "text": "מה שלומך?", "language": "he", "is_correct": false },
+            { "text": "מה הגיל שלך?", "language": "he", "is_correct": false },
+            { "text": "מאיפה אתה?", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "your name",
+          "prompt_language": "en",
+          "explanation_he": "your name = השם שלך. your פירושו שלך.",
+          "options": [
+            { "text": "השם שלך", "language": "he", "is_correct": true },
+            { "text": "השם שלי", "language": "he", "is_correct": false },
+            { "text": "שלום", "language": "he", "is_correct": false },
+            { "text": "תודה", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור קוראים לי דנה: My ___ is Dana.",
+          "prompt_language": "he",
+          "correct_answer": "name",
+          "explanation_he": "My name is Dana. = קוראים לי דנה. המילה name פירושה שם.",
+          "options": [
+            { "text": "name", "language": "en", "is_correct": true },
+            { "text": "from", "language": "en", "is_correct": false },
+            { "text": "you", "language": "en", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "שאל מה השם שלך: What is your ___?",
+          "prompt_language": "he",
+          "correct_answer": "name",
+          "explanation_he": "What is your name? = מה שמך? שאלה נפוצה בתחילת היכרות.",
+          "options": [
+            { "text": "name", "language": "en", "is_correct": true },
+            { "text": "fine", "language": "en", "is_correct": false },
+            { "text": "night", "language": "en", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: קוראים לי דנה.",
+          "prompt_language": "he",
+          "correct_answer": "My name is Dana.",
+          "correct_answer_alternatives": ["My name is Dana"],
+          "word_bank_words": ["My", "name", "is", "Dana.", "your", "Tom."],
+          "explanation_he": "My name is Dana. = קוראים לי דנה. זה משפט בסיסי להצגת השם."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: מה שמך?",
+          "prompt_language": "he",
+          "correct_answer": "What is your name?",
+          "correct_answer_alternatives": ["What is your name"],
+          "word_bank_words": ["What", "is", "your", "name?", "My", "Dana."],
+          "explanation_he": "What is your name? = מה שמך? משתמשים בזה בשיחת היכרות."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את המילים לתרגום שלהן",
+          "prompt_language": "he",
+          "explanation_he": "my = שלי, your = שלך, name = שם, Hello = שלום.",
+          "pairs": [
+            { "en": "my", "he": "שלי" },
+            { "en": "your", "he": "שלך" },
+            { "en": "name", "he": "שם" },
+            { "en": "Hello", "he": "שלום" }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את הביטויים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "My name is = קוראים לי, What is your name? = מה שמך.",
+          "pairs": [
+            { "en": "My name is", "he": "קוראים לי" },
+            { "en": "What is your name?", "he": "מה שמך?" },
+            { "en": "Dana", "he": "דנה" },
+            { "en": "Tom", "he": "תום" }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'קוראים לי דנה' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "My name is Dana",
+          "correct_answer_alternatives": ["My name is Dana.", "my name is dana"],
+          "explanation_he": "קוראים לי דנה באנגלית הוא My name is Dana."
+        }
+      ]
+    },
+    {
+      "order_index": 1,
+      "title_he": "I Am",
+      "description_he": "להציג גיל וזהות בסיסית עם I am",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "I am Dana.",
+          "prompt_language": "en",
+          "explanation_he": "I am Dana. = אני דנה. I am משמש להצגת עצמי.",
+          "options": [
+            { "text": "אני דנה.", "language": "he", "is_correct": true },
+            { "text": "את דנה.", "language": "he", "is_correct": false },
+            { "text": "קוראים לי דנה.", "language": "he", "is_correct": false },
+            { "text": "אני בת עשרים.", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "I am a student.",
+          "prompt_language": "en",
+          "explanation_he": "I am a student. = אני תלמיד או סטודנט. student היא תלמיד.",
+          "options": [
+            { "text": "אני תלמיד/ה.", "language": "he", "is_correct": true },
+            { "text": "אני מאושר.", "language": "he", "is_correct": false },
+            { "text": "מה שמך?", "language": "he", "is_correct": false },
+            { "text": "תודה רבה.", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "I am 20 years old.",
+          "prompt_language": "en",
+          "explanation_he": "I am 20 years old. = אני בן/בת 20. years old משמש לציון גיל.",
+          "options": [
+            { "text": "אני בן/בת 20.", "language": "he", "is_correct": true },
+            { "text": "אני יום 20.", "language": "he", "is_correct": false },
+            { "text": "קוראים לי 20.", "language": "he", "is_correct": false },
+            { "text": "אני תלמיד.", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור אני דנה: I ___ Dana.",
+          "prompt_language": "he",
+          "correct_answer": "am",
+          "explanation_he": "I am Dana. = אני דנה. אחרי I משתמשים ב-am.",
+          "options": [
+            { "text": "am", "language": "en", "is_correct": true },
+            { "text": "is", "language": "en", "is_correct": false },
+            { "text": "your", "language": "en", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור אני תלמיד: I am a ___.",
+          "prompt_language": "he",
+          "correct_answer": "student",
+          "explanation_he": "I am a student. = אני תלמיד/ה. student פירושו תלמיד או סטודנט.",
+          "options": [
+            { "text": "student", "language": "en", "is_correct": true },
+            { "text": "name", "language": "en", "is_correct": false },
+            { "text": "night", "language": "en", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני דנה.",
+          "prompt_language": "he",
+          "correct_answer": "I am Dana.",
+          "correct_answer_alternatives": ["I am Dana", "I'm Dana", "I'm Dana."],
+          "word_bank_words": ["I", "am", "Dana.", "My", "name"],
+          "explanation_he": "I am Dana. = אני דנה. אפשר גם לומר I'm Dana."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני תלמיד.",
+          "prompt_language": "he",
+          "correct_answer": "I am a student.",
+          "correct_answer_alternatives": ["I am a student", "I'm a student", "I'm a student."],
+          "word_bank_words": ["I", "am", "a", "student.", "teacher.", "from"],
+          "explanation_he": "I am a student. = אני תלמיד/ה. המילה a מופיעה לפני שם עצם יחיד."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את המילים לתרגום שלהן",
+          "prompt_language": "he",
+          "explanation_he": "I = אני, years = שנים, student = תלמיד / סטודנט, teacher = מורה.",
+          "pairs": [
+            { "en": "I", "he": "אני" },
+            { "en": "years", "he": "שנים" },
+            { "en": "student", "he": "תלמיד / סטודנט" },
+            { "en": "teacher", "he": "מורה" }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את הביטויים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "I am משמש להצגת עצמי: שם, מקצוע או גיל.",
+          "pairs": [
+            { "en": "I am Dana", "he": "אני דנה" },
+            { "en": "I am a student", "he": "אני תלמיד/ה" },
+            { "en": "20 years old", "he": "בן/בת 20" },
+            { "en": "Thank you", "he": "תודה" }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'אני תלמיד' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "I am a student",
+          "correct_answer_alternatives": ["I am a student.", "I'm a student", "I'm a student.", "i am a student"],
+          "explanation_he": "אני תלמיד באנגלית הוא I am a student."
+        }
+      ]
+    },
+    {
+      "order_index": 2,
+      "title_he": "I'm From",
+      "description_he": "לומר מאיפה אני ולשאול מאיפה אתה",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "I'm from Israel.",
+          "prompt_language": "en",
+          "explanation_he": "I'm from Israel. = אני מישראל. from פירושו מ-/של.",
+          "options": [
+            { "text": "אני מישראל.", "language": "he", "is_correct": true },
+            { "text": "אני בישראל.", "language": "he", "is_correct": false },
+            { "text": "קוראים לי ישראל.", "language": "he", "is_correct": false },
+            { "text": "מה שלומך?", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "Where are you from?",
+          "prompt_language": "en",
+          "explanation_he": "Where are you from? = מאיפה אתה/את? שאלה נפוצה בהיכרות.",
+          "options": [
+            { "text": "מאיפה אתה/את?", "language": "he", "is_correct": true },
+            { "text": "מה שמך?", "language": "he", "is_correct": false },
+            { "text": "מה הגיל שלך?", "language": "he", "is_correct": false },
+            { "text": "בוקר טוב.", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "England",
+          "prompt_language": "en",
+          "explanation_he": "England = אנגליה. שם מדינה שאפשר להשתמש בה במשפט I'm from England.",
+          "options": [
+            { "text": "אנגליה", "language": "he", "is_correct": true },
+            { "text": "ישראל", "language": "he", "is_correct": false },
+            { "text": "שם", "language": "he", "is_correct": false },
+            { "text": "תלמיד", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור אני מישראל: I'm from ___.",
+          "prompt_language": "he",
+          "correct_answer": "Israel",
+          "explanation_he": "I'm from Israel. = אני מישראל. אחרי from מופיעה המדינה.",
+          "options": [
+            { "text": "Israel", "language": "en", "is_correct": true },
+            { "text": "name", "language": "en", "is_correct": false },
+            { "text": "student", "language": "en", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "שאל מאיפה אתה: Where are you ___?",
+          "prompt_language": "he",
+          "correct_answer": "from",
+          "explanation_he": "Where are you from? = מאיפה אתה/את? המילה from מופיעה בסוף השאלה.",
+          "options": [
+            { "text": "from", "language": "en", "is_correct": true },
+            { "text": "fine", "language": "en", "is_correct": false },
+            { "text": "name", "language": "en", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני מישראל.",
+          "prompt_language": "he",
+          "correct_answer": "I'm from Israel.",
+          "correct_answer_alternatives": ["I am from Israel", "I am from Israel.", "I'm from Israel"],
+          "word_bank_words": ["I'm", "from", "Israel.", "Dana.", "name"],
+          "explanation_he": "I'm from Israel. = אני מישראל. I'm הוא קיצור של I am."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: מאיפה אתה?",
+          "prompt_language": "he",
+          "correct_answer": "Where are you from?",
+          "correct_answer_alternatives": ["Where are you from"],
+          "word_bank_words": ["Where", "are", "you", "from?", "name?", "fine"],
+          "explanation_he": "Where are you from? = מאיפה אתה/את? זו שאלה בסיסית על המוצא."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את המדינות לתרגום שלהן",
+          "prompt_language": "he",
+          "explanation_he": "Israel = ישראל, England = אנגליה, USA = ארצות הברית, Spain = ספרד.",
+          "pairs": [
+            { "en": "Israel", "he": "ישראל" },
+            { "en": "England", "he": "אנגליה" },
+            { "en": "USA", "he": "ארצות הברית" },
+            { "en": "Spain", "he": "ספרד" }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את הביטויים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "from = מ-/של. משתמשים בה כדי לציין מאיפה מישהו מגיע.",
+          "pairs": [
+            { "en": "from", "he": "מ- / של" },
+            { "en": "Where", "he": "איפה" },
+            { "en": "I'm from Israel", "he": "אני מישראל" },
+            { "en": "Where are you from?", "he": "מאיפה אתה/את?" }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'אני מישראל' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "I'm from Israel",
+          "correct_answer_alternatives": ["I'm from Israel.", "I am from Israel", "I am from Israel.", "im from israel"],
+          "explanation_he": "אני מישראל באנגלית הוא I'm from Israel או I am from Israel."
+        }
+      ]
+    },
+    {
+      "order_index": 3,
+      "title_he": "Nice to Meet You",
+      "description_he": "ביטויי שיחת היכרות קצרה ומנומסת",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "Nice to meet you.",
+          "prompt_language": "en",
+          "explanation_he": "Nice to meet you. = נעים להכיר. אומרים את זה כשמכירים מישהו חדש.",
+          "options": [
+            { "text": "נעים להכיר.", "language": "he", "is_correct": true },
+            { "text": "אני מישראל.", "language": "he", "is_correct": false },
+            { "text": "מה שמך?", "language": "he", "is_correct": false },
+            { "text": "להתראות.", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "Nice to meet you, too.",
+          "prompt_language": "en",
+          "explanation_he": "Nice to meet you, too. = גם לי נעים להכיר. too פירושו גם.",
+          "options": [
+            { "text": "גם לי נעים להכיר.", "language": "he", "is_correct": true },
+            { "text": "אני בן 20.", "language": "he", "is_correct": false },
+            { "text": "בוקר טוב.", "language": "he", "is_correct": false },
+            { "text": "סלח לי.", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "What about you?",
+          "prompt_language": "en",
+          "explanation_he": "What about you? = ומה אתה? משתמשים בזה כדי להחזיר שאלה לבן השיחה.",
+          "options": [
+            { "text": "ומה אתה?", "language": "he", "is_correct": true },
+            { "text": "מה שמך?", "language": "he", "is_correct": false },
+            { "text": "תודה.", "language": "he", "is_correct": false },
+            { "text": "אני תלמיד.", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור נעים להכיר: Nice to ___ you.",
+          "prompt_language": "he",
+          "correct_answer": "meet",
+          "explanation_he": "Nice to meet you. = נעים להכיר. meet פירושו לפגוש.",
+          "options": [
+            { "text": "meet", "language": "en", "is_correct": true },
+            { "text": "name", "language": "en", "is_correct": false },
+            { "text": "from", "language": "en", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור גם לי נעים להכיר: Nice to meet you, ___.",
+          "prompt_language": "he",
+          "correct_answer": "too",
+          "explanation_he": "Nice to meet you, too. = גם לי נעים להכיר. too פירושו גם.",
+          "options": [
+            { "text": "too", "language": "en", "is_correct": true },
+            { "text": "you", "language": "en", "is_correct": false },
+            { "text": "am", "language": "en", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: נעים להכיר.",
+          "prompt_language": "he",
+          "correct_answer": "Nice to meet you.",
+          "correct_answer_alternatives": ["Nice to meet you"],
+          "word_bank_words": ["Nice", "to", "meet", "you.", "from", "name"],
+          "explanation_he": "Nice to meet you. = נעים להכיר. זה הביטוי הקלאסי להיכרות."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: ומה אתה?",
+          "prompt_language": "he",
+          "correct_answer": "What about you?",
+          "correct_answer_alternatives": ["What about you"],
+          "word_bank_words": ["What", "about", "you?", "name?", "Hello"],
+          "explanation_he": "What about you? = ומה אתה? דרך להחזיר שאלה לבן השיחה."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את המילים לתרגום שלהן",
+          "prompt_language": "he",
+          "explanation_he": "nice = נחמד / נעים, meet = לפגוש, too = גם, about = אודות.",
+          "pairs": [
+            { "en": "nice", "he": "נעים / נחמד" },
+            { "en": "meet", "he": "לפגוש" },
+            { "en": "too", "he": "גם" },
+            { "en": "about", "he": "אודות" }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את הביטויים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "הביטויים האלה עוזרים לנהל שיחת היכרות בצורה מנומסת.",
+          "pairs": [
+            { "en": "Nice to meet you", "he": "נעים להכיר" },
+            { "en": "Nice to meet you, too", "he": "גם לי נעים להכיר" },
+            { "en": "What about you?", "he": "ומה אתה?" },
+            { "en": "Thank you", "he": "תודה" }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'נעים להכיר' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "Nice to meet you",
+          "correct_answer_alternatives": ["Nice to meet you.", "nice to meet you"],
+          "explanation_he": "נעים להכיר באנגלית הוא Nice to meet you."
+        }
+      ]
+    },
+    {
+      "order_index": 4,
+      "title_he": "Checkpoint: Introductions Review",
+      "description_he": "חזרה על שם, מקום, גיל וביטויי היכרות",
+      "is_checkpoint": true,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "My name is Tom.",
+          "prompt_language": "en",
+          "explanation_he": "My name is Tom. = קוראים לי תום. זה משפט בסיסי להצגת שם.",
+          "options": [
+            { "text": "קוראים לי תום.", "language": "he", "is_correct": true },
+            { "text": "אני מישראל.", "language": "he", "is_correct": false },
+            { "text": "מה שלומך?", "language": "he", "is_correct": false },
+            { "text": "נעים להכיר.", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "Where are you from?",
+          "prompt_language": "en",
+          "explanation_he": "Where are you from? = מאיפה אתה/את? שאלה על מוצא.",
+          "options": [
+            { "text": "מאיפה אתה/את?", "language": "he", "is_correct": true },
+            { "text": "איך קוראים לך?", "language": "he", "is_correct": false },
+            { "text": "מה הגיל שלך?", "language": "he", "is_correct": false },
+            { "text": "בבקשה.", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "Nice to meet you.",
+          "prompt_language": "en",
+          "explanation_he": "Nice to meet you. = נעים להכיר. ביטוי שמשתמשים בו בהיכרות.",
+          "options": [
+            { "text": "נעים להכיר.", "language": "he", "is_correct": true },
+            { "text": "לילה טוב.", "language": "he", "is_correct": false },
+            { "text": "אני תלמיד.", "language": "he", "is_correct": false },
+            { "text": "אני בת עשרים.", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: קוראים לי תום.",
+          "prompt_language": "he",
+          "correct_answer": "My name is Tom.",
+          "correct_answer_alternatives": ["My name is Tom"],
+          "word_bank_words": ["My", "name", "is", "Tom.", "from", "Dana."],
+          "explanation_he": "My name is Tom. = קוראים לי תום. My name is הוא דפוס נפוץ להצגת שם."
+        },
+        {
+          "order_index": 4,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני מישראל.",
+          "prompt_language": "he",
+          "correct_answer": "I'm from Israel.",
+          "correct_answer_alternatives": ["I am from Israel", "I am from Israel.", "I'm from Israel"],
+          "word_bank_words": ["I'm", "from", "Israel.", "student.", "name"],
+          "explanation_he": "I'm from Israel. = אני מישראל. from מציין מאיפה מישהו מגיע."
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: נעים להכיר אותך.",
+          "prompt_language": "he",
+          "correct_answer": "Nice to meet you.",
+          "correct_answer_alternatives": ["Nice to meet you"],
+          "word_bank_words": ["Nice", "to", "meet", "you.", "What", "from?"],
+          "explanation_he": "Nice to meet you. = נעים להכיר אותך. ביטוי שגרתי בתחילת שיחה."
+        },
+        {
+          "order_index": 6,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'מה שמך?' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "What is your name",
+          "correct_answer_alternatives": ["What is your name?", "what is your name"],
+          "explanation_he": "מה שמך באנגלית הוא What is your name?"
+        },
+        {
+          "order_index": 7,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'ומה אתה?' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "What about you",
+          "correct_answer_alternatives": ["What about you?", "what about you"],
+          "explanation_he": "ומה אתה באנגלית הוא What about you?"
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את הביטויים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "ארבעת הביטויים המרכזיים שלמדת ביחידה.",
+          "pairs": [
+            { "en": "My name is", "he": "קוראים לי" },
+            { "en": "I am", "he": "אני" },
+            { "en": "I'm from", "he": "אני מ-" },
+            { "en": "Nice to meet you", "he": "נעים להכיר" }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "matching",
+          "prompt_text": "התאם את המילים לתרגום שלהן",
+          "prompt_language": "he",
+          "explanation_he": "name = שם, student = תלמיד, from = מ-, too = גם.",
+          "pairs": [
+            { "en": "name", "he": "שם" },
+            { "en": "student", "he": "תלמיד" },
+            { "en": "from", "he": "מ-" },
+            { "en": "too", "he": "גם" }
+          ]
+        }
+      ]
+    }
+  ]
+}
