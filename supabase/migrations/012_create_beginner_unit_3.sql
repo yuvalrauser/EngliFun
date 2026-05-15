@@ -1,0 +1,31 @@
+-- ============================================================
+-- 012_create_beginner_unit_3.sql
+--
+-- Phase 5 / Batch 4: Create a brand-new Beginner Unit 3
+-- ("כינויי גוף והפועל To Be") under the existing beginner course.
+-- 5 lessons, 50 exercises, 164 options, 40 pair_group_ids.
+--
+-- Unlike Batches 2 & 3, this batch is purely ADDITIVE — there is no
+-- old unit row to wipe. We INSERT a new unit, INSERT lessons,
+-- INSERT exercises + options, then unlock the first lesson for any
+-- user who already completed Unit 2's checkpoint.
+--
+-- Pedagogical safety:
+--   - Every complete_sentence has a Hebrew context prefix that fixes
+--     the subject, so only one to-be form is correct.
+--   - No matching pair translates am / is / are / be / to be to a
+--     Hebrew pronoun. All matching pairs are pronoun-to-pronoun,
+--     real vocab, or full phrase pairs.
+--   - All word_bank correct answers are multi-token.
+--
+-- Unit 1 and Unit 2 are NOT touched. The complete_lesson RPC is NOT
+-- touched. XP / scoring rules are NOT touched.
+--
+-- ID convention (continues the Batch 2/3 sequence):
+--   Unit:           00000000-0000-0000-0001-000000000003
+--   Lessons:        00000000-0000-0008-0002-000000000021..025
+--   Exercises:      00000000-0000-0008-0003-000000000101..150
+--   Pair groups:    b0000000-0008-0004-0000-000000000081..120
+-- ============================================================
+
+-- (Applied via MCP in 4 chunks; see git log for the live migration sequence.)

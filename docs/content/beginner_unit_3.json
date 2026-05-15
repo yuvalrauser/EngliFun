@@ -1,0 +1,545 @@
+{
+  "unit": {
+    "title_he": "כינויי גוף והפועל To Be",
+    "title_en": "Pronouns & To Be",
+    "objective_he": "ללמוד לבנות משפטים פשוטים באנגלית עם כינויי גוף וצורות am, are, is, כולל שלילה ושאלות בסיסיות.",
+    "icon_emoji": "🧩",
+    "color_hex": "#A560FF",
+    "order_index": 2
+  },
+  "lessons": [
+    {
+      "order_index": 0,
+      "title_he": "I am / I am not",
+      "description_he": "משפטים פשוטים על עצמי עם I am ו-I am not",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0, "type": "multiple_choice",
+          "prompt_text": "I am happy.", "prompt_language": "en",
+          "explanation_he": "I am happy. = אני שמח/ה. משתמשים ב-I am כדי לדבר על עצמי.",
+          "options": [
+            { "text": "אני שמח/ה.", "language": "he", "is_correct": true },
+            { "text": "אתה שמח.", "language": "he", "is_correct": false },
+            { "text": "הוא שמח.", "language": "he", "is_correct": false },
+            { "text": "אני עייף/ה.", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 1, "type": "multiple_choice",
+          "prompt_text": "I am not tired.", "prompt_language": "en",
+          "explanation_he": "I am not tired. = אני לא עייף/ה. המילה not יוצרת שלילה.",
+          "options": [
+            { "text": "אני לא עייף/ה.", "language": "he", "is_correct": true },
+            { "text": "אני עייף/ה.", "language": "he", "is_correct": false },
+            { "text": "הוא לא עייף.", "language": "he", "is_correct": false },
+            { "text": "אנחנו עייפים.", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 2, "type": "multiple_choice",
+          "prompt_text": "ready", "prompt_language": "en",
+          "explanation_he": "ready = מוכן/מוכנה. אפשר לומר I am ready.",
+          "options": [
+            { "text": "מוכן / מוכנה", "language": "he", "is_correct": true },
+            { "text": "עייף / עייפה", "language": "he", "is_correct": false },
+            { "text": "שמח / שמחה", "language": "he", "is_correct": false },
+            { "text": "שם", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 3, "type": "complete_sentence",
+          "prompt_text": "אמור אני שמח: I ___ happy.", "prompt_language": "he",
+          "correct_answer": "am",
+          "explanation_he": "I am happy. = אני שמח/ה. אחרי I משתמשים ב-am.",
+          "options": [
+            { "text": "am", "language": "en", "is_correct": true },
+            { "text": "is", "language": "en", "is_correct": false },
+            { "text": "are", "language": "en", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 4, "type": "complete_sentence",
+          "prompt_text": "אמור אני לא עייף: I am ___ tired.", "prompt_language": "he",
+          "correct_answer": "not",
+          "explanation_he": "I am not tired. = אני לא עייף/ה. המילה not הופכת את המשפט לשלילה.",
+          "options": [
+            { "text": "not", "language": "en", "is_correct": true },
+            { "text": "you", "language": "en", "is_correct": false },
+            { "text": "from", "language": "en", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 5, "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני שמח.", "prompt_language": "he",
+          "correct_answer": "I am happy.",
+          "correct_answer_alternatives": ["I am happy", "I'm happy", "I'm happy."],
+          "word_bank_words": ["I", "am", "happy.", "tired.", "you"],
+          "explanation_he": "I am happy. = אני שמח/ה. אפשר גם לומר I'm happy."
+        },
+        {
+          "order_index": 6, "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני לא עייף.", "prompt_language": "he",
+          "correct_answer": "I am not tired.",
+          "correct_answer_alternatives": ["I am not tired", "I'm not tired", "I'm not tired."],
+          "word_bank_words": ["I", "am", "not", "tired.", "happy.", "you"],
+          "explanation_he": "I am not tired. = אני לא עייף/ה. not היא מילת שלילה."
+        },
+        {
+          "order_index": 7, "type": "matching",
+          "prompt_text": "התאם את המילים לתרגום שלהן", "prompt_language": "he",
+          "explanation_he": "I = אני, happy = שמח, tired = עייף, ready = מוכן.",
+          "pairs": [
+            { "en": "I", "he": "אני" },
+            { "en": "happy", "he": "שמח / שמחה" },
+            { "en": "tired", "he": "עייף / עייפה" },
+            { "en": "ready", "he": "מוכן / מוכנה" }
+          ]
+        },
+        {
+          "order_index": 8, "type": "matching",
+          "prompt_text": "התאם את המשפטים לתרגום שלהם", "prompt_language": "he",
+          "explanation_he": "משפטים עם I am מדברים על עצמי. I am not יוצר שלילה.",
+          "pairs": [
+            { "en": "I am happy", "he": "אני שמח/ה" },
+            { "en": "I am ready", "he": "אני מוכן/ה" },
+            { "en": "I am not tired", "he": "אני לא עייף/ה" },
+            { "en": "I am a student", "he": "אני תלמיד/ה" }
+          ]
+        },
+        {
+          "order_index": 9, "type": "type_answer",
+          "prompt_text": "איך אומרים 'אני מוכן' באנגלית?", "prompt_language": "he",
+          "correct_answer": "I am ready",
+          "correct_answer_alternatives": ["I am ready.", "I'm ready", "I'm ready.", "i am ready"],
+          "explanation_he": "אני מוכן באנגלית הוא I am ready או בקיצור I'm ready."
+        }
+      ]
+    },
+    {
+      "order_index": 1,
+      "title_he": "You are / We are / They are",
+      "description_he": "משפטים עם you, we, they וצורת are",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0, "type": "multiple_choice",
+          "prompt_text": "You are ready.", "prompt_language": "en",
+          "explanation_he": "You are ready. = אתה/את מוכן/ה. משתמשים ב-are עם you.",
+          "options": [
+            { "text": "אתה/את מוכן/ה.", "language": "he", "is_correct": true },
+            { "text": "אני מוכן/ה.", "language": "he", "is_correct": false },
+            { "text": "הוא מוכן.", "language": "he", "is_correct": false },
+            { "text": "הם עייפים.", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 1, "type": "multiple_choice",
+          "prompt_text": "We are students.", "prompt_language": "en",
+          "explanation_he": "We are students. = אנחנו תלמידים/סטודנטים. we פירושו אנחנו.",
+          "options": [
+            { "text": "אנחנו תלמידים/סטודנטים.", "language": "he", "is_correct": true },
+            { "text": "הם תלמידים.", "language": "he", "is_correct": false },
+            { "text": "אני תלמיד.", "language": "he", "is_correct": false },
+            { "text": "אתה תלמיד.", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 2, "type": "multiple_choice",
+          "prompt_text": "They are friends.", "prompt_language": "en",
+          "explanation_he": "They are friends. = הם/הן חברים. they פירושו הם או הן.",
+          "options": [
+            { "text": "הם/הן חברים.", "language": "he", "is_correct": true },
+            { "text": "אנחנו חברים.", "language": "he", "is_correct": false },
+            { "text": "אני חבר.", "language": "he", "is_correct": false },
+            { "text": "היא חברה.", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 3, "type": "complete_sentence",
+          "prompt_text": "אמור אתה מוכן: You ___ ready.", "prompt_language": "he",
+          "correct_answer": "are",
+          "explanation_he": "You are ready. = אתה/את מוכן/ה. עם you משתמשים ב-are.",
+          "options": [
+            { "text": "are", "language": "en", "is_correct": true },
+            { "text": "am", "language": "en", "is_correct": false },
+            { "text": "is", "language": "en", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 4, "type": "complete_sentence",
+          "prompt_text": "אמור אנחנו תלמידים: We ___ students.", "prompt_language": "he",
+          "correct_answer": "are",
+          "explanation_he": "We are students. = אנחנו תלמידים/סטודנטים. עם we משתמשים ב-are.",
+          "options": [
+            { "text": "are", "language": "en", "is_correct": true },
+            { "text": "is", "language": "en", "is_correct": false },
+            { "text": "name", "language": "en", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 5, "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אתה מוכן.", "prompt_language": "he",
+          "correct_answer": "You are ready.",
+          "correct_answer_alternatives": ["You are ready", "You're ready", "You're ready."],
+          "word_bank_words": ["You", "are", "ready.", "happy.", "I"],
+          "explanation_he": "You are ready. = אתה/את מוכן/ה. אפשר גם לומר You're ready."
+        },
+        {
+          "order_index": 6, "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: הם חברים.", "prompt_language": "he",
+          "correct_answer": "They are friends.",
+          "correct_answer_alternatives": ["They are friends", "They're friends", "They're friends."],
+          "word_bank_words": ["They", "are", "friends.", "students.", "We"],
+          "explanation_he": "They are friends. = הם/הן חברים. friends היא צורת רבים של friend."
+        },
+        {
+          "order_index": 7, "type": "matching",
+          "prompt_text": "התאם את כינויי הגוף לתרגום שלהן", "prompt_language": "he",
+          "explanation_he": "you = אתה/את, we = אנחנו, they = הם/הן, friends = חברים.",
+          "pairs": [
+            { "en": "you", "he": "אתה / את" },
+            { "en": "we", "he": "אנחנו" },
+            { "en": "they", "he": "הם / הן" },
+            { "en": "friends", "he": "חברים" }
+          ]
+        },
+        {
+          "order_index": 8, "type": "matching",
+          "prompt_text": "התאם את המשפטים לתרגום שלהם", "prompt_language": "he",
+          "explanation_he": "עם you, we ו-they משתמשים ב-are במשפטים פשוטים.",
+          "pairs": [
+            { "en": "You are ready", "he": "אתה/את מוכן/ה" },
+            { "en": "We are students", "he": "אנחנו תלמידים" },
+            { "en": "They are friends", "he": "הם חברים" },
+            { "en": "You are not tired", "he": "אתה/את לא עייף/ה" }
+          ]
+        },
+        {
+          "order_index": 9, "type": "type_answer",
+          "prompt_text": "איך אומרים 'אנחנו תלמידים' באנגלית?", "prompt_language": "he",
+          "correct_answer": "We are students",
+          "correct_answer_alternatives": ["We are students.", "We're students", "We're students.", "we are students"],
+          "explanation_he": "אנחנו תלמידים באנגלית הוא We are students או בקיצור We're students."
+        }
+      ]
+    },
+    {
+      "order_index": 2,
+      "title_he": "He is / She is / It is",
+      "description_he": "משפטים עם he, she, it וצורת is",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0, "type": "multiple_choice",
+          "prompt_text": "He is a teacher.", "prompt_language": "en",
+          "explanation_he": "He is a teacher. = הוא מורה. he פירושו הוא.",
+          "options": [
+            { "text": "הוא מורה.", "language": "he", "is_correct": true },
+            { "text": "היא מורה.", "language": "he", "is_correct": false },
+            { "text": "אני מורה.", "language": "he", "is_correct": false },
+            { "text": "אנחנו מורים.", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 1, "type": "multiple_choice",
+          "prompt_text": "She is happy.", "prompt_language": "en",
+          "explanation_he": "She is happy. = היא שמחה. she פירושו היא.",
+          "options": [
+            { "text": "היא שמחה.", "language": "he", "is_correct": true },
+            { "text": "הוא שמח.", "language": "he", "is_correct": false },
+            { "text": "הם שמחים.", "language": "he", "is_correct": false },
+            { "text": "אתה שמח.", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 2, "type": "multiple_choice",
+          "prompt_text": "It is a book.", "prompt_language": "en",
+          "explanation_he": "It is a book. = זה ספר. it משמש לחפץ דומם.",
+          "options": [
+            { "text": "זה ספר.", "language": "he", "is_correct": true },
+            { "text": "הוא מורה.", "language": "he", "is_correct": false },
+            { "text": "היא שמחה.", "language": "he", "is_correct": false },
+            { "text": "אני ספר.", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 3, "type": "complete_sentence",
+          "prompt_text": "אמור הוא מורה: He ___ a teacher.", "prompt_language": "he",
+          "correct_answer": "is",
+          "explanation_he": "He is a teacher. = הוא מורה. עם he משתמשים ב-is.",
+          "options": [
+            { "text": "is", "language": "en", "is_correct": true },
+            { "text": "am", "language": "en", "is_correct": false },
+            { "text": "are", "language": "en", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 4, "type": "complete_sentence",
+          "prompt_text": "אמור היא שמחה: She ___ happy.", "prompt_language": "he",
+          "correct_answer": "is",
+          "explanation_he": "She is happy. = היא שמחה. עם she משתמשים ב-is.",
+          "options": [
+            { "text": "is", "language": "en", "is_correct": true },
+            { "text": "are", "language": "en", "is_correct": false },
+            { "text": "not", "language": "en", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 5, "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: הוא מורה.", "prompt_language": "he",
+          "correct_answer": "He is a teacher.",
+          "correct_answer_alternatives": ["He is a teacher", "He's a teacher", "He's a teacher."],
+          "word_bank_words": ["He", "is", "a", "teacher.", "student.", "She"],
+          "explanation_he": "He is a teacher. = הוא מורה. אפשר גם לומר He's a teacher."
+        },
+        {
+          "order_index": 6, "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: זה ספר.", "prompt_language": "he",
+          "correct_answer": "It is a book.",
+          "correct_answer_alternatives": ["It is a book", "It's a book", "It's a book."],
+          "word_bank_words": ["It", "is", "a", "book.", "teacher.", "She"],
+          "explanation_he": "It is a book. = זה ספר. it מתאים לחפצים דוממים."
+        },
+        {
+          "order_index": 7, "type": "matching",
+          "prompt_text": "התאם את כינויי הגוף לתרגום שלהן", "prompt_language": "he",
+          "explanation_he": "he = הוא, she = היא, it = זה/זאת, book = ספר.",
+          "pairs": [
+            { "en": "he", "he": "הוא" },
+            { "en": "she", "he": "היא" },
+            { "en": "it", "he": "זה / זאת" },
+            { "en": "book", "he": "ספר" }
+          ]
+        },
+        {
+          "order_index": 8, "type": "matching",
+          "prompt_text": "התאם את המשפטים לתרגום שלהם", "prompt_language": "he",
+          "explanation_he": "עם he, she ו-it משתמשים ב-is במשפטים פשוטים.",
+          "pairs": [
+            { "en": "He is a teacher", "he": "הוא מורה" },
+            { "en": "She is happy", "he": "היא שמחה" },
+            { "en": "It is a book", "he": "זה ספר" },
+            { "en": "It is small", "he": "זה קטן" }
+          ]
+        },
+        {
+          "order_index": 9, "type": "type_answer",
+          "prompt_text": "איך אומרים 'היא שמחה' באנגלית?", "prompt_language": "he",
+          "correct_answer": "She is happy",
+          "correct_answer_alternatives": ["She is happy.", "She's happy", "She's happy.", "she is happy"],
+          "explanation_he": "היא שמחה באנגלית הוא She is happy או בקיצור She's happy."
+        }
+      ]
+    },
+    {
+      "order_index": 3,
+      "title_he": "Questions with To Be",
+      "description_he": "שאלות קצרות עם am, are, is ותשובות קצרות",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0, "type": "multiple_choice",
+          "prompt_text": "Are you ready?", "prompt_language": "en",
+          "explanation_he": "Are you ready? = האם אתה/את מוכן/ה? בשאלה עם you מתחילים ב-Are.",
+          "options": [
+            { "text": "האם אתה/את מוכן/ה?", "language": "he", "is_correct": true },
+            { "text": "אני מוכן.", "language": "he", "is_correct": false },
+            { "text": "האם מוכן?", "language": "he", "is_correct": false },
+            { "text": "מה השם שלך?", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 1, "type": "multiple_choice",
+          "prompt_text": "Is she a student?", "prompt_language": "en",
+          "explanation_he": "Is she a student? = האם היא תלמידה/סטודנטית? בשאלה עם she מתחילים ב-Is.",
+          "options": [
+            { "text": "האם היא תלמידה/סטודנטית?", "language": "he", "is_correct": true },
+            { "text": "האם אתה תלמיד?", "language": "he", "is_correct": false },
+            { "text": "הוא מורה.", "language": "he", "is_correct": false },
+            { "text": "אנחנו תלמידים.", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 2, "type": "multiple_choice",
+          "prompt_text": "No, I'm not.", "prompt_language": "en",
+          "explanation_he": "No, I'm not. = לא, אני לא. זו תשובה קצרה לשאלה על עצמי.",
+          "options": [
+            { "text": "לא, אני לא.", "language": "he", "is_correct": true },
+            { "text": "כן, אני כן.", "language": "he", "is_correct": false },
+            { "text": "אני שמח.", "language": "he", "is_correct": false },
+            { "text": "היא לא.", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 3, "type": "complete_sentence",
+          "prompt_text": "שאל האם אתה מוכן: ___ you ready?", "prompt_language": "he",
+          "correct_answer": "Are",
+          "explanation_he": "Are you ready? = האם אתה/את מוכן/ה? בשאלה עם you מתחילים ב-Are.",
+          "options": [
+            { "text": "Are", "language": "en", "is_correct": true },
+            { "text": "Is", "language": "en", "is_correct": false },
+            { "text": "Am", "language": "en", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 4, "type": "complete_sentence",
+          "prompt_text": "שאל האם היא תלמידה: ___ she a student?", "prompt_language": "he",
+          "correct_answer": "Is",
+          "explanation_he": "Is she a student? = האם היא תלמידה/סטודנטית? בשאלה עם she מתחילים ב-Is.",
+          "options": [
+            { "text": "Is", "language": "en", "is_correct": true },
+            { "text": "Are", "language": "en", "is_correct": false },
+            { "text": "Am", "language": "en", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 5, "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: האם אתה מוכן?", "prompt_language": "he",
+          "correct_answer": "Are you ready?",
+          "correct_answer_alternatives": ["Are you ready"],
+          "word_bank_words": ["Are", "you", "ready?", "Is", "happy?"],
+          "explanation_he": "Are you ready? = האם אתה/את מוכן/ה? בשאלה, Are מופיע בתחילת המשפט."
+        },
+        {
+          "order_index": 6, "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: לא, אני לא.", "prompt_language": "he",
+          "correct_answer": "No, I'm not.",
+          "correct_answer_alternatives": ["No I'm not", "No, I am not", "No I am not", "No, I'm not"],
+          "word_bank_words": ["No,", "I'm", "not.", "Yes,", "ready."],
+          "explanation_he": "No, I'm not. = לא, אני לא. זו תשובה קצרה לשאלות."
+        },
+        {
+          "order_index": 7, "type": "matching",
+          "prompt_text": "התאם את השאלות לתרגום שלהן", "prompt_language": "he",
+          "explanation_he": "שאלות עם To Be מתחילות באחד מ-Am, Are או Is.",
+          "pairs": [
+            { "en": "Are you ready?", "he": "האם אתה מוכן?" },
+            { "en": "Is she happy?", "he": "האם היא שמחה?" },
+            { "en": "Is it a book?", "he": "האם זה ספר?" },
+            { "en": "Am I tired?", "he": "האם אני עייף?" }
+          ]
+        },
+        {
+          "order_index": 8, "type": "matching",
+          "prompt_text": "התאם את התשובות הקצרות לתרגום שלהן", "prompt_language": "he",
+          "explanation_he": "Yes, I am ו-No, I'm not הן תשובות קצרות לשאלות על עצמי.",
+          "pairs": [
+            { "en": "Yes, I am", "he": "כן, אני כן" },
+            { "en": "No, I'm not", "he": "לא, אני לא" },
+            { "en": "Yes, she is", "he": "כן, היא כן" },
+            { "en": "No, he isn't", "he": "לא, הוא לא" }
+          ]
+        },
+        {
+          "order_index": 9, "type": "type_answer",
+          "prompt_text": "איך אומרים 'האם אתה מוכן?' באנגלית?", "prompt_language": "he",
+          "correct_answer": "Are you ready",
+          "correct_answer_alternatives": ["Are you ready?", "are you ready"],
+          "explanation_he": "האם אתה מוכן באנגלית הוא Are you ready?"
+        }
+      ]
+    },
+    {
+      "order_index": 4,
+      "title_he": "Checkpoint: To Be Review",
+      "description_he": "חזרה על I am, you are, he/she/it is ושאלות קצרות",
+      "is_checkpoint": true,
+      "exercises": [
+        {
+          "order_index": 0, "type": "multiple_choice",
+          "prompt_text": "We are friends.", "prompt_language": "en",
+          "explanation_he": "We are friends. = אנחנו חברים. עם we משתמשים ב-are.",
+          "options": [
+            { "text": "אנחנו חברים.", "language": "he", "is_correct": true },
+            { "text": "הם חברים.", "language": "he", "is_correct": false },
+            { "text": "אני חבר.", "language": "he", "is_correct": false },
+            { "text": "הוא חבר.", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 1, "type": "multiple_choice",
+          "prompt_text": "He is not tired.", "prompt_language": "en",
+          "explanation_he": "He is not tired. = הוא לא עייף. not יוצרת שלילה.",
+          "options": [
+            { "text": "הוא לא עייף.", "language": "he", "is_correct": true },
+            { "text": "הוא עייף.", "language": "he", "is_correct": false },
+            { "text": "היא לא עייפה.", "language": "he", "is_correct": false },
+            { "text": "אני לא עייף.", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 2, "type": "multiple_choice",
+          "prompt_text": "Are they students?", "prompt_language": "en",
+          "explanation_he": "Are they students? = האם הם תלמידים? בשאלה עם they מתחילים ב-Are.",
+          "options": [
+            { "text": "האם הם תלמידים?", "language": "he", "is_correct": true },
+            { "text": "האם היא תלמידה?", "language": "he", "is_correct": false },
+            { "text": "הם תלמידים.", "language": "he", "is_correct": false },
+            { "text": "אנחנו תלמידים.", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 3, "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני לא עייף.", "prompt_language": "he",
+          "correct_answer": "I am not tired.",
+          "correct_answer_alternatives": ["I am not tired", "I'm not tired", "I'm not tired."],
+          "word_bank_words": ["I", "am", "not", "tired.", "happy.", "She"],
+          "explanation_he": "I am not tired. = אני לא עייף/ה. זה משפט שלילי עם I am not."
+        },
+        {
+          "order_index": 4, "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: היא שמחה.", "prompt_language": "he",
+          "correct_answer": "She is happy.",
+          "correct_answer_alternatives": ["She is happy", "She's happy", "She's happy."],
+          "word_bank_words": ["She", "is", "happy.", "He", "tired."],
+          "explanation_he": "She is happy. = היא שמחה. עם she משתמשים ב-is."
+        },
+        {
+          "order_index": 5, "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: האם הם חברים?", "prompt_language": "he",
+          "correct_answer": "Are they friends?",
+          "correct_answer_alternatives": ["Are they friends"],
+          "word_bank_words": ["Are", "they", "friends?", "We", "students?"],
+          "explanation_he": "Are they friends? = האם הם חברים? בשאלה עם they מתחילים ב-Are."
+        },
+        {
+          "order_index": 6, "type": "type_answer",
+          "prompt_text": "איך אומרים 'הוא מורה' באנגלית?", "prompt_language": "he",
+          "correct_answer": "He is a teacher",
+          "correct_answer_alternatives": ["He is a teacher.", "He's a teacher", "He's a teacher.", "he is a teacher"],
+          "explanation_he": "הוא מורה באנגלית הוא He is a teacher."
+        },
+        {
+          "order_index": 7, "type": "type_answer",
+          "prompt_text": "איך אומרים 'האם היא שמחה?' באנגלית?", "prompt_language": "he",
+          "correct_answer": "Is she happy",
+          "correct_answer_alternatives": ["Is she happy?", "is she happy"],
+          "explanation_he": "האם היא שמחה באנגלית הוא Is she happy?"
+        },
+        {
+          "order_index": 8, "type": "matching",
+          "prompt_text": "התאם את כינויי הגוף לתרגום שלהן", "prompt_language": "he",
+          "explanation_he": "ארבעת כינויי הגוף המרכזיים שלמדת ביחידה.",
+          "pairs": [
+            { "en": "I", "he": "אני" },
+            { "en": "you", "he": "אתה / את" },
+            { "en": "we", "he": "אנחנו" },
+            { "en": "they", "he": "הם / הן" }
+          ]
+        },
+        {
+          "order_index": 9, "type": "matching",
+          "prompt_text": "התאם את המשפטים לתרגום שלהם", "prompt_language": "he",
+          "explanation_he": "חזרה על משפטים חיוביים, שליליים ושאלות עם To Be.",
+          "pairs": [
+            { "en": "I am ready", "he": "אני מוכן" },
+            { "en": "She is happy", "he": "היא שמחה" },
+            { "en": "They are friends", "he": "הם חברים" },
+            { "en": "Are you ready?", "he": "האם אתה מוכן?" }
+          ]
+        }
+      ]
+    }
+  ]
+}
