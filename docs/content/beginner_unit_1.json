@@ -1,0 +1,645 @@
+{
+  "unit": {
+    "title_he": "ברכות ומילים מנומסות",
+    "title_en": "Greetings & Polite Words",
+    "objective_he": "ללמוד ברכות בסיסיות, מילות נימוס וביטויים שיחתיים קצרים באנגלית.",
+    "icon_emoji": "👋",
+    "color_hex": "#58CC02",
+    "order_index": 0
+  },
+  "lessons": [
+    {
+      "order_index": 0,
+      "title_he": "Hello / Hi / Bye",
+      "description_he": "מילות פתיחה וסיום בסיסיות",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "Hello",
+          "prompt_language": "en",
+          "explanation_he": "Hello = שלום. זו הדרך הנפוצה ביותר לפתוח שיחה באנגלית.",
+          "options": [
+            { "text": "שלום", "language": "he", "is_correct": true },
+            { "text": "להתראות", "language": "he", "is_correct": false },
+            { "text": "תודה", "language": "he", "is_correct": false },
+            { "text": "בבקשה", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "Bye",
+          "prompt_language": "en",
+          "explanation_he": "Bye = ביי או להתראות. זו דרך קצרה ולא רשמית לסיים שיחה.",
+          "options": [
+            { "text": "ביי", "language": "he", "is_correct": true },
+            { "text": "שלום", "language": "he", "is_correct": false },
+            { "text": "כן", "language": "he", "is_correct": false },
+            { "text": "לא", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "Yes",
+          "prompt_language": "en",
+          "explanation_he": "Yes = כן. זו תשובה חיובית פשוטה באנגלית.",
+          "options": [
+            { "text": "כן", "language": "he", "is_correct": true },
+            { "text": "לא", "language": "he", "is_correct": false },
+            { "text": "שלום", "language": "he", "is_correct": false },
+            { "text": "להתראות", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור שלום: ___!",
+          "prompt_language": "he",
+          "correct_answer": "Hello",
+          "explanation_he": "Hello! = שלום! משתמשים בזה כדי לפתוח שיחה.",
+          "options": [
+            { "text": "Hello", "language": "en", "is_correct": true },
+            { "text": "Bye", "language": "en", "is_correct": false },
+            { "text": "No", "language": "en", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור להתראות: ___!",
+          "prompt_language": "he",
+          "correct_answer": "Goodbye",
+          "explanation_he": "Goodbye! = להתראות! משתמשים בזה כדי לסיים שיחה בצורה מנומסת.",
+          "options": [
+            { "text": "Goodbye", "language": "en", "is_correct": true },
+            { "text": "Hello", "language": "en", "is_correct": false },
+            { "text": "Yes", "language": "en", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: שלום, דנה.",
+          "prompt_language": "he",
+          "correct_answer": "Hello, Dana.",
+          "correct_answer_alternatives": ["Hello Dana", "Hello, Dana", "hello, dana."],
+          "word_bank_words": ["Hello,", "Dana.", "Bye", "Yes", "No"],
+          "explanation_he": "Hello, Dana. = שלום, דנה. ככה פונים למישהו בשמו בתחילת שיחה."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: להתראות, תום.",
+          "prompt_language": "he",
+          "correct_answer": "Goodbye, Tom.",
+          "correct_answer_alternatives": ["Goodbye Tom", "Goodbye, Tom", "goodbye, tom."],
+          "word_bank_words": ["Goodbye,", "Tom.", "Hello,", "Thanks", "No"],
+          "explanation_he": "Goodbye, Tom. = להתראות, תום. ככה נפרדים ממישהו בשמו בצורה מנומסת."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את המילים לתרגום שלהן",
+          "prompt_language": "he",
+          "explanation_he": "Hello = שלום, Hi = היי, Bye = ביי, Goodbye = להתראות.",
+          "pairs": [
+            { "en": "Hello", "he": "שלום" },
+            { "en": "Hi", "he": "היי" },
+            { "en": "Bye", "he": "ביי" },
+            { "en": "Goodbye", "he": "להתראות" }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את המילים לתרגום שלהן",
+          "prompt_language": "he",
+          "explanation_he": "Yes = כן, No = לא. אלה תשובות בסיסיות ושימושיות מאוד.",
+          "pairs": [
+            { "en": "Yes", "he": "כן" },
+            { "en": "No", "he": "לא" },
+            { "en": "Hello", "he": "שלום" },
+            { "en": "Bye", "he": "ביי" }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'שלום' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "Hello",
+          "correct_answer_alternatives": ["Hi", "hello", "hi"],
+          "explanation_he": "שלום באנגלית הוא Hello. אפשר גם לומר Hi בצורה פחות רשמית."
+        }
+      ]
+    },
+    {
+      "order_index": 1,
+      "title_he": "Good Morning / Good Night",
+      "description_he": "ברכות לפי זמן ביום",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "Good morning",
+          "prompt_language": "en",
+          "explanation_he": "Good morning = בוקר טוב. משתמשים בזה בתחילת היום.",
+          "options": [
+            { "text": "בוקר טוב", "language": "he", "is_correct": true },
+            { "text": "לילה טוב", "language": "he", "is_correct": false },
+            { "text": "ערב טוב", "language": "he", "is_correct": false },
+            { "text": "להתראות", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "Good night",
+          "prompt_language": "en",
+          "explanation_he": "Good night = לילה טוב. משתמשים בזה לפני שינה או בסוף הערב.",
+          "options": [
+            { "text": "לילה טוב", "language": "he", "is_correct": true },
+            { "text": "בוקר טוב", "language": "he", "is_correct": false },
+            { "text": "צהריים טובים", "language": "he", "is_correct": false },
+            { "text": "שלום", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "Good evening",
+          "prompt_language": "en",
+          "explanation_he": "Good evening = ערב טוב. זו ברכה מנומסת לשעות הערב.",
+          "options": [
+            { "text": "ערב טוב", "language": "he", "is_correct": true },
+            { "text": "בוקר טוב", "language": "he", "is_correct": false },
+            { "text": "לילה טוב", "language": "he", "is_correct": false },
+            { "text": "ביי", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור בוקר טוב: Good ___!",
+          "prompt_language": "he",
+          "correct_answer": "morning",
+          "explanation_he": "Good morning! = בוקר טוב! ברכת הבוקר באנגלית מורכבת מ-Good + morning.",
+          "options": [
+            { "text": "morning", "language": "en", "is_correct": true },
+            { "text": "night", "language": "en", "is_correct": false },
+            { "text": "bye", "language": "en", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור לילה טוב: Good ___!",
+          "prompt_language": "he",
+          "correct_answer": "night",
+          "explanation_he": "Good night! = לילה טוב! ברכת הלילה באנגלית מורכבת מ-Good + night.",
+          "options": [
+            { "text": "night", "language": "en", "is_correct": true },
+            { "text": "morning", "language": "en", "is_correct": false },
+            { "text": "yes", "language": "en", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: בוקר טוב",
+          "prompt_language": "he",
+          "correct_answer": "Good morning.",
+          "correct_answer_alternatives": ["Good morning"],
+          "word_bank_words": ["Good", "morning.", "night.", "Hello"],
+          "explanation_he": "Good morning. = בוקר טוב. Good פירושו טוב, morning פירושו בוקר."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: לילה טוב",
+          "prompt_language": "he",
+          "correct_answer": "Good night.",
+          "correct_answer_alternatives": ["Good night"],
+          "word_bank_words": ["Good", "night.", "morning.", "Bye"],
+          "explanation_he": "Good night. = לילה טוב. זו ברכה נפוצה לפני שינה."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את הברכות לתרגום שלהן",
+          "prompt_language": "he",
+          "explanation_he": "Morning = בוקר, night = לילה, evening = ערב, afternoon = אחר הצהריים.",
+          "pairs": [
+            { "en": "morning", "he": "בוקר" },
+            { "en": "night", "he": "לילה" },
+            { "en": "evening", "he": "ערב" },
+            { "en": "afternoon", "he": "אחר הצהריים" }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את הביטויים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "Good morning ו-Good night הן ברכות לפי זמן ביום.",
+          "pairs": [
+            { "en": "Good morning", "he": "בוקר טוב" },
+            { "en": "Good night", "he": "לילה טוב" },
+            { "en": "Good evening", "he": "ערב טוב" },
+            { "en": "Hello", "he": "שלום" }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'בוקר טוב' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "Good morning",
+          "correct_answer_alternatives": ["Good morning.", "good morning"],
+          "explanation_he": "בוקר טוב באנגלית הוא Good morning."
+        }
+      ]
+    },
+    {
+      "order_index": 2,
+      "title_he": "How Are You?",
+      "description_he": "שיחת שלומך בסיסית",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "How are you?",
+          "prompt_language": "en",
+          "explanation_he": "How are you? = מה שלומך? זו שאלה נפוצה בתחילת שיחה.",
+          "options": [
+            { "text": "מה שלומך?", "language": "he", "is_correct": true },
+            { "text": "איך קוראים לך?", "language": "he", "is_correct": false },
+            { "text": "להתראות", "language": "he", "is_correct": false },
+            { "text": "תודה רבה", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "fine",
+          "prompt_language": "en",
+          "explanation_he": "Fine = בסדר. זו תשובה קצרה ונפוצה לשאלה How are you?",
+          "options": [
+            { "text": "בסדר", "language": "he", "is_correct": true },
+            { "text": "לילה", "language": "he", "is_correct": false },
+            { "text": "שלום", "language": "he", "is_correct": false },
+            { "text": "בבקשה", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "Thanks",
+          "prompt_language": "en",
+          "explanation_he": "Thanks = תודה. זו גרסה קצרה ולא רשמית של Thank you.",
+          "options": [
+            { "text": "תודה", "language": "he", "is_correct": true },
+            { "text": "סליחה", "language": "he", "is_correct": false },
+            { "text": "כן", "language": "he", "is_correct": false },
+            { "text": "לא", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "שאל מה שלומך: How ___ you?",
+          "prompt_language": "he",
+          "correct_answer": "are",
+          "explanation_he": "How are you? = מה שלומך? בשאלה הזו משתמשים תמיד ב-are אחרי How.",
+          "options": [
+            { "text": "are", "language": "en", "is_correct": true },
+            { "text": "am", "language": "en", "is_correct": false },
+            { "text": "is", "language": "en", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "ענה אני בסדר: I am ___, thanks.",
+          "prompt_language": "he",
+          "correct_answer": "fine",
+          "explanation_he": "I am fine, thanks. = אני בסדר, תודה. fine = בסדר, וזו תשובה נפוצה.",
+          "options": [
+            { "text": "fine", "language": "en", "is_correct": true },
+            { "text": "night", "language": "en", "is_correct": false },
+            { "text": "bye", "language": "en", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: מה שלומך?",
+          "prompt_language": "he",
+          "correct_answer": "How are you?",
+          "correct_answer_alternatives": ["How are you"],
+          "word_bank_words": ["How", "are", "you?", "Hello", "fine"],
+          "explanation_he": "How are you? = מה שלומך? זו שאלה בסיסית באנגלית."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני בסדר, תודה.",
+          "prompt_language": "he",
+          "correct_answer": "I'm fine, thanks.",
+          "correct_answer_alternatives": ["I am fine thanks", "I'm fine thanks", "I am fine, thanks."],
+          "word_bank_words": ["I'm", "fine,", "thanks.", "you?", "Good"],
+          "explanation_he": "I'm fine, thanks. = אני בסדר, תודה. I'm הוא קיצור של I am."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את המילים לתרגום שלהן",
+          "prompt_language": "he",
+          "explanation_he": "How = איך, you = אתה / את, fine = בסדר, thanks = תודה.",
+          "pairs": [
+            { "en": "How", "he": "איך" },
+            { "en": "you", "he": "אתה / את" },
+            { "en": "fine", "he": "בסדר" },
+            { "en": "thanks", "he": "תודה" }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את הביטויים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "How are you? היא שאלה, ו-I'm fine היא תשובה קצרה.",
+          "pairs": [
+            { "en": "How are you?", "he": "מה שלומך?" },
+            { "en": "I'm fine", "he": "אני בסדר" },
+            { "en": "Thanks", "he": "תודה" },
+            { "en": "Good", "he": "טוב" }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'אני בסדר' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "I am fine",
+          "correct_answer_alternatives": ["I'm fine", "i am fine", "im fine"],
+          "explanation_he": "אני בסדר באנגלית הוא I am fine או בקיצור I'm fine."
+        }
+      ]
+    },
+    {
+      "order_index": 3,
+      "title_he": "Please / Thank You / Sorry",
+      "description_he": "מילות נימוס בסיסיות",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "Please",
+          "prompt_language": "en",
+          "explanation_he": "Please = בבקשה. משתמשים בזה כדי לבקש משהו בנימוס.",
+          "options": [
+            { "text": "בבקשה", "language": "he", "is_correct": true },
+            { "text": "תודה", "language": "he", "is_correct": false },
+            { "text": "סליחה", "language": "he", "is_correct": false },
+            { "text": "להתראות", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "Thank you",
+          "prompt_language": "en",
+          "explanation_he": "Thank you = תודה. זו צורה מנומסת יותר מ-Thanks.",
+          "options": [
+            { "text": "תודה", "language": "he", "is_correct": true },
+            { "text": "בוקר טוב", "language": "he", "is_correct": false },
+            { "text": "לא", "language": "he", "is_correct": false },
+            { "text": "בבקשה", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "Sorry",
+          "prompt_language": "en",
+          "explanation_he": "Sorry = סליחה או מצטער. משתמשים בזה כשמתנצלים.",
+          "options": [
+            { "text": "סליחה", "language": "he", "is_correct": true },
+            { "text": "תודה", "language": "he", "is_correct": false },
+            { "text": "שלום", "language": "he", "is_correct": false },
+            { "text": "כן", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור תודה: ___ you.",
+          "prompt_language": "he",
+          "correct_answer": "Thank",
+          "explanation_he": "Thank you. = תודה. המילה Thank מופיעה לפני you ומבטאת הודיה.",
+          "options": [
+            { "text": "Thank", "language": "en", "is_correct": true },
+            { "text": "Good", "language": "en", "is_correct": false },
+            { "text": "Bye", "language": "en", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור סלח לי: Excuse ___.",
+          "prompt_language": "he",
+          "correct_answer": "me",
+          "explanation_he": "Excuse me. = סלח לי. אומרים את זה כדי לפנות למישהו בנימוס.",
+          "options": [
+            { "text": "me", "language": "en", "is_correct": true },
+            { "text": "you", "language": "en", "is_correct": false },
+            { "text": "are", "language": "en", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: בבקשה, דנה.",
+          "prompt_language": "he",
+          "correct_answer": "Please, Dana.",
+          "correct_answer_alternatives": ["Please Dana", "Please, Dana", "please, dana."],
+          "word_bank_words": ["Please,", "Dana.", "Thanks.", "Hello", "Sorry."],
+          "explanation_he": "Please, Dana. = בבקשה, דנה. הוספת השם הופכת את הבקשה לאישית ומנומסת יותר."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני מצטער.",
+          "prompt_language": "he",
+          "correct_answer": "I am sorry.",
+          "correct_answer_alternatives": ["I am sorry", "I'm sorry", "I'm sorry."],
+          "word_bank_words": ["I", "am", "sorry.", "fine", "thanks."],
+          "explanation_he": "I am sorry. = אני מצטער. אפשר גם לומר I'm sorry."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את מילות הנימוס לתרגום שלהן",
+          "prompt_language": "he",
+          "explanation_he": "Please = בבקשה, Thank you = תודה, Sorry = סליחה, Excuse me = סליחה / סלח לי.",
+          "pairs": [
+            { "en": "Please", "he": "בבקשה" },
+            { "en": "Thank you", "he": "תודה" },
+            { "en": "Sorry", "he": "סליחה" },
+            { "en": "Excuse me", "he": "סלח לי" }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את הביטויים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "Thanks היא גרסה קצרה של Thank you. Sorry משמש להתנצלות.",
+          "pairs": [
+            { "en": "Thanks", "he": "תודה" },
+            { "en": "I am sorry", "he": "אני מצטער" },
+            { "en": "Please", "he": "בבקשה" },
+            { "en": "Goodbye", "he": "להתראות" }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'תודה' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "Thank you",
+          "correct_answer_alternatives": ["Thanks", "thank you", "thanks"],
+          "explanation_he": "תודה באנגלית היא Thank you. אפשר גם לומר Thanks בצורה קצרה."
+        }
+      ]
+    },
+    {
+      "order_index": 4,
+      "title_he": "Checkpoint: Greetings Review",
+      "description_he": "חזרה על ברכות, שיחת שלומך ומילות נימוס",
+      "is_checkpoint": true,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "Good night",
+          "prompt_language": "en",
+          "explanation_he": "Good night = לילה טוב. זו ברכה שמתאימה לסוף היום או לפני שינה.",
+          "options": [
+            { "text": "לילה טוב", "language": "he", "is_correct": true },
+            { "text": "בוקר טוב", "language": "he", "is_correct": false },
+            { "text": "מה שלומך?", "language": "he", "is_correct": false },
+            { "text": "בבקשה", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "How are you?",
+          "prompt_language": "en",
+          "explanation_he": "How are you? = מה שלומך? זו שאלה בסיסית בשיחה באנגלית.",
+          "options": [
+            { "text": "מה שלומך?", "language": "he", "is_correct": true },
+            { "text": "תודה", "language": "he", "is_correct": false },
+            { "text": "ביי", "language": "he", "is_correct": false },
+            { "text": "כן", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "Excuse me",
+          "prompt_language": "en",
+          "explanation_he": "Excuse me = סליחה / סלח לי. משתמשים בזה כדי לפנות למישהו בנימוס.",
+          "options": [
+            { "text": "סלח לי", "language": "he", "is_correct": true },
+            { "text": "בוקר טוב", "language": "he", "is_correct": false },
+            { "text": "אני בסדר", "language": "he", "is_correct": false },
+            { "text": "כן", "language": "he", "is_correct": false }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: שלום, מה שלומך?",
+          "prompt_language": "he",
+          "correct_answer": "Hello, how are you?",
+          "correct_answer_alternatives": ["Hello how are you"],
+          "word_bank_words": ["Hello,", "how", "are", "you?", "fine", "thanks."],
+          "explanation_he": "Hello, how are you? = שלום, מה שלומך? זה משפט פתיחה טבעי."
+        },
+        {
+          "order_index": 4,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אני בסדר, תודה.",
+          "prompt_language": "he",
+          "correct_answer": "I'm fine, thanks.",
+          "correct_answer_alternatives": ["I'm fine thanks", "I am fine, thanks.", "I am fine thanks"],
+          "word_bank_words": ["I'm", "fine,", "thanks.", "Hello", "night."],
+          "explanation_he": "I'm fine, thanks. = אני בסדר, תודה. זו תשובה קצרה ונפוצה."
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: בוקר טוב, להתראות.",
+          "prompt_language": "he",
+          "correct_answer": "Good morning, goodbye.",
+          "correct_answer_alternatives": ["Good morning goodbye", "Good morning, goodbye"],
+          "word_bank_words": ["Good", "morning,", "goodbye.", "night", "please"],
+          "explanation_he": "Good morning, goodbye. = בוקר טוב, להתראות. שים לב לסדר המילים באנגלית."
+        },
+        {
+          "order_index": 6,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'בבקשה' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "Please",
+          "correct_answer_alternatives": ["please"],
+          "explanation_he": "בבקשה באנגלית היא Please."
+        },
+        {
+          "order_index": 7,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'לילה טוב' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "Good night",
+          "correct_answer_alternatives": ["Good night.", "good night"],
+          "explanation_he": "לילה טוב באנגלית הוא Good night."
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את הביטויים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "אלה הביטויים המרכזיים שלמדת ביחידה הראשונה.",
+          "pairs": [
+            { "en": "Hello", "he": "שלום" },
+            { "en": "Good morning", "he": "בוקר טוב" },
+            { "en": "Good night", "he": "לילה טוב" },
+            { "en": "Goodbye", "he": "להתראות" }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "matching",
+          "prompt_text": "התאם את מילות הנימוס לתרגום שלהן",
+          "prompt_language": "he",
+          "explanation_he": "מילות נימוס כמו Please ו-Thank you הופכות שיחה לנעימה ומנומסת יותר.",
+          "pairs": [
+            { "en": "Please", "he": "בבקשה" },
+            { "en": "Thank you", "he": "תודה" },
+            { "en": "Sorry", "he": "סליחה" },
+            { "en": "Excuse me", "he": "סלח לי" }
+          ]
+        }
+      ]
+    }
+  ]
+}

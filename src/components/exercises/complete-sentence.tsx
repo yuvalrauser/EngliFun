@@ -15,17 +15,26 @@ export function CompleteSentence({ exercise, onSubmit }: CompleteSentenceProps) 
   const [shuffledOptions] = useState(() => shuffle(exercise.exercise_options));
 
   const parts = exercise.prompt_text.split("___");
+  const promptIsHebrew = exercise.prompt_language === "he";
 
   return (
     <div className="space-y-6">
-      {/* Sentence with blank */}
-      <div className="text-center rounded-2xl bg-card p-6 ring-1 ring-border" dir="ltr">
+      {/* Sentence with blank — direction follows the prompt's language.
+          The blank itself stays LTR because the answer tokens are always
+          English in this lesson type. */}
+      <div
+        className="text-center rounded-2xl bg-card p-6 ring-1 ring-border"
+        dir={promptIsHebrew ? "rtl" : "ltr"}
+      >
         <p className="text-xl font-bold leading-relaxed">
           {parts[0]}
-          <span className={cn(
-            "inline-block min-w-[80px] mx-1 border-b-2 px-2 pb-1 text-center",
-            selected ? "border-primary text-primary" : "border-muted-foreground/30"
-          )}>
+          <span
+            dir="ltr"
+            className={cn(
+              "inline-block min-w-[80px] mx-1 border-b-2 px-2 pb-1 text-center align-baseline",
+              selected ? "border-primary text-primary" : "border-muted-foreground/30"
+            )}
+          >
             {selected
               ? exercise.exercise_options.find((o) => o.id === selected)?.option_text
               : ""}
