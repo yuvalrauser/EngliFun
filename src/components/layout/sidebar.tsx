@@ -16,7 +16,7 @@ export function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="hidden md:flex md:w-64 md:flex-col md:border-l border-border bg-card">
+    <aside className="hidden md:flex md:w-64 md:flex-col md:border-l border-border bg-card md:sticky md:top-0 md:h-screen md:self-start md:overflow-y-auto">
       {/* Logo */}
       <div className="pt-4 pb-3">
         <Link href="/dashboard" className="flex justify-center">
