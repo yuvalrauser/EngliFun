@@ -1,0 +1,33 @@
+-- ============================================================
+-- 015_create_beginner_unit_6.sql
+--
+-- Phase 5 / Batch 5: Create a brand-new Beginner Unit 6
+-- ("צבעים וחפצים") under the existing beginner course.
+-- 5 lessons, 50 exercises, 164 options, 40 pair_group_ids.
+--
+-- Purely ADDITIVE.
+--
+-- Pedagogical safety:
+--   - Every complete_sentence has a Hebrew context prefix.
+--     (L0 E3 and L0 E4 share the English skeleton "It is ___." but
+--      have different Hebrew contexts — same approved pattern as
+--      Unit 1 Fix A.)
+--   - No matching pair translates copula to pronoun. All matching
+--     pairs are vocab-to-vocab or full phrase pairs.
+--   - All word_bank correct answers are multi-token.
+--
+-- Units 1–5 are NOT touched. The complete_lesson RPC is NOT touched.
+-- XP / scoring rules are NOT touched.
+--
+-- ID convention (continuing Batch 5):
+--   Unit:           00000000-0000-0000-0001-000000000006
+--   Lessons:        00000000-0000-0008-0002-000000000051..055
+--   Exercises:      00000000-0000-0008-0003-000000000251..300
+--   Pair groups:    b0000000-0008-0004-0000-000000000201..240
+--   Continuity:     unlock 00000000-0000-0008-0002-000000000051
+--                   for users who completed
+--                   00000000-0000-0008-0002-000000000045
+-- ============================================================
+
+-- (Applied via MCP in 4 chunks; see git log for the live migration sequence.)
+-- Chunks: 015a (unit+lessons), 015b (L0+L1), 015c (L2+L3), 015d (L4+continuity).

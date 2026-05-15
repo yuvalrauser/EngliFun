@@ -1,0 +1,32 @@
+-- ============================================================
+-- 014_create_beginner_unit_5.sql
+--
+-- Phase 5 / Batch 5: Create a brand-new Beginner Unit 5
+-- ("משפחה ואנשים") under the existing beginner course.
+-- 5 lessons, 50 exercises, 164 options, 40 pair_group_ids.
+--
+-- Purely ADDITIVE.
+--
+-- Pedagogical safety:
+--   - Every complete_sentence has a Hebrew context prefix.
+--   - No matching pair translates copula to pronoun. All matching
+--     pairs are vocab-to-vocab or full phrase pairs.
+--   - All word_bank correct answers are multi-token.
+--   - L0 E2 ("parents") and L3 E2 ("people") were verified manually
+--     by the user (Option B) to have 4 distinct Hebrew options.
+--
+-- Units 1–4 are NOT touched. The complete_lesson RPC is NOT touched.
+-- XP / scoring rules are NOT touched.
+--
+-- ID convention (continuing Batch 5):
+--   Unit:           00000000-0000-0000-0001-000000000005
+--   Lessons:        00000000-0000-0008-0002-000000000041..045
+--   Exercises:      00000000-0000-0008-0003-000000000201..250
+--   Pair groups:    b0000000-0008-0004-0000-000000000161..200
+--   Continuity:     unlock 00000000-0000-0008-0002-000000000041
+--                   for users who completed
+--                   00000000-0000-0008-0002-000000000035
+-- ============================================================
+
+-- (Applied via MCP in 4 chunks; see git log for the live migration sequence.)
+-- Chunks: 014a (unit+lessons), 014b (L0+L1), 014c (L2+L3), 014d (L4+continuity).

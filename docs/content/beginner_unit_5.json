@@ -1,0 +1,1237 @@
+{
+  "unit": {
+    "title_he": "משפחה ואנשים",
+    "title_en": "Family & People",
+    "objective_he": "ללמוד מילים בסיסיות על משפחה ואנשים ולבנות משפטים קצרים על בני משפחה.",
+    "icon_emoji": "👨‍👩‍👧",
+    "color_hex": "#FF6B6B",
+    "order_index": 4
+  },
+  "lessons": [
+    {
+      "order_index": 0,
+      "title_he": "Mother / Father / Parents",
+      "description_he": "בני משפחה קרובים: mother, father, parents",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "mother",
+          "prompt_language": "en",
+          "explanation_he": "mother = אמא.",
+          "options": [
+            {
+              "text": "אמא",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "אבא",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אחות",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "חבר",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "father",
+          "prompt_language": "en",
+          "explanation_he": "father = אבא.",
+          "options": [
+            {
+              "text": "אבא",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "אמא",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אח",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "ילד",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "parents",
+          "prompt_language": "en",
+          "explanation_he": "parents = הורים.",
+          "options": [
+            {
+              "text": "הורים",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "ילדים",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "חברים",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אנשים",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור זאת אמא שלי: She is my ___.",
+          "prompt_language": "he",
+          "correct_answer": "mother",
+          "explanation_he": "She is my mother. = זאת אמא שלי.",
+          "options": [
+            {
+              "text": "mother",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "father",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "friend",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור אלה ההורים שלי: They are my ___.",
+          "prompt_language": "he",
+          "correct_answer": "parents",
+          "explanation_he": "They are my parents. = אלה ההורים שלי.",
+          "options": [
+            {
+              "text": "parents",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "students",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "books",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: זאת אמא שלי.",
+          "prompt_language": "he",
+          "correct_answer": "She is my mother.",
+          "correct_answer_alternatives": [
+            "She is my mother",
+            "She's my mother",
+            "She's my mother."
+          ],
+          "word_bank_words": [
+            "She",
+            "is",
+            "my",
+            "mother.",
+            "father.",
+            "friend."
+          ],
+          "explanation_he": "She is my mother. = זאת אמא שלי."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: אלה ההורים שלי.",
+          "prompt_language": "he",
+          "correct_answer": "They are my parents.",
+          "correct_answer_alternatives": [
+            "They are my parents",
+            "They're my parents",
+            "They're my parents."
+          ],
+          "word_bank_words": [
+            "They",
+            "are",
+            "my",
+            "parents.",
+            "children.",
+            "friends."
+          ],
+          "explanation_he": "They are my parents. = אלה ההורים שלי."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את המילים לתרגום שלהן",
+          "prompt_language": "he",
+          "explanation_he": "mother = אמא, father = אבא, parents = הורים, family = משפחה.",
+          "pairs": [
+            {
+              "en": "mother",
+              "he": "אמא"
+            },
+            {
+              "en": "father",
+              "he": "אבא"
+            },
+            {
+              "en": "parents",
+              "he": "הורים"
+            },
+            {
+              "en": "family",
+              "he": "משפחה"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את המשפטים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "משפטים קצרים על משפחה.",
+          "pairs": [
+            {
+              "en": "She is my mother",
+              "he": "זאת אמא שלי"
+            },
+            {
+              "en": "He is my father",
+              "he": "זה אבא שלי"
+            },
+            {
+              "en": "They are my parents",
+              "he": "אלה ההורים שלי"
+            },
+            {
+              "en": "My family is here",
+              "he": "המשפחה שלי כאן"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'אמא שלי' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "my mother",
+          "correct_answer_alternatives": [
+            "My mother",
+            "my mother."
+          ],
+          "explanation_he": "אמא שלי באנגלית הוא my mother."
+        }
+      ]
+    },
+    {
+      "order_index": 1,
+      "title_he": "Brother / Sister",
+      "description_he": "אחים ואחיות",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "brother",
+          "prompt_language": "en",
+          "explanation_he": "brother = אח.",
+          "options": [
+            {
+              "text": "אח",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "אחות",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אבא",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אמא",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "sister",
+          "prompt_language": "en",
+          "explanation_he": "sister = אחות.",
+          "options": [
+            {
+              "text": "אחות",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "אח",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "חבר",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "ילדה",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "brothers",
+          "prompt_language": "en",
+          "explanation_he": "brothers = אחים.",
+          "options": [
+            {
+              "text": "אחים",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "אחיות",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "הורים",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "ילדים",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור הוא אח שלי: He is my ___.",
+          "prompt_language": "he",
+          "correct_answer": "brother",
+          "explanation_he": "He is my brother. = הוא אח שלי.",
+          "options": [
+            {
+              "text": "brother",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "sister",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "mother",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור היא אחות שלי: She is my ___.",
+          "prompt_language": "he",
+          "correct_answer": "sister",
+          "explanation_he": "She is my sister. = היא אחות שלי.",
+          "options": [
+            {
+              "text": "sister",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "brother",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "father",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: הוא אח שלי.",
+          "prompt_language": "he",
+          "correct_answer": "He is my brother.",
+          "correct_answer_alternatives": [
+            "He is my brother",
+            "He's my brother",
+            "He's my brother."
+          ],
+          "word_bank_words": [
+            "He",
+            "is",
+            "my",
+            "brother.",
+            "sister.",
+            "father."
+          ],
+          "explanation_he": "He is my brother. = הוא אח שלי."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: היא אחות שלי.",
+          "prompt_language": "he",
+          "correct_answer": "She is my sister.",
+          "correct_answer_alternatives": [
+            "She is my sister",
+            "She's my sister",
+            "She's my sister."
+          ],
+          "word_bank_words": [
+            "She",
+            "is",
+            "my",
+            "sister.",
+            "brother.",
+            "mother."
+          ],
+          "explanation_he": "She is my sister. = היא אחות שלי."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את המילים לתרגום שלהן",
+          "prompt_language": "he",
+          "explanation_he": "brother = אח, sister = אחות, brothers = אחים, sisters = אחיות.",
+          "pairs": [
+            {
+              "en": "brother",
+              "he": "אח"
+            },
+            {
+              "en": "sister",
+              "he": "אחות"
+            },
+            {
+              "en": "brothers",
+              "he": "אחים"
+            },
+            {
+              "en": "sisters",
+              "he": "אחיות"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את המשפטים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "חזרה על משפטי אח/אחות.",
+          "pairs": [
+            {
+              "en": "He is my brother",
+              "he": "הוא אח שלי"
+            },
+            {
+              "en": "She is my sister",
+              "he": "היא אחות שלי"
+            },
+            {
+              "en": "They are brothers",
+              "he": "הם אחים"
+            },
+            {
+              "en": "They are sisters",
+              "he": "הן אחיות"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'אחות שלי' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "my sister",
+          "correct_answer_alternatives": [
+            "My sister",
+            "my sister."
+          ],
+          "explanation_he": "אחות שלי באנגלית הוא my sister."
+        }
+      ]
+    },
+    {
+      "order_index": 2,
+      "title_he": "Son / Daughter / Children",
+      "description_he": "ילדים ובני משפחה",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "son",
+          "prompt_language": "en",
+          "explanation_he": "son = בן.",
+          "options": [
+            {
+              "text": "בן",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "בת",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "ילדים",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אח",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "daughter",
+          "prompt_language": "en",
+          "explanation_he": "daughter = בת.",
+          "options": [
+            {
+              "text": "בת",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "בן",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אמא",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אחות",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "children",
+          "prompt_language": "en",
+          "explanation_he": "children = ילדים. זו צורת רבים מיוחדת.",
+          "options": [
+            {
+              "text": "ילדים",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "ילד",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אנשים",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "חברים",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור הוא הבן שלי: He is my ___.",
+          "prompt_language": "he",
+          "correct_answer": "son",
+          "explanation_he": "He is my son. = הוא הבן שלי.",
+          "options": [
+            {
+              "text": "son",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "daughter",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "person",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור הם ילדים: They are ___.",
+          "prompt_language": "he",
+          "correct_answer": "children",
+          "explanation_he": "They are children. = הם ילדים.",
+          "options": [
+            {
+              "text": "children",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "child",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "friend",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: היא הבת שלי.",
+          "prompt_language": "he",
+          "correct_answer": "She is my daughter.",
+          "correct_answer_alternatives": [
+            "She is my daughter",
+            "She's my daughter",
+            "She's my daughter."
+          ],
+          "word_bank_words": [
+            "She",
+            "is",
+            "my",
+            "daughter.",
+            "son.",
+            "sister."
+          ],
+          "explanation_he": "She is my daughter. = היא הבת שלי."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: הם ילדים.",
+          "prompt_language": "he",
+          "correct_answer": "They are children.",
+          "correct_answer_alternatives": [
+            "They are children",
+            "They're children",
+            "They're children."
+          ],
+          "word_bank_words": [
+            "They",
+            "are",
+            "children.",
+            "people.",
+            "friends."
+          ],
+          "explanation_he": "They are children. = הם ילדים."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את המילים לתרגום שלהן",
+          "prompt_language": "he",
+          "explanation_he": "child = ילד, children = ילדים. children היא צורת רבים לא רגילה.",
+          "pairs": [
+            {
+              "en": "son",
+              "he": "בן"
+            },
+            {
+              "en": "daughter",
+              "he": "בת"
+            },
+            {
+              "en": "child",
+              "he": "ילד"
+            },
+            {
+              "en": "children",
+              "he": "ילדים"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את המשפטים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "משפטים עם בני משפחה וילדים.",
+          "pairs": [
+            {
+              "en": "He is my son",
+              "he": "הוא הבן שלי"
+            },
+            {
+              "en": "She is my daughter",
+              "he": "היא הבת שלי"
+            },
+            {
+              "en": "They are children",
+              "he": "הם ילדים"
+            },
+            {
+              "en": "My family is big",
+              "he": "המשפחה שלי גדולה"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'ילדים' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "children",
+          "correct_answer_alternatives": [
+            "Children",
+            "children."
+          ],
+          "explanation_he": "ילדים באנגלית הוא children."
+        }
+      ]
+    },
+    {
+      "order_index": 3,
+      "title_he": "Friend / Person / People",
+      "description_he": "חברים, אדם ואנשים",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "friend",
+          "prompt_language": "en",
+          "explanation_he": "friend = חבר או חברה.",
+          "options": [
+            {
+              "text": "חבר / חברה",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "אדם",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אנשים",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "משפחה",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "person",
+          "prompt_language": "en",
+          "explanation_he": "person = אדם אחד.",
+          "options": [
+            {
+              "text": "אדם",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "אנשים",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "חברים",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "הורים",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "people",
+          "prompt_language": "en",
+          "explanation_he": "people = אנשים.",
+          "options": [
+            {
+              "text": "אנשים",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "אדם",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "ילד",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "חבר",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור הוא חבר שלי: He is my ___.",
+          "prompt_language": "he",
+          "correct_answer": "friend",
+          "explanation_he": "He is my friend. = הוא חבר שלי.",
+          "options": [
+            {
+              "text": "friend",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "person",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "people",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור הם אנשים: They are ___.",
+          "prompt_language": "he",
+          "correct_answer": "people",
+          "explanation_he": "They are people. = הם אנשים.",
+          "options": [
+            {
+              "text": "people",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "person",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "family",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: הוא חבר שלי.",
+          "prompt_language": "he",
+          "correct_answer": "He is my friend.",
+          "correct_answer_alternatives": [
+            "He is my friend",
+            "He's my friend",
+            "He's my friend."
+          ],
+          "word_bank_words": [
+            "He",
+            "is",
+            "my",
+            "friend.",
+            "brother.",
+            "teacher."
+          ],
+          "explanation_he": "He is my friend. = הוא חבר שלי."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: הם אנשים.",
+          "prompt_language": "he",
+          "correct_answer": "They are people.",
+          "correct_answer_alternatives": [
+            "They are people",
+            "They're people",
+            "They're people."
+          ],
+          "word_bank_words": [
+            "They",
+            "are",
+            "people.",
+            "person.",
+            "friends."
+          ],
+          "explanation_he": "They are people. = הם אנשים."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את המילים לתרגום שלהן",
+          "prompt_language": "he",
+          "explanation_he": "person = אדם, people = אנשים, friend = חבר, friends = חברים.",
+          "pairs": [
+            {
+              "en": "friend",
+              "he": "חבר / חברה"
+            },
+            {
+              "en": "friends",
+              "he": "חברים"
+            },
+            {
+              "en": "person",
+              "he": "אדם"
+            },
+            {
+              "en": "people",
+              "he": "אנשים"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את המשפטים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "חזרה על אנשים וחברים.",
+          "pairs": [
+            {
+              "en": "He is my friend",
+              "he": "הוא חבר שלי"
+            },
+            {
+              "en": "They are people",
+              "he": "הם אנשים"
+            },
+            {
+              "en": "We are friends",
+              "he": "אנחנו חברים"
+            },
+            {
+              "en": "Nice to meet you",
+              "he": "נעים להכיר"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'אנשים' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "people",
+          "correct_answer_alternatives": [
+            "People",
+            "people."
+          ],
+          "explanation_he": "אנשים באנגלית הוא people."
+        }
+      ]
+    },
+    {
+      "order_index": 4,
+      "title_he": "Checkpoint: Family Review",
+      "description_he": "חזרה על משפחה, חברים ואנשים",
+      "is_checkpoint": true,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "mother",
+          "prompt_language": "en",
+          "explanation_he": "mother = אמא.",
+          "options": [
+            {
+              "text": "אמא",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "אבא",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אחות",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "חבר",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "children",
+          "prompt_language": "en",
+          "explanation_he": "children = ילדים.",
+          "options": [
+            {
+              "text": "ילדים",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "ילד",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אנשים",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "חברים",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "They are my parents.",
+          "prompt_language": "en",
+          "explanation_he": "They are my parents. = אלה ההורים שלי.",
+          "options": [
+            {
+              "text": "אלה ההורים שלי.",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "זה אבא שלי.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "היא אחות שלי.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "הם חברים שלי.",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: הוא אח שלי.",
+          "prompt_language": "he",
+          "correct_answer": "He is my brother.",
+          "correct_answer_alternatives": [
+            "He is my brother",
+            "He's my brother",
+            "He's my brother."
+          ],
+          "word_bank_words": [
+            "He",
+            "is",
+            "my",
+            "brother.",
+            "father.",
+            "friend."
+          ],
+          "explanation_he": "He is my brother. = הוא אח שלי."
+        },
+        {
+          "order_index": 4,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: היא אמא שלי.",
+          "prompt_language": "he",
+          "correct_answer": "She is my mother.",
+          "correct_answer_alternatives": [
+            "She is my mother",
+            "She's my mother",
+            "She's my mother."
+          ],
+          "word_bank_words": [
+            "She",
+            "is",
+            "my",
+            "mother.",
+            "sister.",
+            "daughter."
+          ],
+          "explanation_he": "She is my mother. = היא אמא שלי."
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: הם אנשים.",
+          "prompt_language": "he",
+          "correct_answer": "They are people.",
+          "correct_answer_alternatives": [
+            "They are people",
+            "They're people",
+            "They're people."
+          ],
+          "word_bank_words": [
+            "They",
+            "are",
+            "people.",
+            "children.",
+            "parents."
+          ],
+          "explanation_he": "They are people. = הם אנשים."
+        },
+        {
+          "order_index": 6,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'אבא שלי' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "my father",
+          "correct_answer_alternatives": [
+            "My father",
+            "my father."
+          ],
+          "explanation_he": "אבא שלי באנגלית הוא my father."
+        },
+        {
+          "order_index": 7,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'חבר שלי' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "my friend",
+          "correct_answer_alternatives": [
+            "My friend",
+            "my friend."
+          ],
+          "explanation_he": "חבר שלי באנגלית הוא my friend."
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את המילים לתרגום שלהן",
+          "prompt_language": "he",
+          "explanation_he": "חזרה על מילים מרכזיות ממשפחה.",
+          "pairs": [
+            {
+              "en": "mother",
+              "he": "אמא"
+            },
+            {
+              "en": "father",
+              "he": "אבא"
+            },
+            {
+              "en": "sister",
+              "he": "אחות"
+            },
+            {
+              "en": "brother",
+              "he": "אח"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "matching",
+          "prompt_text": "התאם את הביטויים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "חזרה על משפטי משפחה ואנשים.",
+          "pairs": [
+            {
+              "en": "my parents",
+              "he": "ההורים שלי"
+            },
+            {
+              "en": "my children",
+              "he": "הילדים שלי"
+            },
+            {
+              "en": "my friend",
+              "he": "החבר שלי"
+            },
+            {
+              "en": "They are people",
+              "he": "הם אנשים"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

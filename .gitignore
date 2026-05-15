@@ -43,3 +43,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .claude/
+
+# Generated MCP migration chunk output (source files live in supabase/migrations/)
+scripts/_batch5_out/

@@ -1,0 +1,1227 @@
+{
+  "unit": {
+    "title_he": "צבעים וחפצים",
+    "title_en": "Colors & Objects",
+    "objective_he": "ללמוד צבעים וחפצים בסיסיים ולתאר חפצים במשפטים פשוטים.",
+    "icon_emoji": "🎨",
+    "color_hex": "#00C2A8",
+    "order_index": 5
+  },
+  "lessons": [
+    {
+      "order_index": 0,
+      "title_he": "Basic Colors",
+      "description_he": "צבעים בסיסיים: red, blue, green, yellow, white, black",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "red",
+          "prompt_language": "en",
+          "explanation_he": "red = אדום.",
+          "options": [
+            {
+              "text": "אדום",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "כחול",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "ירוק",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "צהוב",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "blue",
+          "prompt_language": "en",
+          "explanation_he": "blue = כחול.",
+          "options": [
+            {
+              "text": "כחול",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "אדום",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "לבן",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "שחור",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "green",
+          "prompt_language": "en",
+          "explanation_he": "green = ירוק.",
+          "options": [
+            {
+              "text": "ירוק",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "צהוב",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "כחול",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "שחור",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור זה אדום: It is ___.",
+          "prompt_language": "he",
+          "correct_answer": "red",
+          "explanation_he": "It is red. = זה אדום.",
+          "options": [
+            {
+              "text": "red",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "blue",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "black",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור זה כחול: It is ___.",
+          "prompt_language": "he",
+          "correct_answer": "blue",
+          "explanation_he": "It is blue. = זה כחול.",
+          "options": [
+            {
+              "text": "blue",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "green",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "white",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: זה אדום.",
+          "prompt_language": "he",
+          "correct_answer": "It is red.",
+          "correct_answer_alternatives": [
+            "It is red",
+            "It's red",
+            "It's red."
+          ],
+          "word_bank_words": [
+            "It",
+            "is",
+            "red.",
+            "blue.",
+            "book."
+          ],
+          "explanation_he": "It is red. = זה אדום."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: זה כחול.",
+          "prompt_language": "he",
+          "correct_answer": "It is blue.",
+          "correct_answer_alternatives": [
+            "It is blue",
+            "It's blue",
+            "It's blue."
+          ],
+          "word_bank_words": [
+            "It",
+            "is",
+            "blue.",
+            "red.",
+            "bag."
+          ],
+          "explanation_he": "It is blue. = זה כחול."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את הצבעים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "צבעים בסיסיים באנגלית.",
+          "pairs": [
+            {
+              "en": "red",
+              "he": "אדום"
+            },
+            {
+              "en": "blue",
+              "he": "כחול"
+            },
+            {
+              "en": "green",
+              "he": "ירוק"
+            },
+            {
+              "en": "yellow",
+              "he": "צהוב"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את הביטויים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "משפטים קצרים עם צבעים.",
+          "pairs": [
+            {
+              "en": "It is red",
+              "he": "זה אדום"
+            },
+            {
+              "en": "It is blue",
+              "he": "זה כחול"
+            },
+            {
+              "en": "It is green",
+              "he": "זה ירוק"
+            },
+            {
+              "en": "It is yellow",
+              "he": "זה צהוב"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'אדום' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "red",
+          "correct_answer_alternatives": [
+            "Red",
+            "red."
+          ],
+          "explanation_he": "אדום באנגלית הוא red."
+        }
+      ]
+    },
+    {
+      "order_index": 1,
+      "title_he": "What Color Is It?",
+      "description_he": "שאלת צבע ותשובה קצרה",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "What color is it?",
+          "prompt_language": "en",
+          "explanation_he": "What color is it? = איזה צבע זה?",
+          "options": [
+            {
+              "text": "איזה צבע זה?",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "מה השם שלך?",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "כמה ספרים?",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "מאיפה אתה?",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "It is black.",
+          "prompt_language": "en",
+          "explanation_he": "It is black. = זה שחור.",
+          "options": [
+            {
+              "text": "זה שחור.",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "זה לבן.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "זה כחול.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "זה ספר.",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "white",
+          "prompt_language": "en",
+          "explanation_he": "white = לבן.",
+          "options": [
+            {
+              "text": "לבן",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "שחור",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אדום",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "ירוק",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "שאל איזה צבע זה: What ___ is it?",
+          "prompt_language": "he",
+          "correct_answer": "color",
+          "explanation_he": "What color is it? = איזה צבע זה?",
+          "options": [
+            {
+              "text": "color",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "name",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "many",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור זה שחור: It is ___.",
+          "prompt_language": "he",
+          "correct_answer": "black",
+          "explanation_he": "It is black. = זה שחור.",
+          "options": [
+            {
+              "text": "black",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "white",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "green",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: איזה צבע זה?",
+          "prompt_language": "he",
+          "correct_answer": "What color is it?",
+          "correct_answer_alternatives": [
+            "What color is it"
+          ],
+          "word_bank_words": [
+            "What",
+            "color",
+            "is",
+            "it?",
+            "many",
+            "book?"
+          ],
+          "explanation_he": "What color is it? = איזה צבע זה?"
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: זה לבן.",
+          "prompt_language": "he",
+          "correct_answer": "It is white.",
+          "correct_answer_alternatives": [
+            "It is white",
+            "It's white",
+            "It's white."
+          ],
+          "word_bank_words": [
+            "It",
+            "is",
+            "white.",
+            "black.",
+            "red."
+          ],
+          "explanation_he": "It is white. = זה לבן."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את הצבעים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "white = לבן, black = שחור.",
+          "pairs": [
+            {
+              "en": "white",
+              "he": "לבן"
+            },
+            {
+              "en": "black",
+              "he": "שחור"
+            },
+            {
+              "en": "red",
+              "he": "אדום"
+            },
+            {
+              "en": "blue",
+              "he": "כחול"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את המשפטים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "שאלה ותשובות על צבע.",
+          "pairs": [
+            {
+              "en": "What color is it?",
+              "he": "איזה צבע זה?"
+            },
+            {
+              "en": "It is black",
+              "he": "זה שחור"
+            },
+            {
+              "en": "It is white",
+              "he": "זה לבן"
+            },
+            {
+              "en": "It is green",
+              "he": "זה ירוק"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'איזה צבע זה?' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "What color is it",
+          "correct_answer_alternatives": [
+            "What color is it?",
+            "what color is it"
+          ],
+          "explanation_he": "איזה צבע זה באנגלית הוא What color is it?"
+        }
+      ]
+    },
+    {
+      "order_index": 2,
+      "title_he": "Classroom Objects",
+      "description_he": "חפצים בכיתה: book, pen, bag, paper",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "book",
+          "prompt_language": "en",
+          "explanation_he": "book = ספר.",
+          "options": [
+            {
+              "text": "ספר",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "עט",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "תיק",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "דף",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "pen",
+          "prompt_language": "en",
+          "explanation_he": "pen = עט.",
+          "options": [
+            {
+              "text": "עט",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "ספר",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "תיק",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "חלון",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "bag",
+          "prompt_language": "en",
+          "explanation_he": "bag = תיק.",
+          "options": [
+            {
+              "text": "תיק",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "דף",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "עט",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "דלת",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור זה ספר: It is a ___.",
+          "prompt_language": "he",
+          "correct_answer": "book",
+          "explanation_he": "It is a book. = זה ספר.",
+          "options": [
+            {
+              "text": "book",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "pen",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "phone",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור העט כחול: The pen is ___.",
+          "prompt_language": "he",
+          "correct_answer": "blue",
+          "explanation_he": "The pen is blue. = העט כחול.",
+          "options": [
+            {
+              "text": "blue",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "red",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "bag",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: זה ספר.",
+          "prompt_language": "he",
+          "correct_answer": "It is a book.",
+          "correct_answer_alternatives": [
+            "It is a book",
+            "It's a book",
+            "It's a book."
+          ],
+          "word_bank_words": [
+            "It",
+            "is",
+            "a",
+            "book.",
+            "pen.",
+            "blue."
+          ],
+          "explanation_he": "It is a book. = זה ספר."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: העט כחול.",
+          "prompt_language": "he",
+          "correct_answer": "The pen is blue.",
+          "correct_answer_alternatives": [
+            "The pen is blue"
+          ],
+          "word_bank_words": [
+            "The",
+            "pen",
+            "is",
+            "blue.",
+            "book",
+            "red."
+          ],
+          "explanation_he": "The pen is blue. = העט כחול."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את החפצים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "חפצים בסיסיים בכיתה.",
+          "pairs": [
+            {
+              "en": "book",
+              "he": "ספר"
+            },
+            {
+              "en": "pen",
+              "he": "עט"
+            },
+            {
+              "en": "bag",
+              "he": "תיק"
+            },
+            {
+              "en": "paper",
+              "he": "דף"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את המשפטים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "משפטים קצרים על חפצים בכיתה.",
+          "pairs": [
+            {
+              "en": "It is a book",
+              "he": "זה ספר"
+            },
+            {
+              "en": "The pen is blue",
+              "he": "העט כחול"
+            },
+            {
+              "en": "The bag is black",
+              "he": "התיק שחור"
+            },
+            {
+              "en": "The paper is white",
+              "he": "הדף לבן"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'עט' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "pen",
+          "correct_answer_alternatives": [
+            "Pen",
+            "pen."
+          ],
+          "explanation_he": "עט באנגלית הוא pen."
+        }
+      ]
+    },
+    {
+      "order_index": 3,
+      "title_he": "Personal Objects",
+      "description_he": "חפצים אישיים: phone, key, door, window",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "phone",
+          "prompt_language": "en",
+          "explanation_he": "phone = טלפון.",
+          "options": [
+            {
+              "text": "טלפון",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "מפתח",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "דלת",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "חלון",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "key",
+          "prompt_language": "en",
+          "explanation_he": "key = מפתח.",
+          "options": [
+            {
+              "text": "מפתח",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "טלפון",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "תיק",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "ספר",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "window",
+          "prompt_language": "en",
+          "explanation_he": "window = חלון.",
+          "options": [
+            {
+              "text": "חלון",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "דלת",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "דף",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "עט",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור זה טלפון: It is a ___.",
+          "prompt_language": "he",
+          "correct_answer": "phone",
+          "explanation_he": "It is a phone. = זה טלפון.",
+          "options": [
+            {
+              "text": "phone",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "book",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "color",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור הדלת לבנה: The door is ___.",
+          "prompt_language": "he",
+          "correct_answer": "white",
+          "explanation_he": "The door is white. = הדלת לבנה.",
+          "options": [
+            {
+              "text": "white",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "black",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "key",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: זה טלפון.",
+          "prompt_language": "he",
+          "correct_answer": "It is a phone.",
+          "correct_answer_alternatives": [
+            "It is a phone",
+            "It's a phone",
+            "It's a phone."
+          ],
+          "word_bank_words": [
+            "It",
+            "is",
+            "a",
+            "phone.",
+            "key.",
+            "red."
+          ],
+          "explanation_he": "It is a phone. = זה טלפון."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: הדלת לבנה.",
+          "prompt_language": "he",
+          "correct_answer": "The door is white.",
+          "correct_answer_alternatives": [
+            "The door is white"
+          ],
+          "word_bank_words": [
+            "The",
+            "door",
+            "is",
+            "white.",
+            "window",
+            "black."
+          ],
+          "explanation_he": "The door is white. = הדלת לבנה."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את החפצים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "חפצים אישיים וביתיים בסיסיים.",
+          "pairs": [
+            {
+              "en": "phone",
+              "he": "טלפון"
+            },
+            {
+              "en": "key",
+              "he": "מפתח"
+            },
+            {
+              "en": "door",
+              "he": "דלת"
+            },
+            {
+              "en": "window",
+              "he": "חלון"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את המשפטים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "משפטים קצרים עם חפצים וצבעים.",
+          "pairs": [
+            {
+              "en": "It is a phone",
+              "he": "זה טלפון"
+            },
+            {
+              "en": "The key is black",
+              "he": "המפתח שחור"
+            },
+            {
+              "en": "The door is white",
+              "he": "הדלת לבנה"
+            },
+            {
+              "en": "The window is blue",
+              "he": "החלון כחול"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'מפתח' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "key",
+          "correct_answer_alternatives": [
+            "Key",
+            "key."
+          ],
+          "explanation_he": "מפתח באנגלית הוא key."
+        }
+      ]
+    },
+    {
+      "order_index": 4,
+      "title_he": "Checkpoint: Colors & Objects Review",
+      "description_he": "חזרה על צבעים וחפצים",
+      "is_checkpoint": true,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "yellow",
+          "prompt_language": "en",
+          "explanation_he": "yellow = צהוב.",
+          "options": [
+            {
+              "text": "צהוב",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "אדום",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "כחול",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "שחור",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "The book is blue.",
+          "prompt_language": "en",
+          "explanation_he": "The book is blue. = הספר כחול.",
+          "options": [
+            {
+              "text": "הספר כחול.",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "העט כחול.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "הספר אדום.",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "זה ספר.",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "What color is it?",
+          "prompt_language": "en",
+          "explanation_he": "What color is it? = איזה צבע זה?",
+          "options": [
+            {
+              "text": "איזה צבע זה?",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "מה זה?",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "כמה ספרים?",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "מאיפה אתה?",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: הספר כחול.",
+          "prompt_language": "he",
+          "correct_answer": "The book is blue.",
+          "correct_answer_alternatives": [
+            "The book is blue"
+          ],
+          "word_bank_words": [
+            "The",
+            "book",
+            "is",
+            "blue.",
+            "pen",
+            "red."
+          ],
+          "explanation_he": "The book is blue. = הספר כחול."
+        },
+        {
+          "order_index": 4,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: זה טלפון.",
+          "prompt_language": "he",
+          "correct_answer": "It is a phone.",
+          "correct_answer_alternatives": [
+            "It is a phone",
+            "It's a phone",
+            "It's a phone."
+          ],
+          "word_bank_words": [
+            "It",
+            "is",
+            "a",
+            "phone.",
+            "book.",
+            "white."
+          ],
+          "explanation_he": "It is a phone. = זה טלפון."
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: איזה צבע זה?",
+          "prompt_language": "he",
+          "correct_answer": "What color is it?",
+          "correct_answer_alternatives": [
+            "What color is it"
+          ],
+          "word_bank_words": [
+            "What",
+            "color",
+            "is",
+            "it?",
+            "many",
+            "books?"
+          ],
+          "explanation_he": "What color is it? = איזה צבע זה?"
+        },
+        {
+          "order_index": 6,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'שחור' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "black",
+          "correct_answer_alternatives": [
+            "Black",
+            "black."
+          ],
+          "explanation_he": "שחור באנגלית הוא black."
+        },
+        {
+          "order_index": 7,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'הספר ירוק' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "The book is green",
+          "correct_answer_alternatives": [
+            "The book is green.",
+            "the book is green"
+          ],
+          "explanation_he": "הספר ירוק באנגלית הוא The book is green."
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את הצבעים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "חזרה על צבעים מרכזיים.",
+          "pairs": [
+            {
+              "en": "red",
+              "he": "אדום"
+            },
+            {
+              "en": "blue",
+              "he": "כחול"
+            },
+            {
+              "en": "green",
+              "he": "ירוק"
+            },
+            {
+              "en": "black",
+              "he": "שחור"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "matching",
+          "prompt_text": "התאם את החפצים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "חזרה על חפצים מרכזיים.",
+          "pairs": [
+            {
+              "en": "book",
+              "he": "ספר"
+            },
+            {
+              "en": "pen",
+              "he": "עט"
+            },
+            {
+              "en": "phone",
+              "he": "טלפון"
+            },
+            {
+              "en": "key",
+              "he": "מפתח"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

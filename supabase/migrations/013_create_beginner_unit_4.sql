@@ -1,0 +1,35 @@
+-- ============================================================
+-- 013_create_beginner_unit_4.sql
+--
+-- Phase 5 / Batch 5: Create a brand-new Beginner Unit 4
+-- ("מספרים 1–20") under the existing beginner course.
+-- 5 lessons, 50 exercises, 164 options, 40 pair_group_ids.
+--
+-- Purely ADDITIVE — no old unit row to wipe.
+-- INSERT a new unit, INSERT lessons, INSERT exercises + options,
+-- then unlock the first lesson for any user who already completed
+-- Unit 3's checkpoint.
+--
+-- Pedagogical safety:
+--   - Every complete_sentence has a Hebrew context prefix that fixes
+--     the meaning, so only one English answer is correct.
+--   - No matching pair translates am / is / are / be / to_be to a
+--     Hebrew pronoun. All matching pairs are number-to-word or
+--     full-phrase pairs.
+--   - All word_bank correct answers are multi-token.
+--
+-- Units 1–3 are NOT touched. The complete_lesson RPC is NOT touched.
+-- XP / scoring rules are NOT touched.
+--
+-- ID convention (continues the Batch 2/3/4 sequence):
+--   Unit:           00000000-0000-0000-0001-000000000004
+--   Lessons:        00000000-0000-0008-0002-000000000031..035
+--   Exercises:      00000000-0000-0008-0003-000000000151..200
+--   Pair groups:    b0000000-0008-0004-0000-000000000121..160
+--   Continuity:     unlock 00000000-0000-0008-0002-000000000031
+--                   for users who completed
+--                   00000000-0000-0008-0002-000000000025
+-- ============================================================
+
+-- (Applied via MCP in 4 chunks; see git log for the live migration sequence.)
+-- Chunks: 013a (unit+lessons), 013b (L0+L1), 013c (L2+L3), 013d (L4+continuity).

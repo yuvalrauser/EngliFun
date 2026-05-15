@@ -1,0 +1,1198 @@
+{
+  "unit": {
+    "title_he": "מספרים 1–20",
+    "title_en": "Numbers 1–20",
+    "objective_he": "ללמוד את המספרים 1 עד 20 באנגלית ולהשתמש בהם בביטויים קצרים ושאלות פשוטות.",
+    "icon_emoji": "🔢",
+    "color_hex": "#FFB020",
+    "order_index": 3
+  },
+  "lessons": [
+    {
+      "order_index": 0,
+      "title_he": "Numbers 1–5",
+      "description_he": "המספרים הראשונים: one, two, three, four, five",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "one",
+          "prompt_language": "en",
+          "explanation_he": "one = אחד.",
+          "options": [
+            {
+              "text": "אחד",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "שתיים",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "שלוש",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "חמש",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "three",
+          "prompt_language": "en",
+          "explanation_he": "three = שלוש.",
+          "options": [
+            {
+              "text": "שלוש",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "אחת",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "ארבע",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "חמש",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "five",
+          "prompt_language": "en",
+          "explanation_he": "five = חמש.",
+          "options": [
+            {
+              "text": "חמש",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "שתיים",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "שלוש",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "ארבע",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור ספר אחד: ___ book.",
+          "prompt_language": "he",
+          "correct_answer": "one",
+          "explanation_he": "one book = ספר אחד. one פירושו אחד.",
+          "options": [
+            {
+              "text": "one",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "three",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "five",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור חמישה תלמידים: ___ students.",
+          "prompt_language": "he",
+          "correct_answer": "five",
+          "explanation_he": "five students = חמישה תלמידים.",
+          "options": [
+            {
+              "text": "five",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "two",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "four",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: שני ספרים.",
+          "prompt_language": "he",
+          "correct_answer": "two books.",
+          "correct_answer_alternatives": [
+            "two books"
+          ],
+          "word_bank_words": [
+            "two",
+            "books.",
+            "five",
+            "students."
+          ],
+          "explanation_he": "two books = שני ספרים."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: ארבעה תלמידים.",
+          "prompt_language": "he",
+          "correct_answer": "four students.",
+          "correct_answer_alternatives": [
+            "four students"
+          ],
+          "word_bank_words": [
+            "four",
+            "students.",
+            "one",
+            "book."
+          ],
+          "explanation_he": "four students = ארבעה תלמידים."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את המספרים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "אלה המספרים 1 עד 4 באנגלית.",
+          "pairs": [
+            {
+              "en": "one",
+              "he": "אחד"
+            },
+            {
+              "en": "two",
+              "he": "שתיים"
+            },
+            {
+              "en": "three",
+              "he": "שלוש"
+            },
+            {
+              "en": "four",
+              "he": "ארבע"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את הביטויים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "משלבים מספר עם שם עצם קצר.",
+          "pairs": [
+            {
+              "en": "one book",
+              "he": "ספר אחד"
+            },
+            {
+              "en": "two books",
+              "he": "שני ספרים"
+            },
+            {
+              "en": "three students",
+              "he": "שלושה תלמידים"
+            },
+            {
+              "en": "five students",
+              "he": "חמישה תלמידים"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'חמישה תלמידים' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "five students",
+          "correct_answer_alternatives": [
+            "five students.",
+            "Five students"
+          ],
+          "explanation_he": "חמישה תלמידים באנגלית הוא five students."
+        }
+      ]
+    },
+    {
+      "order_index": 1,
+      "title_he": "Numbers 6–10",
+      "description_he": "ממשיכים לספור מ-six עד ten",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "six",
+          "prompt_language": "en",
+          "explanation_he": "six = שש.",
+          "options": [
+            {
+              "text": "שש",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "שבע",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "תשע",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "עשר",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "eight",
+          "prompt_language": "en",
+          "explanation_he": "eight = שמונה.",
+          "options": [
+            {
+              "text": "שמונה",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "שש",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "שבע",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "תשע",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "ten",
+          "prompt_language": "en",
+          "explanation_he": "ten = עשר.",
+          "options": [
+            {
+              "text": "עשר",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "שבע",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "שמונה",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "תשע",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור שישה ספרים: ___ books.",
+          "prompt_language": "he",
+          "correct_answer": "six",
+          "explanation_he": "six books = שישה ספרים.",
+          "options": [
+            {
+              "text": "six",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "seven",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "ten",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור עשרה תלמידים: ___ students.",
+          "prompt_language": "he",
+          "correct_answer": "ten",
+          "explanation_he": "ten students = עשרה תלמידים.",
+          "options": [
+            {
+              "text": "ten",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "eight",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "one",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: שבעה ספרים.",
+          "prompt_language": "he",
+          "correct_answer": "seven books.",
+          "correct_answer_alternatives": [
+            "seven books"
+          ],
+          "word_bank_words": [
+            "seven",
+            "books.",
+            "six",
+            "students."
+          ],
+          "explanation_he": "seven books = שבעה ספרים."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: תשעה תלמידים.",
+          "prompt_language": "he",
+          "correct_answer": "nine students.",
+          "correct_answer_alternatives": [
+            "nine students"
+          ],
+          "word_bank_words": [
+            "nine",
+            "students.",
+            "ten",
+            "books."
+          ],
+          "explanation_he": "nine students = תשעה תלמידים."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את המספרים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "מספרים 6 עד 9 באנגלית.",
+          "pairs": [
+            {
+              "en": "six",
+              "he": "שש"
+            },
+            {
+              "en": "seven",
+              "he": "שבע"
+            },
+            {
+              "en": "eight",
+              "he": "שמונה"
+            },
+            {
+              "en": "nine",
+              "he": "תשע"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את הביטויים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "חזרה על מספר + שם עצם.",
+          "pairs": [
+            {
+              "en": "six books",
+              "he": "שישה ספרים"
+            },
+            {
+              "en": "seven students",
+              "he": "שבעה תלמידים"
+            },
+            {
+              "en": "eight books",
+              "he": "שמונה ספרים"
+            },
+            {
+              "en": "ten students",
+              "he": "עשרה תלמידים"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'עשרה ספרים' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "ten books",
+          "correct_answer_alternatives": [
+            "ten books.",
+            "Ten books"
+          ],
+          "explanation_he": "עשרה ספרים באנגלית הוא ten books."
+        }
+      ]
+    },
+    {
+      "order_index": 2,
+      "title_he": "Numbers 11–15",
+      "description_he": "מספרים גדולים יותר: eleven עד fifteen",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "eleven",
+          "prompt_language": "en",
+          "explanation_he": "eleven = אחת עשרה.",
+          "options": [
+            {
+              "text": "אחת עשרה",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "שתים עשרה",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "ארבע עשרה",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "חמש עשרה",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "twelve",
+          "prompt_language": "en",
+          "explanation_he": "twelve = שתים עשרה.",
+          "options": [
+            {
+              "text": "שתים עשרה",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "אחת עשרה",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "שלוש עשרה",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "חמש עשרה",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "fifteen",
+          "prompt_language": "en",
+          "explanation_he": "fifteen = חמש עשרה.",
+          "options": [
+            {
+              "text": "חמש עשרה",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "אחת עשרה",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "שתים עשרה",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "ארבע עשרה",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור אחת עשרה: ___.",
+          "prompt_language": "he",
+          "correct_answer": "eleven",
+          "explanation_he": "eleven = אחת עשרה.",
+          "options": [
+            {
+              "text": "eleven",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "twelve",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "fifteen",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "אמור ארבע עשרה: ___.",
+          "prompt_language": "he",
+          "correct_answer": "fourteen",
+          "explanation_he": "fourteen = ארבע עשרה.",
+          "options": [
+            {
+              "text": "fourteen",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "thirteen",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "ten",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: שתים עשרה תלמידים.",
+          "prompt_language": "he",
+          "correct_answer": "twelve students.",
+          "correct_answer_alternatives": [
+            "twelve students"
+          ],
+          "word_bank_words": [
+            "twelve",
+            "students.",
+            "eleven",
+            "books."
+          ],
+          "explanation_he": "twelve students = שתים עשרה תלמידים."
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: חמש עשרה ספרים.",
+          "prompt_language": "he",
+          "correct_answer": "fifteen books.",
+          "correct_answer_alternatives": [
+            "fifteen books"
+          ],
+          "word_bank_words": [
+            "fifteen",
+            "books.",
+            "fourteen",
+            "students."
+          ],
+          "explanation_he": "fifteen books = חמש עשרה ספרים."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את המספרים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "מספרים 11 עד 14 באנגלית.",
+          "pairs": [
+            {
+              "en": "eleven",
+              "he": "אחת עשרה"
+            },
+            {
+              "en": "twelve",
+              "he": "שתים עשרה"
+            },
+            {
+              "en": "thirteen",
+              "he": "שלוש עשרה"
+            },
+            {
+              "en": "fourteen",
+              "he": "ארבע עשרה"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את הביטויים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "תרגול מספרים בתוך ביטויים קצרים.",
+          "pairs": [
+            {
+              "en": "eleven books",
+              "he": "אחת עשרה ספרים"
+            },
+            {
+              "en": "twelve students",
+              "he": "שתים עשרה תלמידים"
+            },
+            {
+              "en": "thirteen books",
+              "he": "שלוש עשרה ספרים"
+            },
+            {
+              "en": "fifteen students",
+              "he": "חמש עשרה תלמידים"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'ארבע עשרה' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "fourteen",
+          "correct_answer_alternatives": [
+            "Fourteen",
+            "fourteen."
+          ],
+          "explanation_he": "ארבע עשרה באנגלית הוא fourteen."
+        }
+      ]
+    },
+    {
+      "order_index": 3,
+      "title_he": "Numbers 16–20 + How many",
+      "description_he": "מספרים 16–20 ושאלה פשוטה עם How many",
+      "is_checkpoint": false,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "sixteen",
+          "prompt_language": "en",
+          "explanation_he": "sixteen = שש עשרה.",
+          "options": [
+            {
+              "text": "שש עשרה",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "שבע עשרה",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "תשע עשרה",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "עשרים",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "twenty",
+          "prompt_language": "en",
+          "explanation_he": "twenty = עשרים.",
+          "options": [
+            {
+              "text": "עשרים",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "שש עשרה",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "שמונה עשרה",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "תשע עשרה",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "How many books?",
+          "prompt_language": "en",
+          "explanation_he": "How many books? = כמה ספרים?",
+          "options": [
+            {
+              "text": "כמה ספרים?",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "כמה תלמידים?",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "מה שמך?",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "מאיפה אתה?",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "complete_sentence",
+          "prompt_text": "אמור עשרים תלמידים: ___ students.",
+          "prompt_language": "he",
+          "correct_answer": "twenty",
+          "explanation_he": "twenty students = עשרים תלמידים.",
+          "options": [
+            {
+              "text": "twenty",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "sixteen",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "twelve",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 4,
+          "type": "complete_sentence",
+          "prompt_text": "שאל כמה ספרים: How many ___?",
+          "prompt_language": "he",
+          "correct_answer": "books",
+          "explanation_he": "How many books? = כמה ספרים?",
+          "options": [
+            {
+              "text": "books",
+              "language": "en",
+              "is_correct": true
+            },
+            {
+              "text": "students",
+              "language": "en",
+              "is_correct": false
+            },
+            {
+              "text": "friends",
+              "language": "en",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: כמה ספרים?",
+          "prompt_language": "he",
+          "correct_answer": "How many books?",
+          "correct_answer_alternatives": [
+            "How many books"
+          ],
+          "word_bank_words": [
+            "How",
+            "many",
+            "books?",
+            "students?",
+            "twenty"
+          ],
+          "explanation_he": "How many books? = כמה ספרים?"
+        },
+        {
+          "order_index": 6,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: שמונה עשרה תלמידים.",
+          "prompt_language": "he",
+          "correct_answer": "eighteen students.",
+          "correct_answer_alternatives": [
+            "eighteen students"
+          ],
+          "word_bank_words": [
+            "eighteen",
+            "students.",
+            "sixteen",
+            "books."
+          ],
+          "explanation_he": "eighteen students = שמונה עשרה תלמידים."
+        },
+        {
+          "order_index": 7,
+          "type": "matching",
+          "prompt_text": "התאם את המספרים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "מספרים 16 עד 19 באנגלית.",
+          "pairs": [
+            {
+              "en": "sixteen",
+              "he": "שש עשרה"
+            },
+            {
+              "en": "seventeen",
+              "he": "שבע עשרה"
+            },
+            {
+              "en": "eighteen",
+              "he": "שמונה עשרה"
+            },
+            {
+              "en": "nineteen",
+              "he": "תשע עשרה"
+            }
+          ]
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את השאלות לתרגום שלהן",
+          "prompt_language": "he",
+          "explanation_he": "How many משמש לשאלה 'כמה'.",
+          "pairs": [
+            {
+              "en": "How many books?",
+              "he": "כמה ספרים?"
+            },
+            {
+              "en": "How many students?",
+              "he": "כמה תלמידים?"
+            },
+            {
+              "en": "twenty books",
+              "he": "עשרים ספרים"
+            },
+            {
+              "en": "eighteen students",
+              "he": "שמונה עשרה תלמידים"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'כמה תלמידים?' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "How many students",
+          "correct_answer_alternatives": [
+            "How many students?",
+            "how many students"
+          ],
+          "explanation_he": "כמה תלמידים באנגלית הוא How many students?"
+        }
+      ]
+    },
+    {
+      "order_index": 4,
+      "title_he": "Checkpoint: Numbers Review",
+      "description_he": "חזרה על המספרים 1–20 וביטויי ספירה",
+      "is_checkpoint": true,
+      "exercises": [
+        {
+          "order_index": 0,
+          "type": "multiple_choice",
+          "prompt_text": "twenty",
+          "prompt_language": "en",
+          "explanation_he": "twenty = עשרים.",
+          "options": [
+            {
+              "text": "עשרים",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "שתים עשרה",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "חמש עשרה",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "שמונה עשרה",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 1,
+          "type": "multiple_choice",
+          "prompt_text": "thirteen",
+          "prompt_language": "en",
+          "explanation_he": "thirteen = שלוש עשרה.",
+          "options": [
+            {
+              "text": "שלוש עשרה",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "שלוש",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "שלושים",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "חמש עשרה",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 2,
+          "type": "multiple_choice",
+          "prompt_text": "How many students?",
+          "prompt_language": "en",
+          "explanation_he": "How many students? = כמה תלמידים?",
+          "options": [
+            {
+              "text": "כמה תלמידים?",
+              "language": "he",
+              "is_correct": true
+            },
+            {
+              "text": "כמה ספרים?",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "מה השם שלך?",
+              "language": "he",
+              "is_correct": false
+            },
+            {
+              "text": "אני תלמיד",
+              "language": "he",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "order_index": 3,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: שלושה ספרים.",
+          "prompt_language": "he",
+          "correct_answer": "three books.",
+          "correct_answer_alternatives": [
+            "three books"
+          ],
+          "word_bank_words": [
+            "three",
+            "books.",
+            "thirteen",
+            "students."
+          ],
+          "explanation_he": "three books = שלושה ספרים."
+        },
+        {
+          "order_index": 4,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: עשרים תלמידים.",
+          "prompt_language": "he",
+          "correct_answer": "twenty students.",
+          "correct_answer_alternatives": [
+            "twenty students"
+          ],
+          "word_bank_words": [
+            "twenty",
+            "students.",
+            "twelve",
+            "books."
+          ],
+          "explanation_he": "twenty students = עשרים תלמידים."
+        },
+        {
+          "order_index": 5,
+          "type": "word_bank",
+          "prompt_text": "תרגם לאנגלית: כמה ספרים?",
+          "prompt_language": "he",
+          "correct_answer": "How many books?",
+          "correct_answer_alternatives": [
+            "How many books"
+          ],
+          "word_bank_words": [
+            "How",
+            "many",
+            "books?",
+            "students?",
+            "one"
+          ],
+          "explanation_he": "How many books? = כמה ספרים?"
+        },
+        {
+          "order_index": 6,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'שבע עשרה' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "seventeen",
+          "correct_answer_alternatives": [
+            "Seventeen",
+            "seventeen."
+          ],
+          "explanation_he": "שבע עשרה באנגלית הוא seventeen."
+        },
+        {
+          "order_index": 7,
+          "type": "type_answer",
+          "prompt_text": "איך אומרים 'כמה ספרים?' באנגלית?",
+          "prompt_language": "he",
+          "correct_answer": "How many books",
+          "correct_answer_alternatives": [
+            "How many books?",
+            "how many books"
+          ],
+          "explanation_he": "כמה ספרים באנגלית הוא How many books?"
+        },
+        {
+          "order_index": 8,
+          "type": "matching",
+          "prompt_text": "התאם את המספרים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "חזרה על מספרים מרכזיים.",
+          "pairs": [
+            {
+              "en": "one",
+              "he": "אחד"
+            },
+            {
+              "en": "five",
+              "he": "חמש"
+            },
+            {
+              "en": "ten",
+              "he": "עשר"
+            },
+            {
+              "en": "twenty",
+              "he": "עשרים"
+            }
+          ]
+        },
+        {
+          "order_index": 9,
+          "type": "matching",
+          "prompt_text": "התאם את הביטויים לתרגום שלהם",
+          "prompt_language": "he",
+          "explanation_he": "חזרה על ביטויי מספרים ושאלות.",
+          "pairs": [
+            {
+              "en": "two books",
+              "he": "שני ספרים"
+            },
+            {
+              "en": "twelve students",
+              "he": "שתים עשרה תלמידים"
+            },
+            {
+              "en": "How many books?",
+              "he": "כמה ספרים?"
+            },
+            {
+              "en": "twenty students",
+              "he": "עשרים תלמידים"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
