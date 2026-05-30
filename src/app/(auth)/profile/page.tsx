@@ -20,11 +20,10 @@ export default async function ProfilePage() {
   const p = profile as Profile;
   const level = getLevel(p.total_xp);
   const levelLabel = getLevelLabel(p.total_xp);
-  const { current: xpCurrent, next: xpNext } = getXpForNextLevel(p.total_xp);
-  const levelSpan = Math.max(xpNext - xpCurrent, 1);
+  const { next: xpNext } = getXpForNextLevel(p.total_xp);
   const progressPct = Math.max(
     0,
-    Math.min(100, ((p.total_xp - xpCurrent) / levelSpan) * 100)
+    Math.min(100, (p.total_xp / Math.max(xpNext, 1)) * 100)
   );
 
   // Completed lessons count (distinct, via user_lesson_progress)
