@@ -20,7 +20,12 @@ export default async function ProfilePage() {
   const p = profile as Profile;
   const level = getLevel(p.total_xp);
   const levelLabel = getLevelLabel(p.total_xp);
-  const { next: xpNext } = getXpForNextLevel(p.total_xp);
+  const { current: xpCurrent, next: xpNext } = getXpForNextLevel(p.total_xp);
+  const levelSpan = Math.max(xpNext - xpCurrent, 1);
+  const progressPct = Math.max(
+    0,
+    Math.min(100, ((p.total_xp - xpCurrent) / levelSpan) * 100)
+  );
 
   // Completed lessons count (distinct, via user_lesson_progress)
   const { count: completedLessons } = await supabase
@@ -111,9 +116,7 @@ export default async function ProfilePage() {
           <div className="h-3 rounded-full bg-muted overflow-hidden">
             <div
               className="h-full rounded-full bg-gradient-to-l from-primary to-primary/80 transition-all duration-700"
-              style={{
-                width: `${Math.min(((p.total_xp - (xpNext - 50)) / 50) * 100, 100)}%`,
-              }}
+              style={{ width: `${progressPct}%` }}
             />
           </div>
         </div>
