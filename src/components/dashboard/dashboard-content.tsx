@@ -42,11 +42,9 @@ export function DashboardContent({
   const goalReached = todayXp >= dailyGoal;
   const level = getLevel(profile.total_xp);
   const levelLabel = getLevelLabel(profile.total_xp);
-  const { current: xpCurrent, next: xpNext } = getXpForNextLevel(profile.total_xp);
+  const { next: xpNext } = getXpForNextLevel(profile.total_xp);
   const xpProgress =
-    xpNext > xpCurrent
-      ? ((profile.total_xp - xpCurrent) / (xpNext - xpCurrent)) * 100
-      : 100;
+    xpNext > 0 ? (profile.total_xp / xpNext) * 100 : 100;
 
   return (
     <main className="px-4 py-6 md:px-8">
