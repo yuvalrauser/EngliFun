@@ -101,10 +101,19 @@ function MistakeCard({
 
   return (
     <div className="rounded-2xl bg-card ring-1 ring-border overflow-hidden">
-      {/* Header row */}
-      <button
-        className="w-full px-4 py-3 flex items-start gap-3 text-right hover:bg-muted/30 transition-colors"
+      {/* Header row — div with role=button so the inner "סימון כנסקר" button
+          isn't nested inside another button (invalid HTML, breaks clicks). */}
+      <div
+        role="button"
+        tabIndex={0}
+        className="w-full px-4 py-3 flex items-start gap-3 text-right hover:bg-muted/30 transition-colors cursor-pointer"
         onClick={() => setExpanded((v) => !v)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            setExpanded((v) => !v);
+          }
+        }}
       >
         <div className="flex-1 min-w-0">
           <p
@@ -130,7 +139,7 @@ function MistakeCard({
             <polyline points="6 9 12 15 18 9" />
           </svg>
         </div>
-      </button>
+      </div>
 
       {/* Expanded explanation */}
       {expanded && (
