@@ -17,29 +17,47 @@ export function CompleteSentence({ exercise, onSubmit }: CompleteSentenceProps) 
   const parts = exercise.prompt_text.split("___");
   const promptIsHebrew = exercise.prompt_language === "he";
 
+  // For Hebrew-context prompts with embedded English (e.g. "אמור X: I ___ Y."),
+  // split the pre-blank text at the first English letter so the Hebrew context
+  // renders as RTL and the entire English clause (including the blank + any
+  // trailing tokens like "?" / ".") renders as one coherent LTR isolate.
+  // Without this, neutral punctuation drifts to the wrong visual side.
+  const firstEnIdx = promptIsHebrew ? parts[0].search(/[A-Za-z]/) : -1;
+  const heContext = firstEnIdx >= 0 ? parts[0].slice(0, firstEnIdx) : "";
+  const enLead = firstEnIdx >= 0 ? parts[0].slice(firstEnIdx) : parts[0];
+  const enTrail = parts[1] ?? "";
+
+  const selectedText = selected
+    ? exercise.exercise_options.find((o) => o.id === selected)?.option_text ?? ""
+    : "";
+
+  const blankNode = (
+    <span
+      className={cn(
+        "inline-block min-w-[80px] mx-1 border-b-2 px-2 pb-1 text-center align-baseline",
+        selected ? "border-primary text-primary" : "border-muted-foreground/30"
+      )}
+    >
+      {selectedText}
+    </span>
+  );
+
   return (
     <div className="space-y-6">
-      {/* Sentence with blank — direction follows the prompt's language.
-          The blank itself stays LTR because the answer tokens are always
-          English in this lesson type. */}
+      {/* Sentence with blank.
+          Hebrew context renders RTL on the right; English clause + blank + any
+          trailing punctuation render LTR on the left as one bidi isolate. */}
       <div
         className="text-center rounded-2xl bg-card p-6 ring-1 ring-border"
         dir={promptIsHebrew ? "rtl" : "ltr"}
       >
         <p className="text-xl font-bold leading-relaxed">
-          {parts[0]}
-          <span
-            dir="ltr"
-            className={cn(
-              "inline-block min-w-[80px] mx-1 border-b-2 px-2 pb-1 text-center align-baseline",
-              selected ? "border-primary text-primary" : "border-muted-foreground/30"
-            )}
-          >
-            {selected
-              ? exercise.exercise_options.find((o) => o.id === selected)?.option_text
-              : ""}
+          {heContext && <span dir="rtl">{heContext}</span>}
+          <span dir="ltr" style={{ unicodeBidi: "isolate" }}>
+            {enLead}
+            {blankNode}
+            {enTrail}
           </span>
-          {parts[1] ?? ""}
         </p>
       </div>
 
