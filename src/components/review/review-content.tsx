@@ -33,12 +33,23 @@ export function ReviewContent({ mistakes }: ReviewContentProps) {
   const remaining = mistakes.filter((m) => !reviewed.has(m.id)).length;
 
   async function markReviewed(id: string) {
+    // Optimistic update — the card disappears immediately and stays gone
+    // even on slow networks. We roll back only if the DB call comes back
+    // with a real error.
+    setReviewed((prev) => new Set([...prev, id]));
     const supabase = createClient();
-    await supabase
+    const { error } = await supabase
       .from("user_mistakes")
       .update({ needs_review: false, reviewed_at: new Date().toISOString() })
       .eq("id", id);
-    setReviewed((prev) => new Set([...prev, id]));
+    if (error) {
+      console.error("markReviewed failed:", error);
+      setReviewed((prev) => {
+        const next = new Set(prev);
+        next.delete(id);
+        return next;
+      });
+    }
   }
 
   return (
@@ -153,7 +164,13 @@ function MistakeCard({
             💡 {mistake.explanation_he}
           </p>
           <button
-            onClick={onMarkReviewed}
+            type="button"
+            onClick={(e) => {
+              // Prevent any parent click handlers (the role=button header above
+              // exists in case some browser still treats this as nested click).
+              e.stopPropagation();
+              onMarkReviewed();
+            }}
             className="mt-3 w-full rounded-xl bg-success/10 border border-success/30 py-2.5 text-sm font-semibold text-success hover:bg-success/20 transition-colors active:scale-[0.98]"
           >
             ✓ סימון כנסקר
