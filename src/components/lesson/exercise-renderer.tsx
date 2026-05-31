@@ -15,7 +15,14 @@ import {
 import { cn } from "@/lib/utils";
 
 export function ExerciseRenderer() {
-  const { exercises, currentIndex, state, submitCorrect, submitWrong } = useLessonStore();
+  const {
+    exercises,
+    currentIndex,
+    state,
+    submitCorrect,
+    submitWrong,
+    recordPartialMistake,
+  } = useLessonStore();
   const exercise = exercises[currentIndex];
 
   if (!exercise) return null;
@@ -95,21 +102,11 @@ export function ExerciseRenderer() {
           <Matching
             key={exercise.id}
             exercise={exercise}
-            onComplete={({ hadWrongAttempt }) => {
-              // All pairs matched, but if there was any wrong pick during the
-              // attempt the whole exercise is treated as a miss: heart deducted
-              // and recorded as a mistake.
-              if (hadWrongAttempt) {
-                submitWrong(
-                  "התאמה עם טעויות",
-                  "",
-                  exercise.explanation_he,
-                  false
-                );
-              } else {
-                submitCorrect("all_pairs_matched");
-              }
-            }}
+            // Each wrong pair pick deducts a heart immediately; the matching
+            // exercise keeps running until all pairs are matched (or hearts
+            // hit zero, in which case the store transitions to "failed").
+            onWrongAttempt={(answer) => recordPartialMistake(answer)}
+            onComplete={() => submitCorrect("all_pairs_matched")}
           />
         );
 

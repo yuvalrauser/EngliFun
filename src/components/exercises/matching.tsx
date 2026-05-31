@@ -8,15 +8,15 @@ import type { ExerciseWithOptions } from "@/types/lesson";
 
 interface MatchingProps {
   exercise: ExerciseWithOptions;
-  onComplete: (result: { hadWrongAttempt: boolean }) => void;
+  onWrongAttempt: (userAnswer: string) => void;
+  onComplete: () => void;
 }
 
-export function Matching({ exercise, onComplete }: MatchingProps) {
+export function Matching({ exercise, onWrongAttempt, onComplete }: MatchingProps) {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [matchedPairs, setMatchedPairs] = useState<Set<string>>(new Set());
   const [matchedOptionIds, setMatchedOptionIds] = useState<Set<string>>(new Set());
   const [flashWrong, setFlashWrong] = useState<Set<string>>(new Set());
-  const [hadWrongAttempt, setHadWrongAttempt] = useState(false);
 
   // Shuffle each column independently so pairs don't line up
   const [heOptions] = useState(() =>
@@ -57,10 +57,14 @@ export function Matching({ exercise, onComplete }: MatchingProps) {
       setSelectedId(null);
 
       if (newPairs.size === totalPairs) {
-        setTimeout(() => onComplete({ hadWrongAttempt }), 400);
+        setTimeout(() => onComplete(), 400);
       }
     } else {
-      setHadWrongAttempt(true);
+      const selOpt = exercise.exercise_options.find((o) => o.id === selectedId);
+      const otherOpt = exercise.exercise_options.find((o) => o.id === optionId);
+      onWrongAttempt(
+        `${selOpt?.option_text ?? ""} ↔ ${otherOpt?.option_text ?? ""}`
+      );
       const wrongSet = new Set([selectedId, optionId]);
       setFlashWrong(wrongSet);
       setTimeout(() => {
@@ -68,7 +72,7 @@ export function Matching({ exercise, onComplete }: MatchingProps) {
         setSelectedId(null);
       }, 600);
     }
-  }, [selectedId, matchedOptionIds, matchedPairs, exercise, totalPairs, onComplete, hadWrongAttempt]);
+  }, [selectedId, matchedOptionIds, matchedPairs, exercise, totalPairs, onComplete, onWrongAttempt]);
 
   function renderOption(opt: { id: string; option_text: string; option_language: string }) {
     const isMatched = matchedOptionIds.has(opt.id);

@@ -11,6 +11,12 @@ interface LessonStore extends LessonSessionState {
   goTo: (state: LessonState) => void;
   submitCorrect: (answer: string) => void;
   submitWrong: (answer: string, correctAnswer: string, explanation: string, isNearMiss: boolean) => void;
+  // Used by multi-step exercises (e.g. matching) where each wrong attempt
+  // should cost a heart without interrupting the exercise. Records a mistake
+  // and decrements hearts; transitions to "failed" if hearts hit zero. Does
+  // NOT push to attempts — the exercise still produces a single attempts entry
+  // when it finally completes via submitCorrect.
+  recordPartialMistake: (answer: string) => void;
   advanceToNext: () => void;
   setXpEarned: (xp: number) => void;
   reset: () => void;
@@ -109,6 +115,39 @@ export const useLessonStore = create<LessonStore>((set, get) => ({
           is_correct: false,
           is_near_miss: isNearMiss,
         },
+      ],
+    });
+  },
+
+  recordPartialMistake: (answer) => {
+    const s = get();
+    if (s.state !== "active_question") return;
+    const exercise = s.exercises[s.currentIndex];
+    const newHearts = s.hearts - 1;
+    if (newHearts <= 0) {
+      // Out of hearts — fail the lesson immediately with feedback context.
+      set({
+        hearts: 0,
+        isPerfect: false,
+        state: "failed",
+        lastAnswer: answer,
+        lastCorrectAnswer: "",
+        lastExplanation: exercise.explanation_he,
+        lastIsNearMiss: false,
+        mistakes: [
+          ...s.mistakes,
+          { exercise_id: exercise.id, user_answer: answer, is_near_miss: false },
+        ],
+      });
+      return;
+    }
+    // Keep state = "active_question" so the matching exercise continues.
+    set({
+      hearts: newHearts,
+      isPerfect: false,
+      mistakes: [
+        ...s.mistakes,
+        { exercise_id: exercise.id, user_answer: answer, is_near_miss: false },
       ],
     });
   },
