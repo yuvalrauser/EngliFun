@@ -17,14 +17,18 @@ export function CompleteSentence({ exercise, onSubmit }: CompleteSentenceProps) 
   const parts = exercise.prompt_text.split("___");
   const promptIsHebrew = exercise.prompt_language === "he";
 
-  // For Hebrew-context prompts with embedded English (e.g. "אמור X: I ___ Y."),
-  // split the pre-blank text at the first English letter so the Hebrew context
-  // renders as RTL and the entire English clause (including the blank + any
-  // trailing tokens like "?" / ".") renders as one coherent LTR isolate.
-  // Without this, neutral punctuation drifts to the wrong visual side.
+  // Hebrew prompts can mix Hebrew context with English clauses around the
+  // blank. Split parts[0] at the first English letter:
+  //   - hePrefix renders as RTL (Hebrew context + colon)
+  //   - enLead + blank + enTrail render as one LTR isolate so trailing "?" / "!"
+  //     stay attached to the English/blank clause instead of drifting.
+  // If parts[0] has no English at all (e.g. "אמור שלום: ___!"), hePrefix is
+  // the full Hebrew prefix and the LTR isolate only contains the blank + the
+  // trailing punctuation. This prevents the LTR isolate from reversing
+  // Hebrew word order.
   const firstEnIdx = promptIsHebrew ? parts[0].search(/[A-Za-z]/) : -1;
-  const heContext = firstEnIdx >= 0 ? parts[0].slice(0, firstEnIdx) : "";
-  const enLead = firstEnIdx >= 0 ? parts[0].slice(firstEnIdx) : parts[0];
+  const hePrefix = firstEnIdx >= 0 ? parts[0].slice(0, firstEnIdx) : parts[0];
+  const enLead = firstEnIdx >= 0 ? parts[0].slice(firstEnIdx) : "";
   const enTrail = parts[1] ?? "";
 
   const selectedText = selected
@@ -52,7 +56,7 @@ export function CompleteSentence({ exercise, onSubmit }: CompleteSentenceProps) 
         dir={promptIsHebrew ? "rtl" : "ltr"}
       >
         <p className="text-xl font-bold leading-relaxed">
-          {heContext && <span dir="rtl">{heContext}</span>}
+          {hePrefix && <span dir="rtl">{hePrefix}</span>}
           <span dir="ltr" style={{ unicodeBidi: "isolate" }}>
             {enLead}
             {blankNode}
