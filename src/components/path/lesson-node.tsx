@@ -34,6 +34,7 @@ export function LessonNode({ lesson, index, totalInUnit, allowReplays = false }:
     >
       {/* Main circle */}
       <div
+        data-lesson-circle
         className={cn(
           "relative flex items-center justify-center rounded-full transition-all duration-300",
           // Size

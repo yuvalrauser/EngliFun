@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { LessonNode } from "@/components/path/lesson-node";
 import type { UnitWithLessons } from "@/services/content.server";
@@ -14,6 +15,39 @@ interface UnitSectionProps {
 
 export function UnitSection({ unit, lessonStatuses, allowReplays = false }: UnitSectionProps) {
   const lessons = unit.lessons.map((l) => lessonStatuses.get(l.id)!).filter(Boolean);
+  const pathRef = useRef<HTMLDivElement>(null);
+  const [points, setPoints] = useState<{ x: number; y: number }[]>([]);
+
+  // Measure actual centers of each lesson circle so the SVG connector lands on
+  // them. The previous percentage-based math broke whenever the current node
+  // was larger than the others, when labels wrapped, or on the bottom segment.
+  useEffect(() => {
+    function measure() {
+      const container = pathRef.current;
+      if (!container) return;
+      const cRect = container.getBoundingClientRect();
+      const circles = container.querySelectorAll<HTMLElement>("[data-lesson-circle]");
+      const next = Array.from(circles).map((el) => {
+        const r = el.getBoundingClientRect();
+        return {
+          x: r.left + r.width / 2 - cRect.left,
+          y: r.top + r.height / 2 - cRect.top,
+        };
+      });
+      setPoints(next);
+    }
+    measure();
+    const ro = new ResizeObserver(measure);
+    if (pathRef.current) ro.observe(pathRef.current);
+    window.addEventListener("resize", measure);
+    // Re-measure after fonts/images settle the layout.
+    const t = window.setTimeout(measure, 300);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", measure);
+      window.clearTimeout(t);
+    };
+  }, [lessons.length]);
   const completedCount = lessons.filter((l) => l.status === "completed").length;
   const totalCount = lessons.length;
   const isUnitComplete = completedCount === totalCount && totalCount > 0;
@@ -93,21 +127,19 @@ export function UnitSection({ unit, lessonStatuses, allowReplays = false }: Unit
       </div>
 
       {/* Lesson nodes in winding path layout */}
-      <div className="relative flex flex-col items-center gap-6 py-6 px-4">
-        {/* SVG connector path */}
-        {lessons.length > 1 && (
+      <div
+        ref={pathRef}
+        className="relative flex flex-col items-center gap-6 py-6 px-4"
+      >
+        {/* SVG connector path — coordinates come from measured circle centers */}
+        {points.length > 1 && (
           <svg
             className="absolute inset-0 w-full h-full pointer-events-none"
             style={{ zIndex: 0 }}
           >
-            {lessons.slice(0, -1).map((_, idx) => {
-              const totalH = lessons.length;
-              const y1Pct = ((idx * 1.0) / (totalH - 1)) * 100 + 100 / (totalH * 2);
-              const y2Pct = (((idx + 1) * 1.0) / (totalH - 1)) * 100 + 100 / (totalH * 2);
-              const amplitude = 60;
-              const x1 = 50 + (Math.sin((idx / Math.max(totalH - 1, 1)) * Math.PI) * amplitude) / 3;
-              const x2 = 50 + (Math.sin(((idx + 1) / Math.max(totalH - 1, 1)) * Math.PI) * amplitude) / 3;
-
+            {points.slice(0, -1).map((p, idx) => {
+              const next = points[idx + 1];
+              if (!next) return null;
               const isSegmentDone =
                 lessons[idx].status === "completed" &&
                 (lessons[idx + 1].status === "completed" ||
@@ -117,10 +149,10 @@ export function UnitSection({ unit, lessonStatuses, allowReplays = false }: Unit
               return (
                 <line
                   key={idx}
-                  x1={`${x1}%`}
-                  y1={`${y1Pct}%`}
-                  x2={`${x2}%`}
-                  y2={`${y2Pct}%`}
+                  x1={p.x}
+                  y1={p.y}
+                  x2={next.x}
+                  y2={next.y}
                   stroke={isSegmentDone ? "oklch(0.72 0.19 145)" : "oklch(0.88 0.01 260)"}
                   strokeWidth="3"
                   strokeLinecap="round"
