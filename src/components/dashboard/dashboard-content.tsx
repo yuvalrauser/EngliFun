@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { StreakBanner } from "@/components/dashboard/streak-banner";
 import { getLevel, getLevelLabel, getXpForNextLevel } from "@/lib/constants/levels";
+import { effectiveStreak } from "@/lib/utils/streak";
 import type { CourseLevel, Profile } from "@/types/database";
 import type { LessonWithStatus } from "@/services/progress.server";
 
@@ -117,7 +118,7 @@ export function DashboardContent({
           {/* Streak */}
           <div className="rounded-2xl bg-card p-4 text-center shadow-sm ring-1 ring-border">
             <div className="text-2xl mb-1">🔥</div>
-            <div className="text-xl font-bold">{profile.current_streak}</div>
+            <div className="text-xl font-bold">{effectiveStreak(profile.current_streak, profile.last_activity_date, profile.timezone)}</div>
             <div className="text-[11px] text-muted-foreground mt-0.5">סטריק</div>
           </div>
           {/* XP */}

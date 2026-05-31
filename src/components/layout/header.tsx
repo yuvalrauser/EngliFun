@@ -2,13 +2,18 @@
 
 import { useUserStore } from "@/stores/userStore";
 import { getLevelLabel } from "@/lib/constants/levels";
+import { effectiveStreak } from "@/lib/utils/streak";
 import { LogoutButton } from "@/components/layout/logout-button";
 
 export function Header() {
   const { profile } = useUserStore();
 
   const totalXp = profile?.total_xp ?? 0;
-  const streak = profile?.current_streak ?? 0;
+  const streak = effectiveStreak(
+    profile?.current_streak ?? 0,
+    profile?.last_activity_date ?? null,
+    profile?.timezone ?? null
+  );
   const levelLabel = getLevelLabel(totalXp);
 
   return (

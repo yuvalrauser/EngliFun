@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { Mascot } from "@/components/ui/mascot";
 import { getLevel, getLevelLabel, getXpForNextLevel } from "@/lib/constants/levels";
+import { effectiveStreak } from "@/lib/utils/streak";
 import type { Profile } from "@/types/database";
 
 export default async function ProfilePage() {
@@ -79,7 +80,7 @@ export default async function ProfilePage() {
           </div>
           <div className="rounded-2xl bg-card p-4 text-center ring-1 ring-border">
             <div className="text-2xl mb-1">🔥</div>
-            <div className="text-xl font-bold">{p.current_streak}</div>
+            <div className="text-xl font-bold">{effectiveStreak(p.current_streak, p.last_activity_date, p.timezone)}</div>
             <div className="text-xs text-muted-foreground">סטריק נוכחי</div>
           </div>
           <div className="rounded-2xl bg-card p-4 text-center ring-1 ring-border">
