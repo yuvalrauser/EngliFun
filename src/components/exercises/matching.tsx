@@ -8,7 +8,7 @@ import type { ExerciseWithOptions } from "@/types/lesson";
 
 interface MatchingProps {
   exercise: ExerciseWithOptions;
-  onComplete: (matchedPairIds: Set<string>) => void;
+  onComplete: (result: { hadWrongAttempt: boolean }) => void;
 }
 
 export function Matching({ exercise, onComplete }: MatchingProps) {
@@ -16,6 +16,7 @@ export function Matching({ exercise, onComplete }: MatchingProps) {
   const [matchedPairs, setMatchedPairs] = useState<Set<string>>(new Set());
   const [matchedOptionIds, setMatchedOptionIds] = useState<Set<string>>(new Set());
   const [flashWrong, setFlashWrong] = useState<Set<string>>(new Set());
+  const [hadWrongAttempt, setHadWrongAttempt] = useState(false);
 
   // Shuffle each column independently so pairs don't line up
   const [heOptions] = useState(() =>
@@ -56,9 +57,10 @@ export function Matching({ exercise, onComplete }: MatchingProps) {
       setSelectedId(null);
 
       if (newPairs.size === totalPairs) {
-        setTimeout(() => onComplete(newPairs), 400);
+        setTimeout(() => onComplete({ hadWrongAttempt }), 400);
       }
     } else {
+      setHadWrongAttempt(true);
       const wrongSet = new Set([selectedId, optionId]);
       setFlashWrong(wrongSet);
       setTimeout(() => {
@@ -66,7 +68,7 @@ export function Matching({ exercise, onComplete }: MatchingProps) {
         setSelectedId(null);
       }, 600);
     }
-  }, [selectedId, matchedOptionIds, matchedPairs, exercise, totalPairs, onComplete]);
+  }, [selectedId, matchedOptionIds, matchedPairs, exercise, totalPairs, onComplete, hadWrongAttempt]);
 
   function renderOption(opt: { id: string; option_text: string; option_language: string }) {
     const isMatched = matchedOptionIds.has(opt.id);

@@ -95,9 +95,20 @@ export function ExerciseRenderer() {
           <Matching
             key={exercise.id}
             exercise={exercise}
-            onComplete={() => {
-              // Matching always succeeds when onComplete fires (all pairs matched)
-              submitCorrect("all_pairs_matched");
+            onComplete={({ hadWrongAttempt }) => {
+              // All pairs matched, but if there was any wrong pick during the
+              // attempt the whole exercise is treated as a miss: heart deducted
+              // and recorded as a mistake.
+              if (hadWrongAttempt) {
+                submitWrong(
+                  "התאמה עם טעויות",
+                  "",
+                  exercise.explanation_he,
+                  false
+                );
+              } else {
+                submitCorrect("all_pairs_matched");
+              }
             }}
           />
         );
