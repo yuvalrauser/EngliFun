@@ -14,6 +14,9 @@ const NAV_ITEMS = [
 export function BottomNav() {
   const pathname = usePathname();
 
+  // Hide during lesson + onboarding (fullscreen takeover flows)
+  if (pathname?.startsWith("/lesson/") || pathname === "/onboarding") return null;
+
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-50 flex h-16 items-center justify-around border-t border-border bg-card/95 backdrop-blur-sm md:hidden pb-[env(safe-area-inset-bottom)] [height:calc(4rem+env(safe-area-inset-bottom))]">
       {NAV_ITEMS.map((item) => {
