@@ -74,7 +74,7 @@ export default function OnboardingPage() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-4 bg-gradient-to-b from-primary/5 to-background">
+    <main className="flex min-h-dvh flex-col items-center justify-center p-4 bg-gradient-to-b from-primary/5 to-background">
       {/* Emergency exit */}
       <div className="absolute top-4 left-4">
         <button

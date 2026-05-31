@@ -4,7 +4,7 @@ export default function LessonLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="fixed inset-0 z-50 bg-background overflow-y-auto">
+    <div className="fixed inset-0 z-50 bg-background overflow-y-auto overscroll-contain">
       {children}
     </div>
   );

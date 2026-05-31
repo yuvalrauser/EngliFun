@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function LandingPage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-6 p-8 bg-gradient-to-b from-primary/5 to-background">
+    <main className="flex min-h-dvh flex-col items-center justify-center gap-6 p-8 bg-gradient-to-b from-primary/5 to-background">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/brand/owl.png"

@@ -55,9 +55,9 @@ export function LessonEngine({ lesson, exercises }: LessonEngineProps) {
   // Active question / feedback states.
   // ExerciseRenderer locks itself when state is in feedback — no extra wrapper needed.
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-dvh">
       <LessonHeader />
-      <div className="flex-1 flex items-start justify-center px-4 pt-6 pb-40">
+      <div className="flex-1 flex items-start justify-center px-4 pt-6 pb-[calc(10rem+env(safe-area-inset-bottom))]">
         <div className="w-full max-w-lg">
           <ExerciseRenderer />
         </div>

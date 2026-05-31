@@ -32,11 +32,11 @@ export default async function AuthLayout({
 
   return (
     <AuthProvider initialProfile={initialProfile}>
-      <div className="flex min-h-screen">
+      <div className="flex min-h-dvh">
         <Sidebar />
         <div className="flex flex-1 flex-col">
           <Header />
-          <main className="flex-1 pb-20 md:pb-0">{children}</main>
+          <main className="flex-1 pb-[calc(5rem+env(safe-area-inset-bottom))] md:pb-0">{children}</main>
           <BottomNav />
         </div>
       </div>

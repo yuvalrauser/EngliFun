@@ -14,7 +14,7 @@ export function FeedbackBar() {
   return (
     <div
       className={cn(
-        "fixed bottom-0 left-0 right-0 z-40 border-t-2 p-5 pb-8 md:pb-5",
+        "fixed bottom-0 left-0 right-0 z-40 border-t-2 p-5 pb-[calc(2rem+env(safe-area-inset-bottom))] md:pb-5",
         isCorrect
           ? "bg-green-50 border-success text-green-900"
           : "bg-red-50 border-destructive text-red-900"
