@@ -59,6 +59,9 @@ export function UnitSection({
         window.alert(result.error ?? "שגיאה במחיקה");
         return;
       }
+      // Explicit navigation prevents the current page from re-rendering with
+      // the now-stale unit reference; router.push is safer than refresh().
+      router.push("/path");
       router.refresh();
     });
   }

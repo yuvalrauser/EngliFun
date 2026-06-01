@@ -8,6 +8,7 @@ import {
   updateLessonTitle,
   deleteCustomLesson,
   addLessonToUnit,
+  deleteCustomUnit,
 } from "@/app/(auth)/path/actions";
 import type { Lesson, Unit } from "@/types/database";
 import { cn } from "@/lib/utils";
@@ -82,6 +83,24 @@ export function UnitEditor({ unit, lessons: initialLessons }: UnitEditorProps) {
         window.alert(result.error ?? "שגיאה");
         return;
       }
+      router.refresh();
+    });
+  }
+
+  function handleDeleteUnit() {
+    if (
+      !window.confirm(
+        `למחוק את היחידה "${unit.title}" וכל השיעורים והתרגילים שבה? פעולה זו לא ניתנת לביטול.`,
+      )
+    )
+      return;
+    startTransition(async () => {
+      const result = await deleteCustomUnit(unit.id);
+      if (!result.ok) {
+        window.alert(result.error ?? "שגיאה במחיקה");
+        return;
+      }
+      router.push("/path");
       router.refresh();
     });
   }
@@ -203,6 +222,22 @@ export function UnitEditor({ unit, lessons: initialLessons }: UnitEditorProps) {
           className="w-full rounded-xl border-2 border-dashed border-primary/40 bg-primary/5 py-3 text-sm font-semibold text-primary hover:bg-primary/10 transition-colors disabled:opacity-60"
         >
           ＋ הוסף שיעור
+        </button>
+      </div>
+
+      {/* Destructive action — fenced off at the bottom of the page. */}
+      <div className="rounded-3xl bg-destructive/5 p-6 ring-1 ring-destructive/20">
+        <h3 className="text-sm font-bold text-destructive mb-1">איזור מחיקה</h3>
+        <p className="text-xs text-muted-foreground mb-3">
+          מחיקת היחידה תמחק גם את כל השיעורים והתרגילים שבה. לא ניתן לבטל.
+        </p>
+        <button
+          type="button"
+          onClick={handleDeleteUnit}
+          disabled={pending}
+          className="w-full rounded-xl bg-destructive py-2.5 text-sm font-bold text-white disabled:opacity-50"
+        >
+          מחק יחידה
         </button>
       </div>
     </div>
