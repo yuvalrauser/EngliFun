@@ -1,0 +1,24 @@
+-- ============================================================
+-- 020_fix_leaderboard_view_security.sql
+--
+-- Restore leaderboard_view to security definer behavior so the
+-- frontend can list all users in the leaderboard.
+--
+-- Background: the Supabase Security Advisor flagged the view as
+-- "security_invoker should be true". Applying that fix made the
+-- view run with the caller's permissions, which means the existing
+-- RLS policy on public.profiles ("Users can read own profile") now
+-- filters the view down to only the caller's row. Result: the
+-- leaderboard at /leaderboard shows only the current user.
+--
+-- The data exposed by this view (id, username, total_xp,
+-- current_streak) is intentionally public for the leaderboard
+-- feature, so running the view with security_invoker = false is
+-- acceptable. This restores the behavior that 001_initial_schema.sql
+-- originally relied on ("Grant access to the view (bypasses
+-- profiles RLS)").
+--
+-- No code change required.
+-- ============================================================
+
+alter view public.leaderboard_view set (security_invoker = false);
