@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { getFullCourse } from "@/services/content.server";
 import { getLessonProgressMap, buildLessonStatuses } from "@/services/progress.server";
@@ -41,6 +42,15 @@ export default async function PathPage() {
       <div className="mb-6 text-center">
         <h1 className="text-2xl font-bold">{course.title}</h1>
         <p className="text-sm text-muted-foreground mt-1">{course.description}</p>
+      </div>
+      <div className="mx-auto max-w-lg mb-6">
+        <Link
+          href="/path/new"
+          className="flex items-center justify-center gap-2 w-full rounded-2xl border-2 border-dashed border-primary/40 bg-primary/5 py-3 text-sm font-semibold text-primary hover:bg-primary/10 transition-colors"
+        >
+          <span className="text-lg">＋</span>
+          <span>צור יחידה משלך</span>
+        </Link>
       </div>
       <LearningPath
         units={course.units}
