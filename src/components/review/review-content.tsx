@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { createClient } from "@/lib/supabase/client";
 import type { MistakeWithContext } from "@/app/(auth)/review/page";
@@ -11,6 +12,7 @@ interface ReviewContentProps {
 
 export function ReviewContent({ mistakes }: ReviewContentProps) {
   const [reviewed, setReviewed] = useState<Set<string>>(new Set());
+  const router = useRouter();
 
   // Group by unit → lesson
   const grouped = new Map<string, { unitTitle: string; lessons: Map<string, { lessonTitle: string; items: MistakeWithContext[] }> }>();
@@ -33,23 +35,32 @@ export function ReviewContent({ mistakes }: ReviewContentProps) {
   const remaining = mistakes.filter((m) => !reviewed.has(m.id)).length;
 
   async function markReviewed(id: string) {
-    // Optimistic update — the card disappears immediately and stays gone
-    // even on slow networks. We roll back only if the DB call comes back
-    // with a real error.
+    // Optimistic update — the card disappears immediately.
     setReviewed((prev) => new Set([...prev, id]));
     const supabase = createClient();
-    const { error } = await supabase
+    // .select() so we can verify the update actually touched a row. Supabase
+    // returns success even when an RLS rule silently filters everything out,
+    // which would explain a "click works, then it comes back later" bug.
+    const { data, error } = await supabase
       .from("user_mistakes")
       .update({ needs_review: false, reviewed_at: new Date().toISOString() })
-      .eq("id", id);
-    if (error) {
-      console.error("markReviewed failed:", error);
+      .eq("id", id)
+      .select();
+
+    if (error || !data || data.length === 0) {
+      console.error("markReviewed failed:", { id, error, rowsUpdated: data?.length ?? 0 });
+      // Roll back the optimistic state — the row didn't actually get saved.
       setReviewed((prev) => {
         const next = new Set(prev);
         next.delete(id);
         return next;
       });
+      return;
     }
+
+    // Invalidate the server cache so the next visit to /review re-fetches
+    // the fresh `needs_review = true` set instead of the cached one.
+    router.refresh();
   }
 
   return (
