@@ -1,13 +1,11 @@
 "use client";
 
-import { useEffect, useRef, useState, useTransition } from "react";
-import { useRouter } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import { cn } from "@/lib/utils";
 import { LessonNode } from "@/components/path/lesson-node";
-import { deleteCustomUnit } from "@/app/(auth)/path/actions";
 import type { UnitWithLessons } from "@/services/content.server";
 import type { LessonWithStatus } from "@/services/progress.server";
 
@@ -44,27 +42,6 @@ export function UnitSection({
     transition,
     opacity: isDragging ? 0.6 : 1,
   };
-
-  const router = useRouter();
-  const [isDeleting, startDelete] = useTransition();
-
-  function handleDeleteUnit() {
-    const ok = window.confirm(
-      `למחוק את היחידה "${unit.title}" וכל השיעורים והתרגילים שבה? פעולה זו לא ניתנת לביטול.`,
-    );
-    if (!ok) return;
-    startDelete(async () => {
-      const result = await deleteCustomUnit(unit.id);
-      if (!result.ok) {
-        window.alert(result.error ?? "שגיאה במחיקה");
-        return;
-      }
-      // Explicit navigation prevents the current page from re-rendering with
-      // the now-stale unit reference; router.push is safer than refresh().
-      router.push("/path");
-      router.refresh();
-    });
-  }
   const lessons = unit.lessons.map((l) => lessonStatuses.get(l.id)!).filter(Boolean);
   const pathRef = useRef<HTMLDivElement>(null);
   const [points, setPoints] = useState<{ x: number; y: number }[]>([]);
@@ -157,17 +134,6 @@ export function UnitSection({
                   <path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
                 </svg>
               </Link>
-              <button
-                type="button"
-                onClick={handleDeleteUnit}
-                disabled={isDeleting}
-                className="text-destructive/70 hover:text-destructive disabled:opacity-50"
-                aria-label="מחיקת היחידה"
-              >
-                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M3 6h18M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-                </svg>
-              </button>
             </div>
           )}
           {/* Unit icon */}
