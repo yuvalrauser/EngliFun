@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useSortable } from "@dnd-kit/sortable";
+import { CSS } from "@dnd-kit/utilities";
 import { cn } from "@/lib/utils";
 import { LessonNode } from "@/components/path/lesson-node";
 import type { UnitWithLessons } from "@/services/content.server";
@@ -11,9 +13,31 @@ interface UnitSectionProps {
   lessonStatuses: Map<string, LessonWithStatus>;
   isFirst: boolean;
   allowReplays?: boolean;
+  /** True when the unit belongs to the signed-in user (custom unit). */
+  isOwnedByCurrentUser?: boolean;
 }
 
-export function UnitSection({ unit, lessonStatuses, allowReplays = false }: UnitSectionProps) {
+export function UnitSection({
+  unit,
+  lessonStatuses,
+  allowReplays = false,
+  isOwnedByCurrentUser = false,
+}: UnitSectionProps) {
+  // Only owned custom units are draggable. Seeded units are sortable-disabled
+  // so they still appear as drop targets but the user can't grab them.
+  const {
+    setNodeRef,
+    attributes,
+    listeners,
+    transform,
+    transition,
+    isDragging,
+  } = useSortable({ id: unit.id, disabled: !isOwnedByCurrentUser });
+  const dragStyle = {
+    transform: CSS.Transform.toString(transform),
+    transition,
+    opacity: isDragging ? 0.6 : 1,
+  };
   const lessons = unit.lessons.map((l) => lessonStatuses.get(l.id)!).filter(Boolean);
   const pathRef = useRef<HTMLDivElement>(null);
   const [points, setPoints] = useState<{ x: number; y: number }[]>([]);
@@ -62,7 +86,7 @@ export function UnitSection({ unit, lessonStatuses, allowReplays = false }: Unit
       : "from-muted to-muted/50";
 
   return (
-    <section className="relative">
+    <section ref={setNodeRef} style={dragStyle} className="relative">
       {/* Unit banner */}
       <div
         className={cn(
@@ -77,6 +101,25 @@ export function UnitSection({ unit, lessonStatuses, allowReplays = false }: Unit
         }
       >
         <div className="flex items-center gap-4">
+          {/* Drag handle — only for owned custom units */}
+          {isOwnedByCurrentUser && (
+            <button
+              type="button"
+              {...attributes}
+              {...listeners}
+              className="cursor-grab active:cursor-grabbing touch-none text-muted-foreground/70 hover:text-foreground shrink-0 -ml-1"
+              aria-label="גרור לסידור מחדש"
+            >
+              <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
+                <circle cx="9" cy="6" r="1.5" />
+                <circle cx="15" cy="6" r="1.5" />
+                <circle cx="9" cy="12" r="1.5" />
+                <circle cx="15" cy="12" r="1.5" />
+                <circle cx="9" cy="18" r="1.5" />
+                <circle cx="15" cy="18" r="1.5" />
+              </svg>
+            </button>
+          )}
           {/* Unit icon */}
           <div
             className={cn(
@@ -96,6 +139,11 @@ export function UnitSection({ unit, lessonStatuses, allowReplays = false }: Unit
             <h2 className="text-lg font-bold leading-tight">{unit.title}</h2>
             {unit.description && (
               <p className="text-sm text-muted-foreground mt-0.5 truncate">{unit.description}</p>
+            )}
+            {unit.is_draft && (
+              <span className="inline-block mt-1 rounded-full bg-amber-100 text-amber-800 text-[10px] font-semibold px-2 py-0.5">
+                טיוטה
+              </span>
             )}
           </div>
 

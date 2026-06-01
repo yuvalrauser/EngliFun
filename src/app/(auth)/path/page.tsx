@@ -57,6 +57,7 @@ export default async function PathPage() {
         lessonStatuses={lessonStatusEntries}
         allCompleted={allCompleted}
         currentLevel={level as Profile["starting_level"]}
+        currentUserId={user.id}
       />
     </main>
   );

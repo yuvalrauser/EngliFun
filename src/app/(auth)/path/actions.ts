@@ -119,3 +119,34 @@ export async function createCustomUnit(
   revalidatePath("/path");
   return { ok: true, unitId: unit.id };
 }
+
+/**
+ * Move a user-owned custom unit to a new position in the path. The
+ * caller computes `newPosition` as the midpoint of the two neighbors
+ * in the visually-reordered list. RLS ensures the user can only
+ * update their own units; seeded units (owner_id IS NULL) can't be
+ * moved.
+ */
+export async function reorderCustomUnit(
+  unitId: string,
+  newPosition: number,
+): Promise<ActionResult> {
+  if (!Number.isFinite(newPosition)) {
+    return { ok: false, error: "מיקום לא תקין" };
+  }
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { ok: false, error: "לא מחובר" };
+
+  const { error } = await supabase
+    .from("units")
+    .update({ position: newPosition })
+    .eq("id", unitId)
+    .eq("owner_id", user.id);
+  if (error) return { ok: false, error: error.message };
+
+  revalidatePath("/path");
+  return { ok: true };
+}
