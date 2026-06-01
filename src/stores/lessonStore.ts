@@ -71,6 +71,38 @@ export const useLessonStore = create<LessonStore>((set, get) => ({
     // the mistake record while still losing hearts.
     if (s.state !== "active_question") return;
     const exercise = s.exercises[s.currentIndex];
+
+    // For multi-step exercises like matching, the user may have racked up
+    // wrong attempts (via recordPartialMistake) before finally completing
+    // the exercise. Those wrong attempts already cost hearts; here we make
+    // sure the exercise is also persisted as is_correct=false so that the
+    // complete_lesson RPC creates a user_mistakes row for /review and the
+    // score doesn't reward an exercise that had errors.
+    const hadPartialMistakes = s.mistakes.some(
+      (m) => m.exercise_id === exercise.id,
+    );
+
+    if (hadPartialMistakes) {
+      set({
+        // No score bump (the exercise wasn't clean).
+        state: "correct_feedback",
+        lastAnswer: answer,
+        lastCorrectAnswer: "",
+        lastExplanation: "",
+        lastIsNearMiss: false,
+        attempts: [
+          ...s.attempts,
+          {
+            exercise_id: exercise.id,
+            user_answer: answer,
+            is_correct: false,
+            is_near_miss: false,
+          },
+        ],
+      });
+      return;
+    }
+
     set({
       score: s.score + 1,
       state: "correct_feedback",
