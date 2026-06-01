@@ -2,9 +2,12 @@
 
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { cn } from "@/lib/utils";
 import { deleteCustomExercise } from "@/app/(auth)/path/actions";
 import { MatchingEditor } from "@/components/path/editors/matching-editor";
+import { MultipleChoiceEditor } from "@/components/path/editors/multiple-choice-editor";
+import { CompleteSentenceEditor } from "@/components/path/editors/complete-sentence-editor";
+import { WordBankEditor } from "@/components/path/editors/word-bank-editor";
+import { TypeAnswerEditor } from "@/components/path/editors/type-answer-editor";
 import type { Lesson, ExerciseType } from "@/types/database";
 import type { ExerciseWithOptions } from "@/types/lesson";
 
@@ -182,19 +185,10 @@ function TypePickerModal({
               key={t}
               type="button"
               onClick={() => onPick(t)}
-              className={cn(
-                "flex items-center gap-3 rounded-2xl border-2 border-border p-4 text-right hover:border-primary hover:bg-primary/5 transition-all",
-                // Matching is the only one implemented in this pass; the
-                // others appear disabled until later phases.
-                t !== "matching" && "opacity-40 cursor-not-allowed",
-              )}
-              disabled={t !== "matching"}
+              className="flex items-center gap-3 rounded-2xl border-2 border-border p-4 text-right hover:border-primary hover:bg-primary/5 transition-all"
             >
               <span className="text-2xl">{TYPE_ICON[t]}</span>
               <span className="font-semibold flex-1">{TYPE_LABEL_HE[t]}</span>
-              {t !== "matching" && (
-                <span className="text-xs text-muted-foreground">בקרוב</span>
-              )}
             </button>
           ))}
         </div>
@@ -225,30 +219,13 @@ function EditorModal({
   onClose: () => void;
   onSaved: () => void;
 }) {
-  // Only matching is implemented in this commit. Other types render a
-  // placeholder for now.
+  const editorProps = { lessonId, existing, onSaved, onCancel: onClose };
   const editor =
-    type === "matching" ? (
-      <MatchingEditor
-        lessonId={lessonId}
-        existing={existing}
-        onSaved={onSaved}
-        onCancel={onClose}
-      />
-    ) : (
-      <div className="text-center p-6">
-        <p className="text-sm text-muted-foreground">
-          העורך הזה ייבנה בקומיט הבא.
-        </p>
-        <button
-          type="button"
-          onClick={onClose}
-          className="mt-4 w-full rounded-xl border border-border py-2 text-sm font-semibold"
-        >
-          סגור
-        </button>
-      </div>
-    );
+    type === "matching" ? <MatchingEditor {...editorProps} /> :
+    type === "multiple_choice" ? <MultipleChoiceEditor {...editorProps} /> :
+    type === "complete_sentence" ? <CompleteSentenceEditor {...editorProps} /> :
+    type === "word_bank" ? <WordBankEditor {...editorProps} /> :
+    <TypeAnswerEditor {...editorProps} />;
 
   return (
     <div

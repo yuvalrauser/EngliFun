@@ -26,6 +26,9 @@ export function UnitSection({
   allowReplays = false,
   isOwnedByCurrentUser = false,
 }: UnitSectionProps) {
+  // Owners can always replay their custom lessons — useful while iterating
+  // on the content. Seeded units still gate replays on full-course completion.
+  const replaysActive = allowReplays || isOwnedByCurrentUser;
   // Only owned custom units are draggable. Seeded units are sortable-disabled
   // so they still appear as drop targets but the user can't grab them.
   const {
@@ -262,7 +265,7 @@ export function UnitSection({
               lesson={lesson}
               index={idx}
               totalInUnit={totalCount}
-              allowReplays={allowReplays}
+              allowReplays={replaysActive}
             />
           </div>
         ))}
