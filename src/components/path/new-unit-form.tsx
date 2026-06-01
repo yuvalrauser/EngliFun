@@ -46,7 +46,8 @@ export function NewUnitForm() {
         setServerError(result.error ?? "שגיאה לא ידועה");
         return;
       }
-      router.push("/path");
+      // Land in the unit editor so the user can immediately add content.
+      router.push(`/path/edit/${result.unitId}`);
       router.refresh();
     });
   }

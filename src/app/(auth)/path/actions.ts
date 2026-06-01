@@ -151,6 +151,152 @@ export async function reorderCustomUnit(
   return { ok: true };
 }
 
+export interface UpdateUnitMetadataInput {
+  unitId: string;
+  title: string;
+  description: string;
+  icon_emoji: string;
+  color_hex: string;
+}
+
+/** Update an owned unit's metadata. RLS enforces ownership. */
+export async function updateUnitMetadata(
+  input: UpdateUnitMetadataInput,
+): Promise<ActionResult> {
+  const title = input.title.trim();
+  if (!title) return { ok: false, error: "חובה לתת שם ליחידה" };
+  if (title.length > 80) return { ok: false, error: "השם ארוך מדי" };
+
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { ok: false, error: "לא מחובר" };
+
+  const { error } = await supabase
+    .from("units")
+    .update({
+      title,
+      description: input.description.trim() || null,
+      icon_emoji: input.icon_emoji.trim() || "📝",
+      color_hex: input.color_hex || "#9CA3AF",
+    })
+    .eq("id", input.unitId)
+    .eq("owner_id", user.id);
+  if (error) return { ok: false, error: error.message };
+
+  revalidatePath("/path");
+  revalidatePath(`/path/edit/${input.unitId}`);
+  return { ok: true };
+}
+
+/** Rename a lesson in an owned unit. */
+export async function updateLessonTitle(
+  lessonId: string,
+  title: string,
+): Promise<ActionResult> {
+  const t = title.trim();
+  if (!t) return { ok: false, error: "חובה לתת שם לשיעור" };
+  if (t.length > 80) return { ok: false, error: "השם ארוך מדי" };
+
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { ok: false, error: "לא מחובר" };
+
+  // RLS already gates this through the units → owner_id chain, but we still
+  // check user is signed in. The .update will silently match 0 rows if the
+  // lesson belongs to a seeded unit.
+  const { data, error } = await supabase
+    .from("lessons")
+    .update({ title: t })
+    .eq("id", lessonId)
+    .select("id, unit_id");
+  if (error) return { ok: false, error: error.message };
+  if (!data || data.length === 0) {
+    return { ok: false, error: "אין הרשאה לערוך את השיעור" };
+  }
+
+  revalidatePath(`/path/edit/${data[0].unit_id}`);
+  return { ok: true };
+}
+
+/** Delete a lesson belonging to an owned unit. */
+export async function deleteCustomLesson(lessonId: string): Promise<ActionResult> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { ok: false, error: "לא מחובר" };
+
+  const { data, error } = await supabase
+    .from("lessons")
+    .delete()
+    .eq("id", lessonId)
+    .select("id, unit_id");
+  if (error) return { ok: false, error: error.message };
+  if (!data || data.length === 0) {
+    return { ok: false, error: "אין הרשאה למחוק שיעור זה" };
+  }
+
+  revalidatePath("/path");
+  revalidatePath(`/path/edit/${data[0].unit_id}`);
+  return { ok: true };
+}
+
+/** Append a new empty lesson to the end of an owned unit. */
+export async function addLessonToUnit(unitId: string): Promise<ActionResult & { lessonId?: string }> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { ok: false, error: "לא מחובר" };
+
+  // Verify ownership + find next order_index.
+  const { data: unit } = await supabase
+    .from("units")
+    .select("id, owner_id")
+    .eq("id", unitId)
+    .single();
+  if (!unit || unit.owner_id !== user.id) {
+    return { ok: false, error: "אין הרשאה" };
+  }
+
+  const { data: lessons } = await supabase
+    .from("lessons")
+    .select("order_index")
+    .eq("unit_id", unitId)
+    .order("order_index", { ascending: false })
+    .limit(1);
+  const nextOrderIndex = (lessons?.[0]?.order_index ?? -1) + 1;
+
+  const { data: inserted, error } = await supabase
+    .from("lessons")
+    .insert({
+      unit_id: unitId,
+      title: `שיעור ${nextOrderIndex + 1}`,
+      description: null,
+      order_index: nextOrderIndex,
+      is_checkpoint: false,
+      exercise_count: 0,
+    })
+    .select("id")
+    .single();
+  if (error || !inserted) return { ok: false, error: error?.message ?? "שגיאה" };
+
+  // Draft progress row so it shows as unlocked.
+  await supabase.from("user_lesson_progress").insert({
+    user_id: user.id,
+    lesson_id: inserted.id,
+    status: "unlocked",
+  });
+
+  revalidatePath("/path");
+  revalidatePath(`/path/edit/${unitId}`);
+  return { ok: true, lessonId: inserted.id };
+}
+
 /**
  * Delete a user-owned custom unit. Cascades through lessons → exercises →
  * exercise_options + user_lesson_progress via FK on delete cascade. RLS
