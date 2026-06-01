@@ -234,12 +234,23 @@ export async function deleteCustomLesson(lessonId: string): Promise<ActionResult
   } = await supabase.auth.getUser();
   if (!user) return { ok: false, error: "לא מחובר" };
 
+  // Clear user_progress.current_lesson_id if it points to this lesson —
+  // same NO-ACTION FK gotcha as deleteCustomUnit.
+  await supabase
+    .from("user_progress")
+    .update({ current_lesson_id: null })
+    .eq("user_id", user.id)
+    .eq("current_lesson_id", lessonId);
+
   const { data, error } = await supabase
     .from("lessons")
     .delete()
     .eq("id", lessonId)
     .select("id, unit_id");
-  if (error) return { ok: false, error: error.message };
+  if (error) {
+    console.error("deleteCustomLesson failed:", error);
+    return { ok: false, error: error.message };
+  }
   if (!data || data.length === 0) {
     return { ok: false, error: "אין הרשאה למחוק שיעור זה" };
   }
@@ -540,6 +551,10 @@ export async function deleteCustomExercise(exerciseId: string): Promise<ActionRe
  * Delete a user-owned custom unit. Cascades through lessons → exercises →
  * exercise_options + user_lesson_progress via FK on delete cascade. RLS
  * + the explicit owner_id filter block deletion of seeded units.
+ *
+ * Before the delete we clear pointers from user_progress (current_unit_id /
+ * current_lesson_id) — those FKs use NO ACTION and would otherwise block
+ * the cascade if the user ever played a lesson in this unit.
  */
 export async function deleteCustomUnit(unitId: string): Promise<ActionResult> {
   const supabase = await createClient();
@@ -548,12 +563,38 @@ export async function deleteCustomUnit(unitId: string): Promise<ActionResult> {
   } = await supabase.auth.getUser();
   if (!user) return { ok: false, error: "לא מחובר" };
 
+  // Clear user_progress.current_unit_id if it points to this unit.
+  await supabase
+    .from("user_progress")
+    .update({ current_unit_id: null, current_lesson_id: null })
+    .eq("user_id", user.id)
+    .eq("current_unit_id", unitId);
+
+  // Also clear current_lesson_id if it points to a lesson inside this unit
+  // (covers the edge case where current_unit_id was already null but
+  // current_lesson_id still references a soon-to-be-cascade-deleted row).
+  const { data: lessons } = await supabase
+    .from("lessons")
+    .select("id")
+    .eq("unit_id", unitId);
+  const lessonIds = (lessons ?? []).map((l) => l.id);
+  if (lessonIds.length > 0) {
+    await supabase
+      .from("user_progress")
+      .update({ current_lesson_id: null })
+      .eq("user_id", user.id)
+      .in("current_lesson_id", lessonIds);
+  }
+
   const { error } = await supabase
     .from("units")
     .delete()
     .eq("id", unitId)
     .eq("owner_id", user.id);
-  if (error) return { ok: false, error: error.message };
+  if (error) {
+    console.error("deleteCustomUnit failed:", error);
+    return { ok: false, error: error.message };
+  }
 
   revalidatePath("/path");
   return { ok: true };
