@@ -57,15 +57,22 @@ export async function createCustomUnit(
   // Append at the end of the path. Plenty of headroom for drag-and-drop.
   const { data: lastUnit } = await supabase
     .from("units")
-    .select("position, order_index")
+    .select("position")
     .eq("course_id", course.id)
     .order("position", { ascending: false })
     .limit(1)
     .maybeSingle();
   const newPosition = (lastUnit?.position ?? 0) + 1000;
-  // order_index has a UNIQUE(course_id, order_index) constraint; bump it
-  // far above seeded range (0..9) so custom units never collide.
-  const newOrderIndex = Math.max(lastUnit?.order_index ?? 0, 100) + 1;
+  // order_index has a global UNIQUE(course_id, order_index). RLS hides
+  // other users' custom units, so a naive max(order_index)+1 collides
+  // when several users grab the same "next" slot. order_index has no
+  // functional meaning for custom units (we order by `position`), so
+  // pick a pseudo-random high value to avoid collisions both with seeded
+  // content (0..N) and with other users' custom units. Migration 024
+  // converts the constraint to a partial unique (seeded-only) which
+  // eliminates the issue entirely.
+  const newOrderIndex =
+    (Date.now() % 1_000_000_000) + Math.floor(Math.random() * 1_000);
 
   const { data: unit, error: unitErr } = await supabase
     .from("units")
