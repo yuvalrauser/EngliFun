@@ -87,7 +87,8 @@ export async function createCustomUnit(
   }
 
   // 5 placeholder lessons with default titles. The owner edits them via
-  // the unit-edit page in Phase 4.
+  // the unit-edit page. XP rewards are zeroed for custom lessons — the
+  // user shouldn't grind XP from content they wrote themselves.
   const lessons = Array.from({ length: 5 }, (_, i) => ({
     unit_id: unit.id,
     title: `שיעור ${i + 1}`,
@@ -95,6 +96,9 @@ export async function createCustomUnit(
     order_index: i,
     is_checkpoint: false,
     exercise_count: 0,
+    xp_reward: 0,
+    xp_perfect_bonus: 0,
+    xp_replay_reward: 0,
   }));
   const { data: insertedLessons, error: lessonErr } = await supabase
     .from("lessons")
@@ -280,6 +284,9 @@ export async function addLessonToUnit(unitId: string): Promise<ActionResult & { 
       order_index: nextOrderIndex,
       is_checkpoint: false,
       exercise_count: 0,
+      xp_reward: 0,
+      xp_perfect_bonus: 0,
+      xp_replay_reward: 0,
     })
     .select("id")
     .single();
