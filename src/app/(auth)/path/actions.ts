@@ -150,3 +150,26 @@ export async function reorderCustomUnit(
   revalidatePath("/path");
   return { ok: true };
 }
+
+/**
+ * Delete a user-owned custom unit. Cascades through lessons → exercises →
+ * exercise_options + user_lesson_progress via FK on delete cascade. RLS
+ * + the explicit owner_id filter block deletion of seeded units.
+ */
+export async function deleteCustomUnit(unitId: string): Promise<ActionResult> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { ok: false, error: "לא מחובר" };
+
+  const { error } = await supabase
+    .from("units")
+    .delete()
+    .eq("id", unitId)
+    .eq("owner_id", user.id);
+  if (error) return { ok: false, error: error.message };
+
+  revalidatePath("/path");
+  return { ok: true };
+}

@@ -40,7 +40,9 @@ const LEVEL_LABEL_HE: Record<Profile["starting_level"], string> = {
 function midpointPosition(prev: number | null, next: number | null): number {
   if (prev !== null && next !== null) return (prev + next) / 2;
   if (prev !== null) return prev + 1000;
-  if (next !== null) return next / 2;
+  // First seeded unit has position 0, so next/2 would also give 0 (a tie).
+  // Push strictly below by 1000 so the dragged unit lands above it.
+  if (next !== null) return next - 1000;
   return 1000;
 }
 
