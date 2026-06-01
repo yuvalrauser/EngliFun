@@ -79,6 +79,13 @@ export function buildLessonStatuses(
         status = progress.status as LessonStatus;
       }
 
+      // Draft custom unit: every lesson is editable / playable in parallel
+      // while the owner is building it. Sequential gating returns once the
+      // unit is published (is_draft = false).
+      if (unit.is_draft && status === "locked") {
+        status = "unlocked";
+      }
+
       // Mark the first unlocked lesson as "current"
       if (!foundCurrent && status === "unlocked") {
         status = "current";

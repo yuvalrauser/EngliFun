@@ -41,6 +41,12 @@ export interface Unit {
   color_hex: string | null;
   order_index: number;
   created_at: string;
+  // Custom-unit fields (migration 022). owner_id NULL = seeded global
+  // content; UUID = user-created. position drives drag-and-drop order in
+  // the path. is_draft=true unlocks every lesson for parallel editing.
+  owner_id: string | null;
+  position: number;
+  is_draft: boolean;
 }
 
 export interface Lesson {

@@ -25,11 +25,16 @@ export async function getFullCourse(
 
   if (!course) return null;
 
+  // Order by `position` (numeric) so user-created units can be placed
+  // between seeded units via drag-and-drop. Seeded units were back-filled
+  // with `position = order_index * 1000` (migration 022), so their
+  // relative order is identical to before. RLS restricts the result to
+  // global units (owner_id IS NULL) plus the caller's own units.
   const { data: units } = await sb
     .from("units")
     .select("*")
     .eq("course_id", course.id)
-    .order("order_index");
+    .order("position");
 
   if (!units || units.length === 0) return { ...course, units: [] };
 
