@@ -26,6 +26,9 @@ export interface ExerciseWithOptions extends Exercise {
 
 export interface LessonSessionState {
   lessonId: string;
+  /** xp_reward of the lesson — used to short-circuit the LessonComplete
+   * spinner for 0-XP custom lessons. */
+  lessonXpReward: number;
   exercises: ExerciseWithOptions[];
   currentIndex: number;
   hearts: number;

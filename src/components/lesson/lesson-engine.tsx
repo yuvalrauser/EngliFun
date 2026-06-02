@@ -27,9 +27,9 @@ export function LessonEngine({ lesson, exercises }: LessonEngineProps) {
     // lesson — without this guard it would reset the store to "intro" and
     // restart the lesson the user just finished.
     if (lessonIdInStore !== lesson.id) {
-      initLesson(lesson.id, exercises);
+      initLesson(lesson.id, exercises, lesson.xp_reward);
     }
-  }, [lesson.id, lessonIdInStore, exercises, initLesson]);
+  }, [lesson.id, lesson.xp_reward, lessonIdInStore, exercises, initLesson]);
 
   // During intro — no header
   if (state === "intro") {

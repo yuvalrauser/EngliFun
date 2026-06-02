@@ -7,7 +7,7 @@ import type {
 import { HEARTS_PER_LESSON } from "@/lib/constants/xp";
 
 interface LessonStore extends LessonSessionState {
-  initLesson: (lessonId: string, exercises: ExerciseWithOptions[]) => void;
+  initLesson: (lessonId: string, exercises: ExerciseWithOptions[], xpReward?: number) => void;
   goTo: (state: LessonState) => void;
   submitCorrect: (answer: string) => void;
   submitWrong: (answer: string, correctAnswer: string, explanation: string, isNearMiss: boolean) => void;
@@ -24,6 +24,7 @@ interface LessonStore extends LessonSessionState {
 
 const initialState: LessonSessionState = {
   lessonId: "",
+  lessonXpReward: 0,
   exercises: [],
   currentIndex: 0,
   hearts: HEARTS_PER_LESSON,
@@ -43,7 +44,7 @@ const initialState: LessonSessionState = {
 export const useLessonStore = create<LessonStore>((set, get) => ({
   ...initialState,
 
-  initLesson: (lessonId, exercises) => {
+  initLesson: (lessonId, exercises, xpReward = 0) => {
     const current = get();
     // Idempotent: if the lesson engine re-renders for the same lesson — for
     // example after a background fetch updates the user profile, which causes
@@ -56,6 +57,7 @@ export const useLessonStore = create<LessonStore>((set, get) => ({
     set({
       ...initialState,
       lessonId,
+      lessonXpReward: xpReward,
       exercises,
       state: "intro",
       startedAt: new Date(),

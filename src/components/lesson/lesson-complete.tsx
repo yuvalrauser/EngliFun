@@ -46,8 +46,13 @@ export function LessonComplete() {
   const [levelUp, setLevelUp] = useState<{ level: number; label: string } | null>(null);
   const autoSaveStartedRef = useRef(false);
 
-  const saving = saveStatus === "saving";
-  const saved = saveStatus === "success";
+  // For 0-XP lessons (custom user-built units), the save still runs in
+  // the background but the user shouldn't have to wait for it: there's no
+  // XP to compute and the only thing the RPC does is mark the row
+  // completed. Show "+0" immediately and let המשך be clickable.
+  const isZeroXp = store.lessonXpReward === 0;
+  const saving = !isZeroXp && saveStatus === "saving";
+  const saved = isZeroXp || saveStatus === "success";
   const total = store.exercises.length;
 
   const correctCount = (() => {

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { createClient } from "@/lib/supabase/client";
+import { markMistakeReviewed } from "@/app/(auth)/review/actions";
 import type { MistakeWithContext } from "@/app/(auth)/review/page";
 
 interface ReviewContentProps {
@@ -37,19 +37,11 @@ export function ReviewContent({ mistakes }: ReviewContentProps) {
   async function markReviewed(id: string) {
     // Optimistic update — the card disappears immediately.
     setReviewed((prev) => new Set([...prev, id]));
-    const supabase = createClient();
-    // .select() so we can verify the update actually touched a row. Supabase
-    // returns success even when an RLS rule silently filters everything out,
-    // which would explain a "click works, then it comes back later" bug.
-    const { data, error } = await supabase
-      .from("user_mistakes")
-      .update({ needs_review: false, reviewed_at: new Date().toISOString() })
-      .eq("id", id)
-      .select();
-
-    if (error || !data || data.length === 0) {
-      console.error("markReviewed failed:", { id, error, rowsUpdated: data?.length ?? 0 });
-      // Roll back the optimistic state — the row didn't actually get saved.
+    // Server action does the DB update + revalidatePath('/review') so the
+    // Router Cache doesn't serve a stale list when the user navigates back.
+    const result = await markMistakeReviewed(id);
+    if (!result.ok) {
+      console.error("markReviewed failed:", result.error);
       setReviewed((prev) => {
         const next = new Set(prev);
         next.delete(id);
@@ -57,9 +49,6 @@ export function ReviewContent({ mistakes }: ReviewContentProps) {
       });
       return;
     }
-
-    // Invalidate the server cache so the next visit to /review re-fetches
-    // the fresh `needs_review = true` set instead of the cached one.
     router.refresh();
   }
 
