@@ -22,13 +22,22 @@ export function LessonEngine({ lesson, exercises }: LessonEngineProps) {
   const initLesson = useLessonStore((s) => s.initLesson);
 
   useEffect(() => {
-    // Only re-init when navigating to a different lesson. A router.refresh()
-    // after save produces a new `exercises` array reference for the same
-    // lesson — without this guard it would reset the store to "intro" and
-    // restart the lesson the user just finished.
-    if (lessonIdInStore !== lesson.id) {
+    // Re-init when navigating to a different lesson, OR when revisiting the
+    // SAME lesson after it was already completed/failed in this tab — the
+    // latter is the replay flow: user clicked a completed lesson node and
+    // expects a fresh run, not the lingering "כל הכבוד" screen from before.
+    // The guard against re-init on a mid-session router.refresh() is the
+    // `state in {intro, active_question, ...}` check — a router refresh
+    // mid-lesson keeps the store in those active states.
+    const isSameLesson = lessonIdInStore === lesson.id;
+    const isFinishedSnapshot = state === "completed" || state === "failed";
+    if (!isSameLesson || isFinishedSnapshot) {
       initLesson(lesson.id, exercises, lesson.xp_reward);
     }
+    // We deliberately exclude `state` from the deps: the effect should only
+    // re-fire on actual navigation, not when the store transitions to
+    // "completed" at the end of the current run.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lesson.id, lesson.xp_reward, lessonIdInStore, exercises, initLesson]);
 
   // During intro — no header

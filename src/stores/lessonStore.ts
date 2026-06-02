@@ -50,8 +50,17 @@ export const useLessonStore = create<LessonStore>((set, get) => ({
     // example after a background fetch updates the user profile, which causes
     // upstream server components to re-render with a new `exercises` prop
     // reference — never wipe the active session. Only initialize on a real
-    // lesson switch.
-    if (current.lessonId === lessonId && current.exercises.length > 0) {
+    // lesson switch. EXCEPT when the prior session for the same lesson
+    // already finished (completed/failed): that's a replay click, and the
+    // user expects a fresh run, not the lingering finish screen.
+    const isReplayClick =
+      current.lessonId === lessonId &&
+      (current.state === "completed" || current.state === "failed");
+    if (
+      current.lessonId === lessonId &&
+      current.exercises.length > 0 &&
+      !isReplayClick
+    ) {
       return;
     }
     set({
