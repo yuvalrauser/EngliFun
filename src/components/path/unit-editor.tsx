@@ -79,10 +79,15 @@ export function UnitEditor({ unit, lessons: initialLessons }: UnitEditorProps) {
   function handleAddLesson() {
     startTransition(async () => {
       const result = await addLessonToUnit(unit.id);
-      if (!result.ok) {
+      if (!result.ok || !result.lesson) {
         window.alert(result.error ?? "שגיאה");
         return;
       }
+      // Append to local state immediately — router.refresh() updates the
+      // server-side props but useState was already initialized from the
+      // initial render, so without this append the new lesson would only
+      // appear after a hard refresh.
+      setLessons((prev) => [...prev, result.lesson!]);
       router.refresh();
     });
   }

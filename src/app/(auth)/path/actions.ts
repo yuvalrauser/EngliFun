@@ -2,7 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { createClient } from "@/lib/supabase/server";
-import type { CourseLevel, ExerciseType } from "@/types/database";
+import type { CourseLevel, ExerciseType, Lesson } from "@/types/database";
 
 export interface CreateCustomUnitInput {
   title: string;
@@ -268,7 +268,9 @@ export async function deleteCustomLesson(lessonId: string): Promise<ActionResult
 }
 
 /** Append a new empty lesson to the end of an owned unit. */
-export async function addLessonToUnit(unitId: string): Promise<ActionResult & { lessonId?: string }> {
+export async function addLessonToUnit(
+  unitId: string,
+): Promise<ActionResult & { lesson?: Lesson }> {
   const supabase = await createClient();
   const {
     data: { user },
@@ -306,7 +308,7 @@ export async function addLessonToUnit(unitId: string): Promise<ActionResult & { 
       xp_perfect_bonus: 0,
       xp_replay_reward: 0,
     })
-    .select("id")
+    .select("*")
     .single();
   if (error || !inserted) return { ok: false, error: error?.message ?? "שגיאה" };
 
@@ -319,7 +321,7 @@ export async function addLessonToUnit(unitId: string): Promise<ActionResult & { 
 
   revalidatePath("/path");
   revalidatePath(`/path/edit/${unitId}`);
-  return { ok: true, lessonId: inserted.id };
+  return { ok: true, lesson: inserted as Lesson };
 }
 
 export interface ExerciseUpsertInput {

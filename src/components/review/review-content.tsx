@@ -140,9 +140,6 @@ function MistakeCard({
           )}
         </div>
         <div className="flex items-center gap-2 shrink-0">
-          <span className="rounded-full bg-destructive/10 px-2 py-0.5 text-xs font-medium text-destructive">
-            {mistake.wrong_count}x
-          </span>
           <svg
             className={cn("h-4 w-4 text-muted-foreground transition-transform", expanded && "rotate-180")}
             viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}
