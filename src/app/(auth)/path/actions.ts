@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { createClient } from "@/lib/supabase/server";
 import type { CourseLevel, ExerciseType, Lesson } from "@/types/database";
+import type { ExerciseWithOptions } from "@/types/lesson";
 
 export interface CreateCustomUnitInput {
   title: string;
@@ -347,7 +348,12 @@ export interface ExerciseUpsertInput {
  */
 export async function upsertCustomExercise(
   input: ExerciseUpsertInput,
-): Promise<ActionResult & { exerciseId?: string }> {
+): Promise<
+  ActionResult & {
+    exerciseId?: string;
+    exercise?: ExerciseWithOptions;
+  }
+> {
   const prompt = input.promptText.trim();
   const explanation = input.explanationHe.trim();
   if (!prompt) return { ok: false, error: "חובה לתת prompt לתרגיל" };
@@ -518,7 +524,20 @@ export async function upsertCustomExercise(
 
   revalidatePath(`/path/edit/${lesson.unit_id}`);
   revalidatePath(`/path/edit/${lesson.unit_id}/${input.lessonId}`);
-  return { ok: true, exerciseId };
+
+  // Fetch the saved exercise with its options so the client can update
+  // its local state immediately without router.refresh() racing the user.
+  const { data: fresh } = await supabase
+    .from("exercises")
+    .select("*, exercise_options(*)")
+    .eq("id", exerciseId!)
+    .single();
+
+  return {
+    ok: true,
+    exerciseId,
+    exercise: (fresh as ExerciseWithOptions) ?? undefined,
+  };
 }
 
 /** Delete one exercise from a custom lesson. RLS gates ownership. */

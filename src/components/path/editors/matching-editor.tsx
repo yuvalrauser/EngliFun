@@ -7,7 +7,7 @@ import type { ExerciseWithOptions } from "@/types/lesson";
 interface MatchingEditorProps {
   lessonId: string;
   existing: ExerciseWithOptions | null;
-  onSaved: () => void;
+  onSaved: (saved: ExerciseWithOptions) => void;
   onCancel: () => void;
 }
 
@@ -74,11 +74,11 @@ export function MatchingEditor({
         explanationHe: explanation,
         pairs: pairs.map((p) => ({ en: p.en, he: p.he })),
       });
-      if (!result.ok) {
+      if (!result.ok || !result.exercise) {
         setError(result.error ?? "שגיאה");
         return;
       }
-      onSaved();
+      onSaved(result.exercise);
     });
   }
 

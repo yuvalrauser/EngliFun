@@ -13,7 +13,7 @@ interface Option {
 interface MultipleChoiceEditorProps {
   lessonId: string;
   existing: ExerciseWithOptions | null;
-  onSaved: () => void;
+  onSaved: (saved: ExerciseWithOptions) => void;
   onCancel: () => void;
 }
 
@@ -93,11 +93,11 @@ export function MultipleChoiceEditor({
           isCorrect: o.isCorrect,
         })),
       });
-      if (!result.ok) {
+      if (!result.ok || !result.exercise) {
         setError(result.error ?? "שגיאה");
         return;
       }
-      onSaved();
+      onSaved(result.exercise);
     });
   }
 

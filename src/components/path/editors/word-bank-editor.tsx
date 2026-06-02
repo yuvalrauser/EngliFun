@@ -7,7 +7,7 @@ import type { ExerciseWithOptions } from "@/types/lesson";
 interface WordBankEditorProps {
   lessonId: string;
   existing: ExerciseWithOptions | null;
-  onSaved: () => void;
+  onSaved: (saved: ExerciseWithOptions) => void;
   onCancel: () => void;
 }
 
@@ -72,11 +72,11 @@ export function WordBankEditor({
         correctAnswerAlternatives: alternatives,
         wordBankWords: tiles,
       });
-      if (!result.ok) {
+      if (!result.ok || !result.exercise) {
         setError(result.error ?? "שגיאה");
         return;
       }
-      onSaved();
+      onSaved(result.exercise);
     });
   }
 

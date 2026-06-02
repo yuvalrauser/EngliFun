@@ -65,7 +65,14 @@ export function LessonEditor({ unitId, lesson, exercises: initial }: LessonEdito
     });
   }
 
-  function handleSaved() {
+  function handleSaved(saved: ExerciseWithOptions) {
+    setExercises((prev) => {
+      const idx = prev.findIndex((e) => e.id === saved.id);
+      if (idx === -1) return [...prev, saved];
+      const next = prev.slice();
+      next[idx] = saved;
+      return next;
+    });
     setModal({ mode: "closed" });
     router.refresh();
   }
@@ -217,7 +224,7 @@ function EditorModal({
   type: ExerciseType;
   existing: ExerciseWithOptions | null;
   onClose: () => void;
-  onSaved: () => void;
+  onSaved: (saved: ExerciseWithOptions) => void;
 }) {
   const editorProps = { lessonId, existing, onSaved, onCancel: onClose };
   const editor =
