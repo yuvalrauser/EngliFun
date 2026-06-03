@@ -5,6 +5,7 @@ EngliFun_Spec_v3.md
 
 # Claude Code local settings
 /.claude
+/.mcp.json
 
 # dependencies
 /node_modules
