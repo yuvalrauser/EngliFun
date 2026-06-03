@@ -3,6 +3,9 @@
 # Spec document
 EngliFun_Spec_v3.md
 
+# Claude Code local settings
+/.claude
+
 # dependencies
 /node_modules
 /.pnp
