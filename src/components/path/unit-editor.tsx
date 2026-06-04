@@ -18,6 +18,14 @@ const PALETTE = [
   "#4D96FF", "#FFD43B", "#8B5CF6", "#9CA3AF",
 ];
 
+const ICON_OPTIONS = [
+  "📝", "📚", "📖", "✏️", "🎯", "💡", "⭐", "🔥",
+  "🚀", "🎨", "🎵", "🏆", "🌟", "💎", "🧠", "🗣️",
+  "🌍", "✈️", "🍔", "☕", "🏠", "🐶", "🐱", "🌳",
+  "⚽", "🎮", "📱", "💻", "🔬", "🧪", "🎬", "📷",
+  "❤️", "🌈", "☀️", "🌙", "🎁", "🎉", "🔑", "🧩",
+];
+
 interface UnitEditorProps {
   unit: Unit;
   lessons: Lesson[];
@@ -154,13 +162,21 @@ export function UnitEditor({ unit, lessons: initialLessons }: UnitEditorProps) {
         </div>
         <div>
           <label className="block text-sm font-medium mb-1.5">אייקון</label>
-          <input
-            type="text"
-            value={icon}
-            onChange={(e) => setIcon(e.target.value)}
-            maxLength={4}
-            className="w-20 rounded-xl border-2 border-border bg-card px-4 py-2.5 text-2xl text-center focus:border-primary focus:outline-none"
-          />
+          <div className="grid grid-cols-8 gap-1.5 max-h-40 overflow-y-auto rounded-xl border-2 border-border bg-card p-2">
+            {ICON_OPTIONS.map((emoji) => (
+              <button
+                key={emoji}
+                type="button"
+                onClick={() => setIcon(emoji)}
+                className={cn(
+                  "flex h-9 w-9 items-center justify-center rounded-lg text-xl transition-all hover:bg-muted",
+                  icon === emoji && "bg-primary/15 ring-2 ring-primary scale-110",
+                )}
+              >
+                {emoji}
+              </button>
+            ))}
+          </div>
         </div>
         <div>
           <label className="block text-sm font-medium mb-1.5">צבע</label>

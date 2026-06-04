@@ -156,11 +156,6 @@ export function UnitSection({
             {unit.description && (
               <p className="text-sm text-muted-foreground mt-0.5 truncate">{unit.description}</p>
             )}
-            {unit.is_draft && (
-              <span className="inline-block mt-1 rounded-full bg-amber-100 text-amber-800 text-[10px] font-semibold px-2 py-0.5">
-                טיוטה
-              </span>
-            )}
           </div>
 
           {/* Completion badge */}
